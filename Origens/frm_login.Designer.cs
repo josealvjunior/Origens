@@ -31,8 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txt_cpf = new System.Windows.Forms.TextBox();
+            this.txtSENHA = new System.Windows.Forms.TextBox();
+            this.txtLOGIN = new System.Windows.Forms.TextBox();
             this.bt_cancelar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.bt_confirmar = new System.Windows.Forms.Button();
@@ -76,19 +76,20 @@
             this.label1.Text = "Senha:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txtSENHA
             // 
-            this.textBox1.Location = new System.Drawing.Point(260, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 136;
+            this.txtSENHA.Location = new System.Drawing.Point(260, 67);
+            this.txtSENHA.Name = "txtSENHA";
+            this.txtSENHA.PasswordChar = '*';
+            this.txtSENHA.Size = new System.Drawing.Size(159, 20);
+            this.txtSENHA.TabIndex = 136;
             // 
-            // txt_cpf
+            // txtLOGIN
             // 
-            this.txt_cpf.Location = new System.Drawing.Point(260, 41);
-            this.txt_cpf.Name = "txt_cpf";
-            this.txt_cpf.Size = new System.Drawing.Size(159, 20);
-            this.txt_cpf.TabIndex = 135;
+            this.txtLOGIN.Location = new System.Drawing.Point(260, 41);
+            this.txtLOGIN.Name = "txtLOGIN";
+            this.txtLOGIN.Size = new System.Drawing.Size(159, 20);
+            this.txtLOGIN.TabIndex = 135;
             // 
             // bt_cancelar
             // 
@@ -149,8 +150,8 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.bt_confirmar);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txt_cpf);
+            this.Controls.Add(this.txtSENHA);
+            this.Controls.Add(this.txtLOGIN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.pictureBox1);
@@ -170,8 +171,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txt_cpf;
+        private System.Windows.Forms.TextBox txtSENHA;
+        private System.Windows.Forms.TextBox txtLOGIN;
         private System.Windows.Forms.Button bt_cancelar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button bt_confirmar;

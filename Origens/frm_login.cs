@@ -25,9 +25,7 @@ namespace Origens
 
         private void bt_cancelar_Click(object sender, EventArgs e)
         {
-            frm_login login = new frm_login();
-            login.Close();
-            //Application.Exit();
+            Application.Exit();
         }
         private void frm_login_Load(object sender, EventArgs e)
         {
@@ -43,8 +41,12 @@ namespace Origens
 
         private void bt_confirmar_Click(object sender, EventArgs e)
         {
-            frm_login login = new frm_login();
-            login.Close();
+            DataSetOrigensTableAdapters.USUARIOSTableAdapter adaptador = new DataSetOrigensTableAdapters.USUARIOSTableAdapter();
+            if ((int)adaptador.autenticar(txtLOGIN.Text, txtSENHA.Text) > 0)
+            {
+                frm_login login = new frm_login();
+                login.Close();
+            }
         }
     }
 }
