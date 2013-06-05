@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Origens.Properties {
+namespace CORE.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,20 +26,10 @@ namespace Origens.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=drago;Initial Catalog=Origens;User ID=sa;Password=34190723")]
-        public string OrigensConnectionString {
-            get {
-                return ((string)(this["OrigensConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MATILDA\\SQLEXPRESS;Initial Catalog=ORIGENS;Integrated Security=True")]
-        public string ORIGENSconStr {
+        public string ORIGENSConnectionString {
             get {
-                return ((string)(this["ORIGENSconStr"]));
+                return ((string)(this["ORIGENSConnectionString"]));
             }
         }
     }

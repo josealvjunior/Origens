@@ -127,6 +127,7 @@
             this.bt_confirmar.TabIndex = 177;
             this.bt_confirmar.Text = "Confirmar";
             this.bt_confirmar.UseVisualStyleBackColor = false;
+            this.bt_confirmar.Click += new System.EventHandler(this.bt_confirmar_Click);
             // 
             // textBox3
             // 

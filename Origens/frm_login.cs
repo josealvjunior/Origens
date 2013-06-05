@@ -21,13 +21,13 @@ namespace Origens
             //Formato de connection String com usuário e senha no Banco;
           //  Conn.ConnectionString = "Data Souce = Drago; Initial Catolog=Origens; User id=sa;Password=34190723;";
             //Conn.Open();
-        }        
-        
-            
+        }    
 
         private void bt_cancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frm_login login = new frm_login();
+            login.Close();
+            //Application.Exit();
         }
         private void frm_login_Load(object sender, EventArgs e)
         {
@@ -39,6 +39,12 @@ namespace Origens
             this.Visible = false;
             frm_principal principal = new frm_principal();
             principal.Focus();
+        }
+
+        private void bt_confirmar_Click(object sender, EventArgs e)
+        {
+            frm_login login = new frm_login();
+            login.Close();
         }
     }
 }

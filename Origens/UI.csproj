@@ -44,11 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DataSetOrigens.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetOrigens.xsd</DependentUpon>
     </Compile>
     <Compile Include="frm_atualizar.cs">
       <SubType>Form</SubType>
@@ -116,6 +115,17 @@
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetOrigens.xsc">
+      <DependentUpon>DataSetOrigens.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetOrigens.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetOrigens.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetOrigens.xss">
+      <DependentUpon>DataSetOrigens.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
