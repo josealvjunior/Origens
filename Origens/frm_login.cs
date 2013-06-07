@@ -15,6 +15,8 @@ namespace Origens
         // Define a conexção com o Banco de Dados;
         //public SqlConnection Conn = new SqlConnection();
 
+
+
         public frm_login()
         {
             InitializeComponent();
@@ -32,21 +34,22 @@ namespace Origens
                     
         }      
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frm_principal principal = new frm_principal();
-            principal.Focus();
-        }
-
         private void bt_confirmar_Click(object sender, EventArgs e)
         {
             DataSetOrigensTableAdapters.USUARIOSTableAdapter adaptador = new DataSetOrigensTableAdapters.USUARIOSTableAdapter();
             if ((int)adaptador.autenticar(txtLOGIN.Text, txtSENHA.Text) > 0)
             {
-                frm_login login = new frm_login();
-                login.Close();
+                frm_principal principal = new frm_principal();
+                principal.Show();
+                this.Close();
+                this.Dispose();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
     }
 }

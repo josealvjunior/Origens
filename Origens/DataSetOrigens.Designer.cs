@@ -44,6 +44,8 @@ namespace Origens {
         
         private USUARIOSDataTable tableUSUARIOS;
         
+        private candidatosDataTable tablecandidatos;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -101,6 +103,9 @@ namespace Origens {
                 }
                 if ((ds.Tables["USUARIOS"] != null)) {
                     base.Tables.Add(new USUARIOSDataTable(ds.Tables["USUARIOS"]));
+                }
+                if ((ds.Tables["candidatos"] != null)) {
+                    base.Tables.Add(new candidatosDataTable(ds.Tables["candidatos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -222,6 +227,16 @@ namespace Origens {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public candidatosDataTable candidatos {
+            get {
+                return this.tablecandidatos;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -317,6 +332,9 @@ namespace Origens {
                 if ((ds.Tables["USUARIOS"] != null)) {
                     base.Tables.Add(new USUARIOSDataTable(ds.Tables["USUARIOS"]));
                 }
+                if ((ds.Tables["candidatos"] != null)) {
+                    base.Tables.Add(new candidatosDataTable(ds.Tables["candidatos"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -410,6 +428,12 @@ namespace Origens {
                     this.tableUSUARIOS.InitVars();
                 }
             }
+            this.tablecandidatos = ((candidatosDataTable)(base.Tables["candidatos"]));
+            if ((initTable == true)) {
+                if ((this.tablecandidatos != null)) {
+                    this.tablecandidatos.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -440,6 +464,8 @@ namespace Origens {
             base.Tables.Add(this.tabletipos_cabelo);
             this.tableUSUARIOS = new USUARIOSDataTable();
             base.Tables.Add(this.tableUSUARIOS);
+            this.tablecandidatos = new candidatosDataTable();
+            base.Tables.Add(this.tablecandidatos);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -499,6 +525,12 @@ namespace Origens {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeUSUARIOS() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializecandidatos() {
             return false;
         }
         
@@ -586,6 +618,9 @@ namespace Origens {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void USUARIOSRowChangeEventHandler(object sender, USUARIOSRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void candidatosRowChangeEventHandler(object sender, candidatosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3430,6 +3465,560 @@ namespace Origens {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class candidatosDataTable : global::System.Data.TypedTableBase<candidatosRow> {
+            
+            private global::System.Data.DataColumn columncod_candidato;
+            
+            private global::System.Data.DataColumn columnnom_candidato;
+            
+            private global::System.Data.DataColumn columncpf_candidato;
+            
+            private global::System.Data.DataColumn columndat_nascimento_candidato;
+            
+            private global::System.Data.DataColumn columntel_candidato;
+            
+            private global::System.Data.DataColumn columncod_estado;
+            
+            private global::System.Data.DataColumn columncidade_candidato;
+            
+            private global::System.Data.DataColumn columnendereco_candidato;
+            
+            private global::System.Data.DataColumn columncomplemento_candidato;
+            
+            private global::System.Data.DataColumn columncep_candidato;
+            
+            private global::System.Data.DataColumn columncod_cor_olho;
+            
+            private global::System.Data.DataColumn columncod_cor_cabelo;
+            
+            private global::System.Data.DataColumn columncod_cor_pele;
+            
+            private global::System.Data.DataColumn columncod_tipo_cabelo;
+            
+            private global::System.Data.DataColumn columncod_faixa_altura;
+            
+            private global::System.Data.DataColumn columncod_temperamento;
+            
+            private global::System.Data.DataColumn columncod_escolaridade;
+            
+            private global::System.Data.DataColumn columncod_doenca;
+            
+            private global::System.Data.DataColumn columnpratica_esporte;
+            
+            private global::System.Data.DataColumn columnle;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatosDataTable() {
+                this.TableName = "candidatos";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal candidatosDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected candidatosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_candidatoColumn {
+                get {
+                    return this.columncod_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nom_candidatoColumn {
+                get {
+                    return this.columnnom_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpf_candidatoColumn {
+                get {
+                    return this.columncpf_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dat_nascimento_candidatoColumn {
+                get {
+                    return this.columndat_nascimento_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tel_candidatoColumn {
+                get {
+                    return this.columntel_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_estadoColumn {
+                get {
+                    return this.columncod_estado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cidade_candidatoColumn {
+                get {
+                    return this.columncidade_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn endereco_candidatoColumn {
+                get {
+                    return this.columnendereco_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn complemento_candidatoColumn {
+                get {
+                    return this.columncomplemento_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cep_candidatoColumn {
+                get {
+                    return this.columncep_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_cor_olhoColumn {
+                get {
+                    return this.columncod_cor_olho;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_cor_cabeloColumn {
+                get {
+                    return this.columncod_cor_cabelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_cor_peleColumn {
+                get {
+                    return this.columncod_cor_pele;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_tipo_cabeloColumn {
+                get {
+                    return this.columncod_tipo_cabelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_faixa_alturaColumn {
+                get {
+                    return this.columncod_faixa_altura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_temperamentoColumn {
+                get {
+                    return this.columncod_temperamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_escolaridadeColumn {
+                get {
+                    return this.columncod_escolaridade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_doencaColumn {
+                get {
+                    return this.columncod_doenca;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pratica_esporteColumn {
+                get {
+                    return this.columnpratica_esporte;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn leColumn {
+                get {
+                    return this.columnle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatosRow this[int index] {
+                get {
+                    return ((candidatosRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatosRowChangeEventHandler candidatosRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatosRowChangeEventHandler candidatosRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatosRowChangeEventHandler candidatosRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatosRowChangeEventHandler candidatosRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddcandidatosRow(candidatosRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatosRow AddcandidatosRow(
+                        string nom_candidato, 
+                        string cpf_candidato, 
+                        System.DateTime dat_nascimento_candidato, 
+                        string tel_candidato, 
+                        int cod_estado, 
+                        string cidade_candidato, 
+                        string endereco_candidato, 
+                        string complemento_candidato, 
+                        string cep_candidato, 
+                        int cod_cor_olho, 
+                        int cod_cor_cabelo, 
+                        int cod_cor_pele, 
+                        int cod_tipo_cabelo, 
+                        int cod_faixa_altura, 
+                        int cod_temperamento, 
+                        int cod_escolaridade, 
+                        int cod_doenca, 
+                        bool pratica_esporte, 
+                        bool le) {
+                candidatosRow rowcandidatosRow = ((candidatosRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        nom_candidato,
+                        cpf_candidato,
+                        dat_nascimento_candidato,
+                        tel_candidato,
+                        cod_estado,
+                        cidade_candidato,
+                        endereco_candidato,
+                        complemento_candidato,
+                        cep_candidato,
+                        cod_cor_olho,
+                        cod_cor_cabelo,
+                        cod_cor_pele,
+                        cod_tipo_cabelo,
+                        cod_faixa_altura,
+                        cod_temperamento,
+                        cod_escolaridade,
+                        cod_doenca,
+                        pratica_esporte,
+                        le};
+                rowcandidatosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowcandidatosRow);
+                return rowcandidatosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatosRow FindBycod_candidato(int cod_candidato) {
+                return ((candidatosRow)(this.Rows.Find(new object[] {
+                            cod_candidato})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                candidatosDataTable cln = ((candidatosDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new candidatosDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columncod_candidato = base.Columns["cod_candidato"];
+                this.columnnom_candidato = base.Columns["nom_candidato"];
+                this.columncpf_candidato = base.Columns["cpf_candidato"];
+                this.columndat_nascimento_candidato = base.Columns["dat_nascimento_candidato"];
+                this.columntel_candidato = base.Columns["tel_candidato"];
+                this.columncod_estado = base.Columns["cod_estado"];
+                this.columncidade_candidato = base.Columns["cidade_candidato"];
+                this.columnendereco_candidato = base.Columns["endereco_candidato"];
+                this.columncomplemento_candidato = base.Columns["complemento_candidato"];
+                this.columncep_candidato = base.Columns["cep_candidato"];
+                this.columncod_cor_olho = base.Columns["cod_cor_olho"];
+                this.columncod_cor_cabelo = base.Columns["cod_cor_cabelo"];
+                this.columncod_cor_pele = base.Columns["cod_cor_pele"];
+                this.columncod_tipo_cabelo = base.Columns["cod_tipo_cabelo"];
+                this.columncod_faixa_altura = base.Columns["cod_faixa_altura"];
+                this.columncod_temperamento = base.Columns["cod_temperamento"];
+                this.columncod_escolaridade = base.Columns["cod_escolaridade"];
+                this.columncod_doenca = base.Columns["cod_doenca"];
+                this.columnpratica_esporte = base.Columns["pratica_esporte"];
+                this.columnle = base.Columns["le"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columncod_candidato = new global::System.Data.DataColumn("cod_candidato", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_candidato);
+                this.columnnom_candidato = new global::System.Data.DataColumn("nom_candidato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnom_candidato);
+                this.columncpf_candidato = new global::System.Data.DataColumn("cpf_candidato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncpf_candidato);
+                this.columndat_nascimento_candidato = new global::System.Data.DataColumn("dat_nascimento_candidato", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndat_nascimento_candidato);
+                this.columntel_candidato = new global::System.Data.DataColumn("tel_candidato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntel_candidato);
+                this.columncod_estado = new global::System.Data.DataColumn("cod_estado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_estado);
+                this.columncidade_candidato = new global::System.Data.DataColumn("cidade_candidato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncidade_candidato);
+                this.columnendereco_candidato = new global::System.Data.DataColumn("endereco_candidato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnendereco_candidato);
+                this.columncomplemento_candidato = new global::System.Data.DataColumn("complemento_candidato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncomplemento_candidato);
+                this.columncep_candidato = new global::System.Data.DataColumn("cep_candidato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncep_candidato);
+                this.columncod_cor_olho = new global::System.Data.DataColumn("cod_cor_olho", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_cor_olho);
+                this.columncod_cor_cabelo = new global::System.Data.DataColumn("cod_cor_cabelo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_cor_cabelo);
+                this.columncod_cor_pele = new global::System.Data.DataColumn("cod_cor_pele", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_cor_pele);
+                this.columncod_tipo_cabelo = new global::System.Data.DataColumn("cod_tipo_cabelo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_tipo_cabelo);
+                this.columncod_faixa_altura = new global::System.Data.DataColumn("cod_faixa_altura", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_faixa_altura);
+                this.columncod_temperamento = new global::System.Data.DataColumn("cod_temperamento", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_temperamento);
+                this.columncod_escolaridade = new global::System.Data.DataColumn("cod_escolaridade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_escolaridade);
+                this.columncod_doenca = new global::System.Data.DataColumn("cod_doenca", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_doenca);
+                this.columnpratica_esporte = new global::System.Data.DataColumn("pratica_esporte", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpratica_esporte);
+                this.columnle = new global::System.Data.DataColumn("le", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnle);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncod_candidato}, true));
+                this.columncod_candidato.AutoIncrement = true;
+                this.columncod_candidato.AutoIncrementSeed = -1;
+                this.columncod_candidato.AutoIncrementStep = -1;
+                this.columncod_candidato.AllowDBNull = false;
+                this.columncod_candidato.ReadOnly = true;
+                this.columncod_candidato.Unique = true;
+                this.columnnom_candidato.MaxLength = 255;
+                this.columncpf_candidato.MaxLength = 11;
+                this.columntel_candidato.MaxLength = 20;
+                this.columncidade_candidato.MaxLength = 255;
+                this.columnendereco_candidato.MaxLength = 255;
+                this.columncomplemento_candidato.MaxLength = 255;
+                this.columncep_candidato.MaxLength = 8;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatosRow NewcandidatosRow() {
+                return ((candidatosRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new candidatosRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(candidatosRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.candidatosRowChanged != null)) {
+                    this.candidatosRowChanged(this, new candidatosRowChangeEvent(((candidatosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.candidatosRowChanging != null)) {
+                    this.candidatosRowChanging(this, new candidatosRowChangeEvent(((candidatosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.candidatosRowDeleted != null)) {
+                    this.candidatosRowDeleted(this, new candidatosRowChangeEvent(((candidatosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.candidatosRowDeleting != null)) {
+                    this.candidatosRowDeleting(this, new candidatosRowChangeEvent(((candidatosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovecandidatosRow(candidatosRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSetOrigens ds = new DataSetOrigens();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "candidatosDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class estadosRow : global::System.Data.DataRow {
@@ -4110,6 +4699,564 @@ namespace Origens {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class candidatosRow : global::System.Data.DataRow {
+            
+            private candidatosDataTable tablecandidatos;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal candidatosRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablecandidatos = ((candidatosDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_candidato {
+                get {
+                    return ((int)(this[this.tablecandidatos.cod_candidatoColumn]));
+                }
+                set {
+                    this[this.tablecandidatos.cod_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nom_candidato {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatos.nom_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nom_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.nom_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cpf_candidato {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatos.cpf_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cpf_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cpf_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dat_nascimento_candidato {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablecandidatos.dat_nascimento_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'dat_nascimento_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.dat_nascimento_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tel_candidato {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatos.tel_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tel_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.tel_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_estado {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_estadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_estado\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_estadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cidade_candidato {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatos.cidade_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cidade_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cidade_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string endereco_candidato {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatos.endereco_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'endereco_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.endereco_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string complemento_candidato {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatos.complemento_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'complemento_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.complemento_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cep_candidato {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatos.cep_candidatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cep_candidato\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cep_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_cor_olho {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_cor_olhoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_cor_olho\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_cor_olhoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_cor_cabelo {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_cor_cabeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_cor_cabelo\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_cor_cabeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_cor_pele {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_cor_peleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_cor_pele\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_cor_peleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_tipo_cabelo {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_tipo_cabeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_tipo_cabelo\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_tipo_cabeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_faixa_altura {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_faixa_alturaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_faixa_altura\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_faixa_alturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_temperamento {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_temperamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_temperamento\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_temperamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_escolaridade {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_escolaridadeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_escolaridade\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_escolaridadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_doenca {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatos.cod_doencaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_doenca\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.cod_doencaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool pratica_esporte {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecandidatos.pratica_esporteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pratica_esporte\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.pratica_esporteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool le {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecandidatos.leColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'le\' in table \'candidatos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatos.leColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnom_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.nom_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnom_candidatoNull() {
+                this[this.tablecandidatos.nom_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscpf_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.cpf_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcpf_candidatoNull() {
+                this[this.tablecandidatos.cpf_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdat_nascimento_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.dat_nascimento_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdat_nascimento_candidatoNull() {
+                this[this.tablecandidatos.dat_nascimento_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istel_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.tel_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settel_candidatoNull() {
+                this[this.tablecandidatos.tel_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_estadoNull() {
+                return this.IsNull(this.tablecandidatos.cod_estadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_estadoNull() {
+                this[this.tablecandidatos.cod_estadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscidade_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.cidade_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcidade_candidatoNull() {
+                this[this.tablecandidatos.cidade_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isendereco_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.endereco_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setendereco_candidatoNull() {
+                this[this.tablecandidatos.endereco_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscomplemento_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.complemento_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcomplemento_candidatoNull() {
+                this[this.tablecandidatos.complemento_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscep_candidatoNull() {
+                return this.IsNull(this.tablecandidatos.cep_candidatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcep_candidatoNull() {
+                this[this.tablecandidatos.cep_candidatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_cor_olhoNull() {
+                return this.IsNull(this.tablecandidatos.cod_cor_olhoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_cor_olhoNull() {
+                this[this.tablecandidatos.cod_cor_olhoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_cor_cabeloNull() {
+                return this.IsNull(this.tablecandidatos.cod_cor_cabeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_cor_cabeloNull() {
+                this[this.tablecandidatos.cod_cor_cabeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_cor_peleNull() {
+                return this.IsNull(this.tablecandidatos.cod_cor_peleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_cor_peleNull() {
+                this[this.tablecandidatos.cod_cor_peleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_tipo_cabeloNull() {
+                return this.IsNull(this.tablecandidatos.cod_tipo_cabeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_tipo_cabeloNull() {
+                this[this.tablecandidatos.cod_tipo_cabeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_faixa_alturaNull() {
+                return this.IsNull(this.tablecandidatos.cod_faixa_alturaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_faixa_alturaNull() {
+                this[this.tablecandidatos.cod_faixa_alturaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_temperamentoNull() {
+                return this.IsNull(this.tablecandidatos.cod_temperamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_temperamentoNull() {
+                this[this.tablecandidatos.cod_temperamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_escolaridadeNull() {
+                return this.IsNull(this.tablecandidatos.cod_escolaridadeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_escolaridadeNull() {
+                this[this.tablecandidatos.cod_escolaridadeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_doencaNull() {
+                return this.IsNull(this.tablecandidatos.cod_doencaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_doencaNull() {
+                this[this.tablecandidatos.cod_doencaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispratica_esporteNull() {
+                return this.IsNull(this.tablecandidatos.pratica_esporteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpratica_esporteNull() {
+                this[this.tablecandidatos.pratica_esporteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsleNull() {
+                return this.IsNull(this.tablecandidatos.leColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetleNull() {
+                this[this.tablecandidatos.leColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4435,6 +5582,40 @@ namespace Origens {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public USUARIOSRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class candidatosRowChangeEvent : global::System.EventArgs {
+            
+            private candidatosRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatosRowChangeEvent(candidatosRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7721,6 +8902,1120 @@ namespace Origens.DataSetOrigensTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class candidatosTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public candidatosTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "candidatos";
+            tableMapping.ColumnMappings.Add("cod_candidato", "cod_candidato");
+            tableMapping.ColumnMappings.Add("nom_candidato", "nom_candidato");
+            tableMapping.ColumnMappings.Add("cpf_candidato", "cpf_candidato");
+            tableMapping.ColumnMappings.Add("dat_nascimento_candidato", "dat_nascimento_candidato");
+            tableMapping.ColumnMappings.Add("tel_candidato", "tel_candidato");
+            tableMapping.ColumnMappings.Add("cod_estado", "cod_estado");
+            tableMapping.ColumnMappings.Add("cidade_candidato", "cidade_candidato");
+            tableMapping.ColumnMappings.Add("endereco_candidato", "endereco_candidato");
+            tableMapping.ColumnMappings.Add("complemento_candidato", "complemento_candidato");
+            tableMapping.ColumnMappings.Add("cep_candidato", "cep_candidato");
+            tableMapping.ColumnMappings.Add("cod_cor_olho", "cod_cor_olho");
+            tableMapping.ColumnMappings.Add("cod_cor_cabelo", "cod_cor_cabelo");
+            tableMapping.ColumnMappings.Add("cod_cor_pele", "cod_cor_pele");
+            tableMapping.ColumnMappings.Add("cod_tipo_cabelo", "cod_tipo_cabelo");
+            tableMapping.ColumnMappings.Add("cod_faixa_altura", "cod_faixa_altura");
+            tableMapping.ColumnMappings.Add("cod_temperamento", "cod_temperamento");
+            tableMapping.ColumnMappings.Add("cod_escolaridade", "cod_escolaridade");
+            tableMapping.ColumnMappings.Add("cod_doenca", "cod_doenca");
+            tableMapping.ColumnMappings.Add("pratica_esporte", "pratica_esporte");
+            tableMapping.ColumnMappings.Add("le", "le");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "dbo.CANDIDATO_DELETE";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nom_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cpf_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpf_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cpf_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpf_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dat_nascimento_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dat_nascimento_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dat_nascimento_candidato", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dat_nascimento_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tel_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cidade_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cidade_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_endereco_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endereco_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_endereco_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endereco_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_complemento_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "complemento_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_complemento_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "complemento_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cep_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cep_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_cor_olho", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_olho", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_cor_olho", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_olho", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_cor_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_cabelo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_cor_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_cabelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_cor_pele", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_pele", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_cor_pele", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_pele", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_tipo_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_tipo_cabelo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_tipo_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_tipo_cabelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_faixa_altura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_faixa_altura", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_faixa_altura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_faixa_altura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_temperamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_temperamento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_temperamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_temperamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_escolaridade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_escolaridade", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_escolaridade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_escolaridade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_doenca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_doenca", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_doenca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_doenca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pratica_esporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pratica_esporte", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pratica_esporte", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pratica_esporte", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_le", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "le", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_le", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "le", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "dbo.CANDIDATO_INSERT";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpf_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpf_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dat_nascimento_candidato", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dat_nascimento_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cidade_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endereco_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endereco_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@complemento_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "complemento_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cep_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_olho", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_olho", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_cabelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_pele", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_pele", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_tipo_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_tipo_cabelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_faixa_altura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_faixa_altura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_temperamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_temperamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_escolaridade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_escolaridade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_doenca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_doenca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pratica_esporte", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pratica_esporte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@le", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "le", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "dbo.CANDIDATO_UPDATE";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cpf_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpf_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dat_nascimento_candidato", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dat_nascimento_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cidade_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@endereco_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endereco_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@complemento_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "complemento_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cep_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_olho", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_olho", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_cabelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_pele", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_pele", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_tipo_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_tipo_cabelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_faixa_altura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_faixa_altura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_temperamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_temperamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_escolaridade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_escolaridade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_doenca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_doenca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pratica_esporte", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pratica_esporte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@le", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "le", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nom_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cpf_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpf_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cpf_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cpf_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dat_nascimento_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dat_nascimento_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dat_nascimento_candidato", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dat_nascimento_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tel_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_estado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_estado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cidade_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cidade_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_endereco_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endereco_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_endereco_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "endereco_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_complemento_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "complemento_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_complemento_candidato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "complemento_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cep_candidato", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_candidato", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cep_candidato", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_candidato", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_cor_olho", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_olho", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_cor_olho", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_olho", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_cor_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_cabelo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_cor_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_cabelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_cor_pele", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_pele", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_cor_pele", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_cor_pele", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_tipo_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_tipo_cabelo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_tipo_cabelo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_tipo_cabelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_faixa_altura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_faixa_altura", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_faixa_altura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_faixa_altura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_temperamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_temperamento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_temperamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_temperamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_escolaridade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_escolaridade", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_escolaridade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_escolaridade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cod_doenca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_doenca", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_doenca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_doenca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pratica_esporte", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pratica_esporte", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pratica_esporte", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pratica_esporte", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_le", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "le", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_le", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "le", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_candidato", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cod_candidato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Origens.Properties.Settings.Default.ORIGENSconStr;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.CANDIDATO_SELECT";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "dbo.CANDIDATO_OBTERUM";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_candidato", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSetOrigens.candidatosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSetOrigens.candidatosDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetOrigens.candidatosDataTable dataTable = new DataSetOrigens.candidatosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DataSetOrigens.candidatosDataTable dataTable, global::System.Nullable<int> cod_candidato) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((cod_candidato.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(cod_candidato.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetOrigens.candidatosDataTable ObterCandidatoPeloCodigo(global::System.Nullable<int> cod_candidato) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((cod_candidato.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(cod_candidato.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            DataSetOrigens.candidatosDataTable dataTable = new DataSetOrigens.candidatosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSetOrigens.candidatosDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSetOrigens dataSet) {
+            return this.Adapter.Update(dataSet, "candidatos");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_cod_candidato, 
+                    string Original_nom_candidato, 
+                    string Original_cpf_candidato, 
+                    global::System.Nullable<global::System.DateTime> Original_dat_nascimento_candidato, 
+                    string Original_tel_candidato, 
+                    global::System.Nullable<int> Original_cod_estado, 
+                    string Original_cidade_candidato, 
+                    string Original_endereco_candidato, 
+                    string Original_complemento_candidato, 
+                    string Original_cep_candidato, 
+                    global::System.Nullable<int> Original_cod_cor_olho, 
+                    global::System.Nullable<int> Original_cod_cor_cabelo, 
+                    global::System.Nullable<int> Original_cod_cor_pele, 
+                    global::System.Nullable<int> Original_cod_tipo_cabelo, 
+                    global::System.Nullable<int> Original_cod_faixa_altura, 
+                    global::System.Nullable<int> Original_cod_temperamento, 
+                    global::System.Nullable<int> Original_cod_escolaridade, 
+                    global::System.Nullable<int> Original_cod_doenca, 
+                    global::System.Nullable<bool> Original_pratica_esporte, 
+                    global::System.Nullable<bool> Original_le) {
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_cod_candidato));
+            if ((Original_nom_candidato == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_nom_candidato));
+            }
+            if ((Original_cpf_candidato == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_cpf_candidato));
+            }
+            if ((Original_dat_nascimento_candidato.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_dat_nascimento_candidato.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_tel_candidato == null)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_tel_candidato));
+            }
+            if ((Original_cod_estado.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_cod_estado.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cidade_candidato == null)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_cidade_candidato));
+            }
+            if ((Original_endereco_candidato == null)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_endereco_candidato));
+            }
+            if ((Original_complemento_candidato == null)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(Original_complemento_candidato));
+            }
+            if ((Original_cep_candidato == null)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_cep_candidato));
+            }
+            if ((Original_cod_cor_olho.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_cod_cor_olho.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_cor_cabelo.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((int)(Original_cod_cor_cabelo.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_cor_pele.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_cod_cor_pele.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_tipo_cabelo.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((int)(Original_cod_tipo_cabelo.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_faixa_altura.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((int)(Original_cod_faixa_altura.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_temperamento.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((int)(Original_cod_temperamento.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_escolaridade.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((int)(Original_cod_escolaridade.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_doenca.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((int)(Original_cod_doenca.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((Original_pratica_esporte.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((bool)(Original_pratica_esporte.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((Original_le.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((bool)(Original_le.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string nom_candidato, 
+                    string cpf_candidato, 
+                    global::System.Nullable<global::System.DateTime> dat_nascimento_candidato, 
+                    string tel_candidato, 
+                    global::System.Nullable<int> cod_estado, 
+                    string cidade_candidato, 
+                    string endereco_candidato, 
+                    string complemento_candidato, 
+                    string cep_candidato, 
+                    global::System.Nullable<int> cod_cor_olho, 
+                    global::System.Nullable<int> cod_cor_cabelo, 
+                    global::System.Nullable<int> cod_cor_pele, 
+                    global::System.Nullable<int> cod_tipo_cabelo, 
+                    global::System.Nullable<int> cod_faixa_altura, 
+                    global::System.Nullable<int> cod_temperamento, 
+                    global::System.Nullable<int> cod_escolaridade, 
+                    global::System.Nullable<int> cod_doenca, 
+                    global::System.Nullable<bool> pratica_esporte, 
+                    global::System.Nullable<bool> le) {
+            if ((nom_candidato == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nom_candidato));
+            }
+            if ((cpf_candidato == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(cpf_candidato));
+            }
+            if ((dat_nascimento_candidato.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(dat_nascimento_candidato.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((tel_candidato == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(tel_candidato));
+            }
+            if ((cod_estado.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(cod_estado.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((cidade_candidato == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(cidade_candidato));
+            }
+            if ((endereco_candidato == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(endereco_candidato));
+            }
+            if ((complemento_candidato == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(complemento_candidato));
+            }
+            if ((cep_candidato == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(cep_candidato));
+            }
+            if ((cod_cor_olho.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(cod_cor_olho.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_cabelo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(cod_cor_cabelo.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_pele.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(cod_cor_pele.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((cod_tipo_cabelo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(cod_tipo_cabelo.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((cod_faixa_altura.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(cod_faixa_altura.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((cod_temperamento.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(cod_temperamento.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((cod_escolaridade.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(cod_escolaridade.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((cod_doenca.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(cod_doenca.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((pratica_esporte.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(pratica_esporte.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((le.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((bool)(le.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string nom_candidato, 
+                    string cpf_candidato, 
+                    global::System.Nullable<global::System.DateTime> dat_nascimento_candidato, 
+                    string tel_candidato, 
+                    global::System.Nullable<int> cod_estado, 
+                    string cidade_candidato, 
+                    string endereco_candidato, 
+                    string complemento_candidato, 
+                    string cep_candidato, 
+                    global::System.Nullable<int> cod_cor_olho, 
+                    global::System.Nullable<int> cod_cor_cabelo, 
+                    global::System.Nullable<int> cod_cor_pele, 
+                    global::System.Nullable<int> cod_tipo_cabelo, 
+                    global::System.Nullable<int> cod_faixa_altura, 
+                    global::System.Nullable<int> cod_temperamento, 
+                    global::System.Nullable<int> cod_escolaridade, 
+                    global::System.Nullable<int> cod_doenca, 
+                    global::System.Nullable<bool> pratica_esporte, 
+                    global::System.Nullable<bool> le, 
+                    int Original_cod_candidato, 
+                    string Original_nom_candidato, 
+                    string Original_cpf_candidato, 
+                    global::System.Nullable<global::System.DateTime> Original_dat_nascimento_candidato, 
+                    string Original_tel_candidato, 
+                    global::System.Nullable<int> Original_cod_estado, 
+                    string Original_cidade_candidato, 
+                    string Original_endereco_candidato, 
+                    string Original_complemento_candidato, 
+                    string Original_cep_candidato, 
+                    global::System.Nullable<int> Original_cod_cor_olho, 
+                    global::System.Nullable<int> Original_cod_cor_cabelo, 
+                    global::System.Nullable<int> Original_cod_cor_pele, 
+                    global::System.Nullable<int> Original_cod_tipo_cabelo, 
+                    global::System.Nullable<int> Original_cod_faixa_altura, 
+                    global::System.Nullable<int> Original_cod_temperamento, 
+                    global::System.Nullable<int> Original_cod_escolaridade, 
+                    global::System.Nullable<int> Original_cod_doenca, 
+                    global::System.Nullable<bool> Original_pratica_esporte, 
+                    global::System.Nullable<bool> Original_le, 
+                    int cod_candidato) {
+            if ((nom_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nom_candidato));
+            }
+            if ((cpf_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(cpf_candidato));
+            }
+            if ((dat_nascimento_candidato.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(dat_nascimento_candidato.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((tel_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(tel_candidato));
+            }
+            if ((cod_estado.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(cod_estado.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((cidade_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(cidade_candidato));
+            }
+            if ((endereco_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(endereco_candidato));
+            }
+            if ((complemento_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(complemento_candidato));
+            }
+            if ((cep_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(cep_candidato));
+            }
+            if ((cod_cor_olho.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(cod_cor_olho.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_cabelo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(cod_cor_cabelo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_pele.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(cod_cor_pele.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((cod_tipo_cabelo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(cod_tipo_cabelo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((cod_faixa_altura.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(cod_faixa_altura.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((cod_temperamento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(cod_temperamento.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((cod_escolaridade.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(cod_escolaridade.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((cod_doenca.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(cod_doenca.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((pratica_esporte.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(pratica_esporte.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((le.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(le.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_cod_candidato));
+            if ((Original_nom_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_nom_candidato));
+            }
+            if ((Original_cpf_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_cpf_candidato));
+            }
+            if ((Original_dat_nascimento_candidato.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_dat_nascimento_candidato.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_tel_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_tel_candidato));
+            }
+            if ((Original_cod_estado.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_cod_estado.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cidade_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_cidade_candidato));
+            }
+            if ((Original_endereco_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_endereco_candidato));
+            }
+            if ((Original_complemento_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_complemento_candidato));
+            }
+            if ((Original_cep_candidato == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_cep_candidato));
+            }
+            if ((Original_cod_cor_olho.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_cod_cor_olho.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_cor_cabelo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_cod_cor_cabelo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_cor_pele.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_cod_cor_pele.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_tipo_cabelo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_cod_tipo_cabelo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_faixa_altura.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_cod_faixa_altura.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_temperamento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_cod_temperamento.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_escolaridade.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(Original_cod_escolaridade.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((Original_cod_doenca.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(Original_cod_doenca.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            if ((Original_pratica_esporte.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((bool)(Original_pratica_esporte.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            if ((Original_le.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((bool)(Original_le.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[59].Value = ((int)(cod_candidato));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string nom_candidato, 
+                    string cpf_candidato, 
+                    global::System.Nullable<global::System.DateTime> dat_nascimento_candidato, 
+                    string tel_candidato, 
+                    global::System.Nullable<int> cod_estado, 
+                    string cidade_candidato, 
+                    string endereco_candidato, 
+                    string complemento_candidato, 
+                    string cep_candidato, 
+                    global::System.Nullable<int> cod_cor_olho, 
+                    global::System.Nullable<int> cod_cor_cabelo, 
+                    global::System.Nullable<int> cod_cor_pele, 
+                    global::System.Nullable<int> cod_tipo_cabelo, 
+                    global::System.Nullable<int> cod_faixa_altura, 
+                    global::System.Nullable<int> cod_temperamento, 
+                    global::System.Nullable<int> cod_escolaridade, 
+                    global::System.Nullable<int> cod_doenca, 
+                    global::System.Nullable<bool> pratica_esporte, 
+                    global::System.Nullable<bool> le, 
+                    int Original_cod_candidato, 
+                    string Original_nom_candidato, 
+                    string Original_cpf_candidato, 
+                    global::System.Nullable<global::System.DateTime> Original_dat_nascimento_candidato, 
+                    string Original_tel_candidato, 
+                    global::System.Nullable<int> Original_cod_estado, 
+                    string Original_cidade_candidato, 
+                    string Original_endereco_candidato, 
+                    string Original_complemento_candidato, 
+                    string Original_cep_candidato, 
+                    global::System.Nullable<int> Original_cod_cor_olho, 
+                    global::System.Nullable<int> Original_cod_cor_cabelo, 
+                    global::System.Nullable<int> Original_cod_cor_pele, 
+                    global::System.Nullable<int> Original_cod_tipo_cabelo, 
+                    global::System.Nullable<int> Original_cod_faixa_altura, 
+                    global::System.Nullable<int> Original_cod_temperamento, 
+                    global::System.Nullable<int> Original_cod_escolaridade, 
+                    global::System.Nullable<int> Original_cod_doenca, 
+                    global::System.Nullable<bool> Original_pratica_esporte, 
+                    global::System.Nullable<bool> Original_le) {
+            return this.Update(nom_candidato, cpf_candidato, dat_nascimento_candidato, tel_candidato, cod_estado, cidade_candidato, endereco_candidato, complemento_candidato, cep_candidato, cod_cor_olho, cod_cor_cabelo, cod_cor_pele, cod_tipo_cabelo, cod_faixa_altura, cod_temperamento, cod_escolaridade, cod_doenca, pratica_esporte, le, Original_cod_candidato, Original_nom_candidato, Original_cpf_candidato, Original_dat_nascimento_candidato, Original_tel_candidato, Original_cod_estado, Original_cidade_candidato, Original_endereco_candidato, Original_complemento_candidato, Original_cep_candidato, Original_cod_cor_olho, Original_cod_cor_cabelo, Original_cod_cor_pele, Original_cod_tipo_cabelo, Original_cod_faixa_altura, Original_cod_temperamento, Original_cod_escolaridade, Original_cod_doenca, Original_pratica_esporte, Original_le, Original_cod_candidato);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7749,6 +10044,8 @@ namespace Origens.DataSetOrigensTableAdapters {
         private tipos_cabeloTableAdapter _tipos_cabeloTableAdapter;
         
         private USUARIOSTableAdapter _uSUARIOSTableAdapter;
+        
+        private candidatosTableAdapter _candidatosTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -7893,6 +10190,20 @@ namespace Origens.DataSetOrigensTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public candidatosTableAdapter candidatosTableAdapter {
+            get {
+                return this._candidatosTableAdapter;
+            }
+            set {
+                this._candidatosTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -7946,6 +10257,10 @@ namespace Origens.DataSetOrigensTableAdapters {
                             && (this._uSUARIOSTableAdapter.Connection != null))) {
                     return this._uSUARIOSTableAdapter.Connection;
                 }
+                if (((this._candidatosTableAdapter != null) 
+                            && (this._candidatosTableAdapter.Connection != null))) {
+                    return this._candidatosTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -7984,6 +10299,9 @@ namespace Origens.DataSetOrigensTableAdapters {
                     count = (count + 1);
                 }
                 if ((this._uSUARIOSTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._candidatosTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8078,6 +10396,15 @@ namespace Origens.DataSetOrigensTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._candidatosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.candidatos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._candidatosTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -8160,6 +10487,14 @@ namespace Origens.DataSetOrigensTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._candidatosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.candidatos.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._candidatosTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -8170,6 +10505,14 @@ namespace Origens.DataSetOrigensTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataSetOrigens dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._candidatosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.candidatos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._candidatosTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._uSUARIOSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.USUARIOS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -8326,6 +10669,11 @@ namespace Origens.DataSetOrigensTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._candidatosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._candidatosTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -8439,6 +10787,15 @@ namespace Origens.DataSetOrigensTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._uSUARIOSTableAdapter.Adapter);
                     }
                 }
+                if ((this._candidatosTableAdapter != null)) {
+                    revertConnections.Add(this._candidatosTableAdapter, this._candidatosTableAdapter.Connection);
+                    this._candidatosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._candidatosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._candidatosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._candidatosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._candidatosTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -8532,6 +10889,10 @@ namespace Origens.DataSetOrigensTableAdapters {
                 if ((this._uSUARIOSTableAdapter != null)) {
                     this._uSUARIOSTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._uSUARIOSTableAdapter]));
                     this._uSUARIOSTableAdapter.Transaction = null;
+                }
+                if ((this._candidatosTableAdapter != null)) {
+                    this._candidatosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._candidatosTableAdapter]));
+                    this._candidatosTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

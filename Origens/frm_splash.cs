@@ -27,8 +27,8 @@ namespace Origens
             {
                 timer1.Enabled = false;
                 this.Visible = false;
-                frm_principal principal = new frm_principal();
-                principal.Show();
+                /*frm_principal principal = new frm_principal();
+                principal.Show();*/
                 frm_login login = new frm_login();
                 login.ShowDialog();
                 

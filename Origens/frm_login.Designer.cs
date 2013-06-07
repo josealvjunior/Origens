@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSENHA = new System.Windows.Forms.TextBox();
             this.txtLOGIN = new System.Windows.Forms.TextBox();
-            this.bt_cancelar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.bt_confirmar = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label22
             // 
@@ -91,21 +92,21 @@
             this.txtLOGIN.Size = new System.Drawing.Size(159, 20);
             this.txtLOGIN.TabIndex = 135;
             // 
-            // bt_cancelar
+            // btnCancelar
             // 
-            this.bt_cancelar.BackColor = System.Drawing.Color.Red;
-            this.bt_cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bt_cancelar.FlatAppearance.BorderSize = 0;
-            this.bt_cancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancelar.ForeColor = System.Drawing.Color.SeaShell;
-            this.bt_cancelar.Location = new System.Drawing.Point(305, 121);
-            this.bt_cancelar.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_cancelar.Name = "bt_cancelar";
-            this.bt_cancelar.Size = new System.Drawing.Size(114, 49);
-            this.bt_cancelar.TabIndex = 178;
-            this.bt_cancelar.Text = "Cancelar";
-            this.bt_cancelar.UseVisualStyleBackColor = false;
-            this.bt_cancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
+            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnCancelar.Location = new System.Drawing.Point(305, 121);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(114, 49);
+            this.btnCancelar.TabIndex = 178;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.bt_cancelar_Click);
             // 
             // textBox2
             // 
@@ -115,20 +116,20 @@
             this.textBox2.TabIndex = 176;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bt_confirmar
+            // btnConfirmar
             // 
-            this.bt_confirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(164)))), ((int)(((byte)(70)))));
-            this.bt_confirmar.FlatAppearance.BorderSize = 0;
-            this.bt_confirmar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_confirmar.ForeColor = System.Drawing.Color.SeaShell;
-            this.bt_confirmar.Location = new System.Drawing.Point(179, 121);
-            this.bt_confirmar.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_confirmar.Name = "bt_confirmar";
-            this.bt_confirmar.Size = new System.Drawing.Size(114, 49);
-            this.bt_confirmar.TabIndex = 177;
-            this.bt_confirmar.Text = "Confirmar";
-            this.bt_confirmar.UseVisualStyleBackColor = false;
-            this.bt_confirmar.Click += new System.EventHandler(this.bt_confirmar_Click);
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(164)))), ((int)(((byte)(70)))));
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.SeaShell;
+            this.btnConfirmar.Location = new System.Drawing.Point(179, 121);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(114, 49);
+            this.btnConfirmar.TabIndex = 177;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.bt_confirmar_Click);
             // 
             // textBox3
             // 
@@ -143,12 +144,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.CancelButton = this.bt_cancelar;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(430, 182);
             this.ControlBox = false;
-            this.Controls.Add(this.bt_cancelar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.bt_confirmar);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtSENHA);
             this.Controls.Add(this.txtLOGIN);
@@ -173,9 +174,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSENHA;
         private System.Windows.Forms.TextBox txtLOGIN;
-        private System.Windows.Forms.Button bt_cancelar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button bt_confirmar;
+        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.TextBox textBox3;
     }
 }

@@ -31,29 +31,34 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNOME = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboCOR_OLHOS = new System.Windows.Forms.ComboBox();
             this.coresolhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetOrigensBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetOrigens = new Origens.DataSetOrigens();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.cboDOENCA = new System.Windows.Forms.ComboBox();
+            this.doencasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label20 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.cboLE = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.cboPRATICA_ESPORTE = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.cboESCOLARIDADE = new System.Windows.Forms.ComboBox();
+            this.escolaridadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cboFAIXA_ALTURA = new System.Windows.Forms.ComboBox();
+            this.viewfaixaalturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cboTEMPERAMENTO = new System.Windows.Forms.ComboBox();
+            this.temperamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cboTIPO_CABELO = new System.Windows.Forms.ComboBox();
+            this.tiposcabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cboCOR_PELE = new System.Windows.Forms.ComboBox();
             this.corespeleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cboCOR_CABELO = new System.Windows.Forms.ComboBox();
             this.corescabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,7 +66,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtCIDADE = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtCEP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCOMPLEMENTO = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -70,7 +74,6 @@
             this.txtENDERECO = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tboxCODIGO = new System.Windows.Forms.TextBox();
@@ -83,28 +86,25 @@
             this.cores_olhoTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_olhoTableAdapter();
             this.cores_cabeloTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_cabeloTableAdapter();
             this.cores_peleTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_peleTableAdapter();
-            this.tiposcabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipos_cabeloTableAdapter = new Origens.DataSetOrigensTableAdapters.tipos_cabeloTableAdapter();
-            this.viewfaixaalturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_faixa_alturaTableAdapter = new Origens.DataSetOrigensTableAdapters.view_faixa_alturaTableAdapter();
-            this.temperamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.temperamentosTableAdapter = new Origens.DataSetOrigensTableAdapters.temperamentosTableAdapter();
-            this.escolaridadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.escolaridadesTableAdapter = new Origens.DataSetOrigensTableAdapters.escolaridadesTableAdapter();
-            this.doencasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doencasTableAdapter = new Origens.DataSetOrigensTableAdapters.doencasTableAdapter();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigensBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -126,18 +126,18 @@
             this.txtNOME.Size = new System.Drawing.Size(390, 20);
             this.txtNOME.TabIndex = 1;
             // 
-            // comboBox3
+            // cboCOR_OLHOS
             // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.DataSource = this.coresolhoBindingSource;
-            this.comboBox3.DisplayMember = "nom_cor";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(210, 457);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(122, 21);
-            this.comboBox3.TabIndex = 12;
-            this.comboBox3.ValueMember = "cod_olho";
+            this.cboCOR_OLHOS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCOR_OLHOS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCOR_OLHOS.DataSource = this.coresolhoBindingSource;
+            this.cboCOR_OLHOS.DisplayMember = "nom_cor";
+            this.cboCOR_OLHOS.FormattingEnabled = true;
+            this.cboCOR_OLHOS.Location = new System.Drawing.Point(210, 457);
+            this.cboCOR_OLHOS.Name = "cboCOR_OLHOS";
+            this.cboCOR_OLHOS.Size = new System.Drawing.Size(122, 21);
+            this.cboCOR_OLHOS.TabIndex = 12;
+            this.cboCOR_OLHOS.ValueMember = "cod_olho";
             // 
             // coresolhoBindingSource
             // 
@@ -167,19 +167,24 @@
             this.button4.TabIndex = 126;
             this.button4.Text = "Confirmar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // comboBox12
+            // cboDOENCA
             // 
-            this.comboBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox12.DataSource = this.doencasBindingSource;
-            this.comboBox12.DisplayMember = "nom_doenca";
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(464, 577);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(125, 21);
-            this.comboBox12.TabIndex = 21;
-            this.comboBox12.ValueMember = "cod_doenca";
+            this.cboDOENCA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboDOENCA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboDOENCA.DataSource = this.doencasBindingSource;
+            this.cboDOENCA.DisplayMember = "nom_doenca";
+            this.cboDOENCA.FormattingEnabled = true;
+            this.cboDOENCA.Location = new System.Drawing.Point(464, 577);
+            this.cboDOENCA.Name = "cboDOENCA";
+            this.cboDOENCA.Size = new System.Drawing.Size(125, 21);
+            this.cboDOENCA.TabIndex = 21;
+            // 
+            // doencasBindingSource
+            // 
+            this.doencasBindingSource.DataMember = "doencas";
+            this.doencasBindingSource.DataSource = this.dataSetOrigensBindingSource;
             // 
             // label20
             // 
@@ -193,19 +198,19 @@
             this.label20.Text = "Doenças congênitas?";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox11
+            // cboLE
             // 
-            this.comboBox11.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox11.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox11.DisplayMember = "selecione";
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
+            this.cboLE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboLE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboLE.DisplayMember = "selecione";
+            this.cboLE.FormattingEnabled = true;
+            this.cboLE.Items.AddRange(new object[] {
             "Não",
             "Sim"});
-            this.comboBox11.Location = new System.Drawing.Point(210, 579);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(122, 21);
-            this.comboBox11.TabIndex = 20;
+            this.cboLE.Location = new System.Drawing.Point(210, 579);
+            this.cboLE.Name = "cboLE";
+            this.cboLE.Size = new System.Drawing.Size(122, 21);
+            this.cboLE.TabIndex = 20;
             // 
             // label19
             // 
@@ -220,18 +225,18 @@
             this.label19.Text = "Lê com frequência?";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox10
+            // cboPRATICA_ESPORTE
             // 
-            this.comboBox10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
+            this.cboPRATICA_ESPORTE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboPRATICA_ESPORTE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboPRATICA_ESPORTE.FormattingEnabled = true;
+            this.cboPRATICA_ESPORTE.Items.AddRange(new object[] {
             "Não",
             "Sim"});
-            this.comboBox10.Location = new System.Drawing.Point(464, 547);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(126, 21);
-            this.comboBox10.TabIndex = 19;
+            this.cboPRATICA_ESPORTE.Location = new System.Drawing.Point(464, 547);
+            this.cboPRATICA_ESPORTE.Name = "cboPRATICA_ESPORTE";
+            this.cboPRATICA_ESPORTE.Size = new System.Drawing.Size(126, 21);
+            this.cboPRATICA_ESPORTE.TabIndex = 19;
             // 
             // label18
             // 
@@ -246,18 +251,23 @@
             this.label18.Text = "Pratica Esportes?";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox9
+            // cboESCOLARIDADE
             // 
-            this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox9.DataSource = this.escolaridadesBindingSource;
-            this.comboBox9.DisplayMember = "nom_escolaridade";
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(210, 549);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(122, 21);
-            this.comboBox9.TabIndex = 18;
-            this.comboBox9.ValueMember = "cod_escolaridade";
+            this.cboESCOLARIDADE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboESCOLARIDADE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboESCOLARIDADE.DataSource = this.escolaridadesBindingSource;
+            this.cboESCOLARIDADE.DisplayMember = "nom_escolaridade";
+            this.cboESCOLARIDADE.FormattingEnabled = true;
+            this.cboESCOLARIDADE.Location = new System.Drawing.Point(210, 549);
+            this.cboESCOLARIDADE.Name = "cboESCOLARIDADE";
+            this.cboESCOLARIDADE.Size = new System.Drawing.Size(122, 21);
+            this.cboESCOLARIDADE.TabIndex = 18;
+            this.cboESCOLARIDADE.ValueMember = "cod_escolaridade";
+            // 
+            // escolaridadesBindingSource
+            // 
+            this.escolaridadesBindingSource.DataMember = "escolaridades";
+            this.escolaridadesBindingSource.DataSource = this.dataSetOrigensBindingSource;
             // 
             // label17
             // 
@@ -272,18 +282,23 @@
             this.label17.Text = "Escolaridade:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox8
+            // cboFAIXA_ALTURA
             // 
-            this.comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox8.DataSource = this.viewfaixaalturaBindingSource;
-            this.comboBox8.DisplayMember = "nom_faixa";
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(210, 519);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(122, 21);
-            this.comboBox8.TabIndex = 16;
-            this.comboBox8.ValueMember = "cod_faixa";
+            this.cboFAIXA_ALTURA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFAIXA_ALTURA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFAIXA_ALTURA.DataSource = this.viewfaixaalturaBindingSource;
+            this.cboFAIXA_ALTURA.DisplayMember = "nom_faixa";
+            this.cboFAIXA_ALTURA.FormattingEnabled = true;
+            this.cboFAIXA_ALTURA.Location = new System.Drawing.Point(210, 519);
+            this.cboFAIXA_ALTURA.Name = "cboFAIXA_ALTURA";
+            this.cboFAIXA_ALTURA.Size = new System.Drawing.Size(122, 21);
+            this.cboFAIXA_ALTURA.TabIndex = 16;
+            this.cboFAIXA_ALTURA.ValueMember = "cod_faixa";
+            // 
+            // viewfaixaalturaBindingSource
+            // 
+            this.viewfaixaalturaBindingSource.DataMember = "view_faixa_altura";
+            this.viewfaixaalturaBindingSource.DataSource = this.dataSetOrigensBindingSource;
             // 
             // label16
             // 
@@ -298,18 +313,22 @@
             this.label16.Text = "Altura:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox7
+            // cboTEMPERAMENTO
             // 
-            this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox7.DataSource = this.temperamentosBindingSource;
-            this.comboBox7.DisplayMember = "nom_temperamento";
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(464, 517);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(126, 21);
-            this.comboBox7.TabIndex = 17;
-            this.comboBox7.ValueMember = "cod_temperamento";
+            this.cboTEMPERAMENTO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboTEMPERAMENTO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboTEMPERAMENTO.DataSource = this.temperamentosBindingSource;
+            this.cboTEMPERAMENTO.DisplayMember = "nom_temperamento";
+            this.cboTEMPERAMENTO.FormattingEnabled = true;
+            this.cboTEMPERAMENTO.Location = new System.Drawing.Point(464, 517);
+            this.cboTEMPERAMENTO.Name = "cboTEMPERAMENTO";
+            this.cboTEMPERAMENTO.Size = new System.Drawing.Size(126, 21);
+            this.cboTEMPERAMENTO.TabIndex = 17;
+            // 
+            // temperamentosBindingSource
+            // 
+            this.temperamentosBindingSource.DataMember = "temperamentos";
+            this.temperamentosBindingSource.DataSource = this.dataSetOrigensBindingSource;
             // 
             // label15
             // 
@@ -324,18 +343,23 @@
             this.label15.Text = "Temperamento:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox6
+            // cboTIPO_CABELO
             // 
-            this.comboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox6.DataSource = this.tiposcabeloBindingSource;
-            this.comboBox6.DisplayMember = "nom_tipo";
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(464, 488);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(126, 21);
-            this.comboBox6.TabIndex = 15;
-            this.comboBox6.ValueMember = "cod_tipo";
+            this.cboTIPO_CABELO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboTIPO_CABELO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboTIPO_CABELO.DataSource = this.tiposcabeloBindingSource;
+            this.cboTIPO_CABELO.DisplayMember = "nom_tipo";
+            this.cboTIPO_CABELO.FormattingEnabled = true;
+            this.cboTIPO_CABELO.Location = new System.Drawing.Point(464, 488);
+            this.cboTIPO_CABELO.Name = "cboTIPO_CABELO";
+            this.cboTIPO_CABELO.Size = new System.Drawing.Size(126, 21);
+            this.cboTIPO_CABELO.TabIndex = 15;
+            this.cboTIPO_CABELO.ValueMember = "cod_tipo";
+            // 
+            // tiposcabeloBindingSource
+            // 
+            this.tiposcabeloBindingSource.DataMember = "tipos_cabelo";
+            this.tiposcabeloBindingSource.DataSource = this.dataSetOrigensBindingSource;
             // 
             // label14
             // 
@@ -350,18 +374,18 @@
             this.label14.Text = "Tipo do Cabelo:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox5
+            // cboCOR_PELE
             // 
-            this.comboBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox5.DataSource = this.corespeleBindingSource;
-            this.comboBox5.DisplayMember = "nom_cor";
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(210, 488);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(122, 21);
-            this.comboBox5.TabIndex = 14;
-            this.comboBox5.ValueMember = "cod_cor";
+            this.cboCOR_PELE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCOR_PELE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCOR_PELE.DataSource = this.corespeleBindingSource;
+            this.cboCOR_PELE.DisplayMember = "nom_cor";
+            this.cboCOR_PELE.FormattingEnabled = true;
+            this.cboCOR_PELE.Location = new System.Drawing.Point(210, 488);
+            this.cboCOR_PELE.Name = "cboCOR_PELE";
+            this.cboCOR_PELE.Size = new System.Drawing.Size(122, 21);
+            this.cboCOR_PELE.TabIndex = 14;
+            this.cboCOR_PELE.ValueMember = "cod_cor";
             // 
             // corespeleBindingSource
             // 
@@ -381,18 +405,18 @@
             this.label13.Text = "Cor da Pele:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox4
+            // cboCOR_CABELO
             // 
-            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox4.DataSource = this.corescabeloBindingSource;
-            this.comboBox4.DisplayMember = "nom_cor";
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(464, 458);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(126, 21);
-            this.comboBox4.TabIndex = 13;
-            this.comboBox4.ValueMember = "cod_cor";
+            this.cboCOR_CABELO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCOR_CABELO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCOR_CABELO.DataSource = this.corescabeloBindingSource;
+            this.cboCOR_CABELO.DisplayMember = "nom_cor";
+            this.cboCOR_CABELO.FormattingEnabled = true;
+            this.cboCOR_CABELO.Location = new System.Drawing.Point(464, 458);
+            this.cboCOR_CABELO.Name = "cboCOR_CABELO";
+            this.cboCOR_CABELO.Size = new System.Drawing.Size(126, 21);
+            this.cboCOR_CABELO.TabIndex = 13;
+            this.cboCOR_CABELO.ValueMember = "cod_cor";
             // 
             // corescabeloBindingSource
             // 
@@ -467,13 +491,6 @@
             this.label9.Size = new System.Drawing.Size(56, 17);
             this.label9.TabIndex = 102;
             this.label9.Text = "Cidade: ";
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Location = new System.Drawing.Point(199, 379);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(97, 20);
-            this.txtCEP.TabIndex = 10;
             // 
             // label7
             // 
@@ -558,13 +575,6 @@
             this.label3.Text = "Nascimento:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtCPF
-            // 
-            this.txtCPF.Location = new System.Drawing.Point(199, 189);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(159, 20);
-            this.txtCPF.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -631,7 +641,7 @@
             this.dtpNASCIMENTO.Location = new System.Drawing.Point(200, 215);
             this.dtpNASCIMENTO.Name = "dtpNASCIMENTO";
             this.dtpNASCIMENTO.Size = new System.Drawing.Size(158, 20);
-            this.dtpNASCIMENTO.TabIndex = 132;
+            this.dtpNASCIMENTO.TabIndex = 3;
             this.dtpNASCIMENTO.Value = new System.DateTime(2013, 6, 5, 0, 0, 0, 0);
             // 
             // cboESTADO
@@ -642,7 +652,7 @@
             this.cboESTADO.Location = new System.Drawing.Point(198, 267);
             this.cboESTADO.Name = "cboESTADO";
             this.cboESTADO.Size = new System.Drawing.Size(160, 21);
-            this.cboESTADO.TabIndex = 133;
+            this.cboESTADO.TabIndex = 5;
             this.cboESTADO.ValueMember = "cod_estado";
             // 
             // estadosBindingSource
@@ -666,50 +676,41 @@
             // 
             this.cores_peleTableAdapter.ClearBeforeFill = true;
             // 
-            // tiposcabeloBindingSource
-            // 
-            this.tiposcabeloBindingSource.DataMember = "tipos_cabelo";
-            this.tiposcabeloBindingSource.DataSource = this.dataSetOrigensBindingSource;
-            // 
             // tipos_cabeloTableAdapter
             // 
             this.tipos_cabeloTableAdapter.ClearBeforeFill = true;
-            // 
-            // viewfaixaalturaBindingSource
-            // 
-            this.viewfaixaalturaBindingSource.DataMember = "view_faixa_altura";
-            this.viewfaixaalturaBindingSource.DataSource = this.dataSetOrigensBindingSource;
             // 
             // view_faixa_alturaTableAdapter
             // 
             this.view_faixa_alturaTableAdapter.ClearBeforeFill = true;
             // 
-            // temperamentosBindingSource
-            // 
-            this.temperamentosBindingSource.DataMember = "temperamentos";
-            this.temperamentosBindingSource.DataSource = this.dataSetOrigensBindingSource;
-            // 
             // temperamentosTableAdapter
             // 
             this.temperamentosTableAdapter.ClearBeforeFill = true;
-            // 
-            // escolaridadesBindingSource
-            // 
-            this.escolaridadesBindingSource.DataMember = "escolaridades";
-            this.escolaridadesBindingSource.DataSource = this.dataSetOrigensBindingSource;
             // 
             // escolaridadesTableAdapter
             // 
             this.escolaridadesTableAdapter.ClearBeforeFill = true;
             // 
-            // doencasBindingSource
-            // 
-            this.doencasBindingSource.DataMember = "doencas";
-            this.doencasBindingSource.DataSource = this.dataSetOrigensBindingSource;
-            // 
             // doencasTableAdapter
             // 
             this.doencasTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtCPF
+            // 
+            this.txtCPF.Location = new System.Drawing.Point(198, 189);
+            this.txtCPF.Mask = "000.000.000-00";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(160, 20);
+            this.txtCPF.TabIndex = 2;
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Location = new System.Drawing.Point(198, 380);
+            this.txtCEP.Mask = "00.000-000";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(160, 20);
+            this.txtCEP.TabIndex = 9;
             // 
             // frm_cadastro
             // 
@@ -717,37 +718,38 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 696);
             this.ControlBox = false;
+            this.Controls.Add(this.txtCEP);
+            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.cboESTADO);
             this.Controls.Add(this.dtpNASCIMENTO);
             this.Controls.Add(this.bt_cancelar);
             this.Controls.Add(this.tboxCODIGO);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cboCOR_OLHOS);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.comboBox12);
+            this.Controls.Add(this.cboDOENCA);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.comboBox11);
+            this.Controls.Add(this.cboLE);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.comboBox10);
+            this.Controls.Add(this.cboPRATICA_ESPORTE);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.comboBox9);
+            this.Controls.Add(this.cboESCOLARIDADE);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.comboBox8);
+            this.Controls.Add(this.cboFAIXA_ALTURA);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.cboTEMPERAMENTO);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.cboTIPO_CABELO);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cboCOR_PELE);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.cboCOR_CABELO);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCIDADE);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCOMPLEMENTO);
             this.Controls.Add(this.label6);
@@ -756,7 +758,6 @@
             this.Controls.Add(this.txtENDERECO);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNOME);
             this.Controls.Add(this.label1);
@@ -769,15 +770,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigensBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -788,32 +789,31 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNOME;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboCOR_OLHOS;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox cboDOENCA;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cboLE;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox cboPRATICA_ESPORTE;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox cboESCOLARIDADE;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cboFAIXA_ALTURA;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cboTEMPERAMENTO;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cboTIPO_CABELO;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cboCOR_PELE;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cboCOR_CABELO;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCIDADE;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCEP;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCOMPLEMENTO;
         private System.Windows.Forms.Label label6;
@@ -822,7 +822,6 @@
         private System.Windows.Forms.TextBox txtENDERECO;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tboxCODIGO;
         private System.Windows.Forms.Label label22;
@@ -849,5 +848,7 @@
         private DataSetOrigensTableAdapters.escolaridadesTableAdapter escolaridadesTableAdapter;
         private System.Windows.Forms.BindingSource doencasBindingSource;
         private DataSetOrigensTableAdapters.doencasTableAdapter doencasTableAdapter;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
     }
 }

@@ -28,33 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.cboCOR_OLHOS = new System.Windows.Forms.ComboBox();
+            this.cboDOENCA = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.cboLE = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.cboPRATICA_ESPORTE = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.cboESCOLARIDADE = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cboFAIXA_ALTURA = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cboTEMPERAMENTO = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cboTIPO_CABELO = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cboCOR_PELE = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cboCOR_CABELO = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataSetOrigens = new Origens.DataSetOrigens();
+            this.coresolhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cores_olhoTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_olhoTableAdapter();
+            this.corescabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cores_cabeloTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_cabeloTableAdapter();
+            this.corespeleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cores_peleTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_peleTableAdapter();
+            this.corespeleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tiposcabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipos_cabeloTableAdapter = new Origens.DataSetOrigensTableAdapters.tipos_cabeloTableAdapter();
+            this.viewfaixaalturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_faixa_alturaTableAdapter = new Origens.DataSetOrigensTableAdapters.view_faixa_alturaTableAdapter();
+            this.temperamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.temperamentosTableAdapter = new Origens.DataSetOrigensTableAdapters.temperamentosTableAdapter();
+            this.escolaridadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.escolaridadesTableAdapter = new Origens.DataSetOrigensTableAdapters.escolaridadesTableAdapter();
+            this.dataSetOrigensBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doencasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doencasTableAdapter = new Origens.DataSetOrigensTableAdapters.doencasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigensBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -66,16 +96,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DisplayMember = "descricao_cor_olho";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(162, 248);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(122, 21);
-            this.comboBox3.TabIndex = 157;
-            this.comboBox3.ValueMember = "cod_olho";
             // 
             // textBox7
             // 
@@ -112,39 +132,57 @@
             this.button4.Text = "Localizar";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // comboBox12
+            // cboCOR_OLHOS
             // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "Sim",
-            "Não"});
-            this.comboBox12.Location = new System.Drawing.Point(416, 368);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(125, 21);
-            this.comboBox12.TabIndex = 153;
+            this.cboCOR_OLHOS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCOR_OLHOS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCOR_OLHOS.DataSource = this.coresolhoBindingSource;
+            this.cboCOR_OLHOS.DisplayMember = "nom_cor";
+            this.cboCOR_OLHOS.FormattingEnabled = true;
+            this.cboCOR_OLHOS.Location = new System.Drawing.Point(163, 215);
+            this.cboCOR_OLHOS.Name = "cboCOR_OLHOS";
+            this.cboCOR_OLHOS.Size = new System.Drawing.Size(122, 21);
+            this.cboCOR_OLHOS.TabIndex = 215;
+            this.cboCOR_OLHOS.ValueMember = "cod_olho";
+            // 
+            // cboDOENCA
+            // 
+            this.cboDOENCA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboDOENCA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboDOENCA.DataSource = this.doencasBindingSource;
+            this.cboDOENCA.DisplayMember = "nom_doenca";
+            this.cboDOENCA.FormattingEnabled = true;
+            this.cboDOENCA.Location = new System.Drawing.Point(417, 335);
+            this.cboDOENCA.Name = "cboDOENCA";
+            this.cboDOENCA.Size = new System.Drawing.Size(125, 21);
+            this.cboDOENCA.TabIndex = 224;
+            this.cboDOENCA.ValueMember = "cod_doenca";
             // 
             // label20
             // 
             this.label20.BackColor = System.Drawing.Color.White;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(323, 364);
+            this.label20.Location = new System.Drawing.Point(324, 331);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(93, 29);
-            this.label20.TabIndex = 152;
+            this.label20.TabIndex = 234;
             this.label20.Text = "Doenças congênitas?";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox11
+            // cboLE
             // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "Sim",
-            "Não"});
-            this.comboBox11.Location = new System.Drawing.Point(162, 370);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(122, 21);
-            this.comboBox11.TabIndex = 151;
+            this.cboLE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboLE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboLE.DisplayMember = "selecione";
+            this.cboLE.FormattingEnabled = true;
+            this.cboLE.Items.AddRange(new object[] {
+            "Não",
+            "Sim"});
+            this.cboLE.Location = new System.Drawing.Point(163, 337);
+            this.cboLE.Name = "cboLE";
+            this.cboLE.Size = new System.Drawing.Size(122, 21);
+            this.cboLE.TabIndex = 223;
             // 
             // label19
             // 
@@ -152,23 +190,25 @@
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(59, 372);
+            this.label19.Location = new System.Drawing.Point(60, 339);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(105, 13);
-            this.label19.TabIndex = 150;
+            this.label19.TabIndex = 233;
             this.label19.Text = "Lê com frequência?";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox10
+            // cboPRATICA_ESPORTE
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "Sim",
-            "Não"});
-            this.comboBox10.Location = new System.Drawing.Point(416, 338);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(126, 21);
-            this.comboBox10.TabIndex = 149;
+            this.cboPRATICA_ESPORTE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboPRATICA_ESPORTE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboPRATICA_ESPORTE.FormattingEnabled = true;
+            this.cboPRATICA_ESPORTE.Items.AddRange(new object[] {
+            "Não",
+            "Sim"});
+            this.cboPRATICA_ESPORTE.Location = new System.Drawing.Point(417, 305);
+            this.cboPRATICA_ESPORTE.Name = "cboPRATICA_ESPORTE";
+            this.cboPRATICA_ESPORTE.Size = new System.Drawing.Size(126, 21);
+            this.cboPRATICA_ESPORTE.TabIndex = 222;
             // 
             // label18
             // 
@@ -176,20 +216,25 @@
             this.label18.BackColor = System.Drawing.Color.White;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(323, 340);
+            this.label18.Location = new System.Drawing.Point(324, 307);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(93, 13);
-            this.label18.TabIndex = 148;
+            this.label18.TabIndex = 232;
             this.label18.Text = "Pratica Esportes?";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox9
+            // cboESCOLARIDADE
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(162, 340);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(122, 21);
-            this.comboBox9.TabIndex = 147;
+            this.cboESCOLARIDADE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboESCOLARIDADE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboESCOLARIDADE.DataSource = this.escolaridadesBindingSource;
+            this.cboESCOLARIDADE.DisplayMember = "nom_escolaridade";
+            this.cboESCOLARIDADE.FormattingEnabled = true;
+            this.cboESCOLARIDADE.Location = new System.Drawing.Point(163, 307);
+            this.cboESCOLARIDADE.Name = "cboESCOLARIDADE";
+            this.cboESCOLARIDADE.Size = new System.Drawing.Size(122, 21);
+            this.cboESCOLARIDADE.TabIndex = 221;
+            this.cboESCOLARIDADE.ValueMember = "cod_escolaridade";
             // 
             // label17
             // 
@@ -197,28 +242,25 @@
             this.label17.BackColor = System.Drawing.Color.White;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(59, 342);
+            this.label17.Location = new System.Drawing.Point(60, 309);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 13);
-            this.label17.TabIndex = 146;
+            this.label17.TabIndex = 231;
             this.label17.Text = "Escolaridade:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox8
+            // cboFAIXA_ALTURA
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Até 1,50 m",
-            "1,50 - 1,55 m",
-            "1,60 - 1,65 m",
-            "1,70 - 1,75 cm",
-            "1,80 - 1,85 cm",
-            "1,90 - 1,95 cm",
-            "2,00 m ou mais"});
-            this.comboBox8.Location = new System.Drawing.Point(162, 310);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(122, 21);
-            this.comboBox8.TabIndex = 145;
+            this.cboFAIXA_ALTURA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboFAIXA_ALTURA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboFAIXA_ALTURA.DataSource = this.viewfaixaalturaBindingSource;
+            this.cboFAIXA_ALTURA.DisplayMember = "nom_faixa";
+            this.cboFAIXA_ALTURA.FormattingEnabled = true;
+            this.cboFAIXA_ALTURA.Location = new System.Drawing.Point(163, 277);
+            this.cboFAIXA_ALTURA.Name = "cboFAIXA_ALTURA";
+            this.cboFAIXA_ALTURA.Size = new System.Drawing.Size(122, 21);
+            this.cboFAIXA_ALTURA.TabIndex = 219;
+            this.cboFAIXA_ALTURA.ValueMember = "cod_faixa";
             // 
             // label16
             // 
@@ -226,25 +268,25 @@
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label16.Location = new System.Drawing.Point(59, 312);
+            this.label16.Location = new System.Drawing.Point(60, 279);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 144;
+            this.label16.TabIndex = 230;
             this.label16.Text = "Altura:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox7
+            // cboTEMPERAMENTO
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Colérico",
-            "Fleumático",
-            "Melancólico",
-            "Sanguíneo"});
-            this.comboBox7.Location = new System.Drawing.Point(416, 308);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(126, 21);
-            this.comboBox7.TabIndex = 143;
+            this.cboTEMPERAMENTO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboTEMPERAMENTO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboTEMPERAMENTO.DataSource = this.temperamentosBindingSource;
+            this.cboTEMPERAMENTO.DisplayMember = "nom_temperamento";
+            this.cboTEMPERAMENTO.FormattingEnabled = true;
+            this.cboTEMPERAMENTO.Location = new System.Drawing.Point(417, 275);
+            this.cboTEMPERAMENTO.Name = "cboTEMPERAMENTO";
+            this.cboTEMPERAMENTO.Size = new System.Drawing.Size(126, 21);
+            this.cboTEMPERAMENTO.TabIndex = 220;
+            this.cboTEMPERAMENTO.ValueMember = "cod_temperamento";
             // 
             // label15
             // 
@@ -252,25 +294,25 @@
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(323, 310);
+            this.label15.Location = new System.Drawing.Point(324, 277);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(86, 13);
-            this.label15.TabIndex = 142;
+            this.label15.TabIndex = 229;
             this.label15.Text = "Temperamento:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox6
+            // cboTIPO_CABELO
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Cacheados",
-            "Crespos",
-            "Lisos",
-            "Ondulados"});
-            this.comboBox6.Location = new System.Drawing.Point(416, 279);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(126, 21);
-            this.comboBox6.TabIndex = 141;
+            this.cboTIPO_CABELO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboTIPO_CABELO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboTIPO_CABELO.DataSource = this.tiposcabeloBindingSource;
+            this.cboTIPO_CABELO.DisplayMember = "nom_tipo";
+            this.cboTIPO_CABELO.FormattingEnabled = true;
+            this.cboTIPO_CABELO.Location = new System.Drawing.Point(417, 246);
+            this.cboTIPO_CABELO.Name = "cboTIPO_CABELO";
+            this.cboTIPO_CABELO.Size = new System.Drawing.Size(126, 21);
+            this.cboTIPO_CABELO.TabIndex = 218;
+            this.cboTIPO_CABELO.ValueMember = "cod_tipo";
             // 
             // label14
             // 
@@ -278,27 +320,26 @@
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(323, 281);
+            this.label14.Location = new System.Drawing.Point(324, 248);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 13);
-            this.label14.TabIndex = 140;
+            this.label14.TabIndex = 228;
             this.label14.Text = "Tipo do Cabelo:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox5
+            // cboCOR_PELE
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Clara",
-            "Muito Clara",
-            "Clara Média",
-            "Escura Média",
-            "Escura",
-            "Muito Escura"});
-            this.comboBox5.Location = new System.Drawing.Point(162, 279);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(122, 21);
-            this.comboBox5.TabIndex = 139;
+            this.cboCOR_PELE.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCOR_PELE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCOR_PELE.DataSource = this.corespeleBindingSource;
+            this.cboCOR_PELE.DisplayMember = "nom_cor";
+            this.cboCOR_PELE.FormattingEnabled = true;
+            this.cboCOR_PELE.Location = new System.Drawing.Point(163, 246);
+            this.cboCOR_PELE.Name = "cboCOR_PELE";
+            this.cboCOR_PELE.Size = new System.Drawing.Size(122, 21);
+            this.cboCOR_PELE.TabIndex = 217;
+            this.cboCOR_PELE.ValueMember = "cod_cor";
+            this.cboCOR_PELE.SelectedIndexChanged += new System.EventHandler(this.cboCOR_PELE_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -306,26 +347,25 @@
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(59, 281);
+            this.label13.Location = new System.Drawing.Point(60, 248);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 13);
-            this.label13.TabIndex = 138;
+            this.label13.TabIndex = 227;
             this.label13.Text = "Cor da Pele:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox4
+            // cboCOR_CABELO
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Castanhos",
-            "Grisalhos",
-            "Loiros ",
-            "Pretos",
-            "Ruivos"});
-            this.comboBox4.Location = new System.Drawing.Point(416, 249);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(126, 21);
-            this.comboBox4.TabIndex = 137;
+            this.cboCOR_CABELO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboCOR_CABELO.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboCOR_CABELO.DataSource = this.corescabeloBindingSource;
+            this.cboCOR_CABELO.DisplayMember = "nom_cor";
+            this.cboCOR_CABELO.FormattingEnabled = true;
+            this.cboCOR_CABELO.Location = new System.Drawing.Point(417, 216);
+            this.cboCOR_CABELO.Name = "cboCOR_CABELO";
+            this.cboCOR_CABELO.Size = new System.Drawing.Size(126, 21);
+            this.cboCOR_CABELO.TabIndex = 216;
+            this.cboCOR_CABELO.ValueMember = "cod_cor";
             // 
             // label12
             // 
@@ -333,10 +373,10 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(323, 251);
+            this.label12.Location = new System.Drawing.Point(324, 218);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 13);
-            this.label12.TabIndex = 136;
+            this.label12.TabIndex = 226;
             this.label12.Text = "Cor do Cabelo:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -346,10 +386,10 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(59, 249);
+            this.label11.Location = new System.Drawing.Point(60, 216);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 13);
-            this.label11.TabIndex = 135;
+            this.label11.TabIndex = 225;
             this.label11.Text = "Cor dos Olhos:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -359,23 +399,98 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(58, 212);
+            this.label10.Location = new System.Drawing.Point(59, 179);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(128, 21);
-            this.label10.TabIndex = 134;
+            this.label10.TabIndex = 214;
             this.label10.Text = "Características: ";
             // 
-            // label1
+            // dataSetOrigens
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(59, 212);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 17);
-            this.label1.TabIndex = 133;
-            this.label1.Text = "Nome: ";
+            this.dataSetOrigens.DataSetName = "DataSetOrigens";
+            this.dataSetOrigens.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coresolhoBindingSource
+            // 
+            this.coresolhoBindingSource.DataMember = "cores_olho";
+            this.coresolhoBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // cores_olhoTableAdapter
+            // 
+            this.cores_olhoTableAdapter.ClearBeforeFill = true;
+            // 
+            // corescabeloBindingSource
+            // 
+            this.corescabeloBindingSource.DataMember = "cores_cabelo";
+            this.corescabeloBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // cores_cabeloTableAdapter
+            // 
+            this.cores_cabeloTableAdapter.ClearBeforeFill = true;
+            // 
+            // corespeleBindingSource
+            // 
+            this.corespeleBindingSource.DataMember = "cores_pele";
+            this.corespeleBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // cores_peleTableAdapter
+            // 
+            this.cores_peleTableAdapter.ClearBeforeFill = true;
+            // 
+            // corespeleBindingSource1
+            // 
+            this.corespeleBindingSource1.DataMember = "cores_pele";
+            this.corespeleBindingSource1.DataSource = this.dataSetOrigens;
+            // 
+            // tiposcabeloBindingSource
+            // 
+            this.tiposcabeloBindingSource.DataMember = "tipos_cabelo";
+            this.tiposcabeloBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // tipos_cabeloTableAdapter
+            // 
+            this.tipos_cabeloTableAdapter.ClearBeforeFill = true;
+            // 
+            // viewfaixaalturaBindingSource
+            // 
+            this.viewfaixaalturaBindingSource.DataMember = "view_faixa_altura";
+            this.viewfaixaalturaBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // view_faixa_alturaTableAdapter
+            // 
+            this.view_faixa_alturaTableAdapter.ClearBeforeFill = true;
+            // 
+            // temperamentosBindingSource
+            // 
+            this.temperamentosBindingSource.DataMember = "temperamentos";
+            this.temperamentosBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // temperamentosTableAdapter
+            // 
+            this.temperamentosTableAdapter.ClearBeforeFill = true;
+            // 
+            // escolaridadesBindingSource
+            // 
+            this.escolaridadesBindingSource.DataMember = "escolaridades";
+            this.escolaridadesBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // escolaridadesTableAdapter
+            // 
+            this.escolaridadesTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataSetOrigensBindingSource
+            // 
+            this.dataSetOrigensBindingSource.DataSource = this.dataSetOrigens;
+            this.dataSetOrigensBindingSource.Position = 0;
+            // 
+            // doencasBindingSource
+            // 
+            this.doencasBindingSource.DataMember = "doencas";
+            this.doencasBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // doencasTableAdapter
+            // 
+            this.doencasTableAdapter.ClearBeforeFill = true;
             // 
             // frm_localizar
             // 
@@ -384,37 +499,48 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 696);
             this.ControlBox = false;
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.comboBox12);
+            this.Controls.Add(this.cboCOR_OLHOS);
+            this.Controls.Add(this.cboDOENCA);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.comboBox11);
+            this.Controls.Add(this.cboLE);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.comboBox10);
+            this.Controls.Add(this.cboPRATICA_ESPORTE);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.comboBox9);
+            this.Controls.Add(this.cboESCOLARIDADE);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.comboBox8);
+            this.Controls.Add(this.cboFAIXA_ALTURA);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.cboTEMPERAMENTO);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.cboTIPO_CABELO);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cboCOR_PELE);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.cboCOR_CABELO);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_localizar";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_localizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigensBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,30 +549,48 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox cboCOR_OLHOS;
+        private System.Windows.Forms.ComboBox cboDOENCA;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cboLE;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox cboPRATICA_ESPORTE;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox cboESCOLARIDADE;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox cboFAIXA_ALTURA;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cboTEMPERAMENTO;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cboTIPO_CABELO;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cboCOR_PELE;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cboCOR_CABELO;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label1;
+        private DataSetOrigens dataSetOrigens;
+        private System.Windows.Forms.BindingSource coresolhoBindingSource;
+        private DataSetOrigensTableAdapters.cores_olhoTableAdapter cores_olhoTableAdapter;
+        private System.Windows.Forms.BindingSource corescabeloBindingSource;
+        private DataSetOrigensTableAdapters.cores_cabeloTableAdapter cores_cabeloTableAdapter;
+        private System.Windows.Forms.BindingSource corespeleBindingSource;
+        private DataSetOrigensTableAdapters.cores_peleTableAdapter cores_peleTableAdapter;
+        private System.Windows.Forms.BindingSource corespeleBindingSource1;
+        private System.Windows.Forms.BindingSource tiposcabeloBindingSource;
+        private DataSetOrigensTableAdapters.tipos_cabeloTableAdapter tipos_cabeloTableAdapter;
+        private System.Windows.Forms.BindingSource viewfaixaalturaBindingSource;
+        private DataSetOrigensTableAdapters.view_faixa_alturaTableAdapter view_faixa_alturaTableAdapter;
+        private System.Windows.Forms.BindingSource temperamentosBindingSource;
+        private DataSetOrigensTableAdapters.temperamentosTableAdapter temperamentosTableAdapter;
+        private System.Windows.Forms.BindingSource escolaridadesBindingSource;
+        private DataSetOrigensTableAdapters.escolaridadesTableAdapter escolaridadesTableAdapter;
+        private System.Windows.Forms.BindingSource dataSetOrigensBindingSource;
+        private System.Windows.Forms.BindingSource doencasBindingSource;
+        private DataSetOrigensTableAdapters.doencasTableAdapter doencasTableAdapter;
     }
 }
