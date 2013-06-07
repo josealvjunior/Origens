@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Origens.Properties.Resources._1_home1;
+            this.BackgroundImage = global::Origens.Properties.Resources._2_tela_origem_incial;
             this.ClientSize = new System.Drawing.Size(900, 700);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip1);

@@ -21,7 +21,7 @@ namespace Origens
         {
             if (pbcarrega.Value < 100)
             {
-                pbcarrega.Value = pbcarrega.Value + 10;
+                pbcarrega.Value = pbcarrega.Value + 5;
             }
             else
             {
@@ -33,6 +33,11 @@ namespace Origens
                 login.ShowDialog();
                 
             }
+        }
+
+        private void frm_splash_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -83,6 +83,16 @@ namespace Origens.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2_tela_origem_incial {
+            get {
+                object obj = ResourceManager.GetObject("2-tela-origem-incial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ajuda {
             get {
                 object obj = ResourceManager.GetObject("ajuda", resourceCulture);
@@ -146,6 +156,16 @@ namespace Origens.Properties {
         internal static System.Drawing.Bitmap LoginRed {
             get {
                 object obj = ResourceManager.GetObject("LoginRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Login {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

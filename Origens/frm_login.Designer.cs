@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSENHA = new System.Windows.Forms.TextBox();
@@ -37,19 +36,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Origens.Properties.Resources.LoginRed;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 161);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label22
             // 
@@ -57,7 +46,7 @@
             this.label22.BackColor = System.Drawing.Color.White;
             this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(197, 41);
+            this.label22.Location = new System.Drawing.Point(181, 27);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(57, 17);
             this.label22.TabIndex = 130;
@@ -70,7 +59,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(206, 70);
+            this.label1.Location = new System.Drawing.Point(181, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 131;
@@ -79,7 +68,7 @@
             // 
             // txtSENHA
             // 
-            this.txtSENHA.Location = new System.Drawing.Point(260, 67);
+            this.txtSENHA.Location = new System.Drawing.Point(244, 53);
             this.txtSENHA.Name = "txtSENHA";
             this.txtSENHA.PasswordChar = '*';
             this.txtSENHA.Size = new System.Drawing.Size(159, 20);
@@ -87,7 +76,7 @@
             // 
             // txtLOGIN
             // 
-            this.txtLOGIN.Location = new System.Drawing.Point(260, 41);
+            this.txtLOGIN.Location = new System.Drawing.Point(244, 27);
             this.txtLOGIN.Name = "txtLOGIN";
             this.txtLOGIN.Size = new System.Drawing.Size(159, 20);
             this.txtLOGIN.TabIndex = 135;
@@ -99,10 +88,10 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnCancelar.Location = new System.Drawing.Point(305, 121);
+            this.btnCancelar.Location = new System.Drawing.Point(299, 87);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(114, 49);
+            this.btnCancelar.Size = new System.Drawing.Size(104, 49);
             this.btnCancelar.TabIndex = 178;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -122,10 +111,10 @@
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnConfirmar.Location = new System.Drawing.Point(179, 121);
+            this.btnConfirmar.Location = new System.Drawing.Point(184, 87);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(0);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(114, 49);
+            this.btnConfirmar.Size = new System.Drawing.Size(104, 49);
             this.btnConfirmar.TabIndex = 177;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -138,6 +127,17 @@
             this.textBox3.Size = new System.Drawing.Size(159, 20);
             this.textBox3.TabIndex = 175;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Origens.Properties.Resources.Logo_Login;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,7 +145,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(430, 182);
+            this.ClientSize = new System.Drawing.Size(430, 170);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.textBox2);
@@ -169,7 +169,6 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSENHA;
@@ -178,5 +177,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

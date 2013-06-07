@@ -58,6 +58,7 @@
             this.Name = "frm_splash";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frm_splash_Load);
             this.ResumeLayout(false);
 
         }
