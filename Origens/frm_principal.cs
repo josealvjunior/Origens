@@ -12,6 +12,7 @@ namespace Origens
 {   
     public partial class frm_principal : Form
     {
+        public int codCandidatoSelecionado = -1;
         private int childFormNumber = 0;        
         public frm_principal()
         {
@@ -101,9 +102,13 @@ namespace Origens
 
         private void bt_atualizar_Click(object sender, EventArgs e)
         {
-            frm_atualizar atualiza = new frm_atualizar();
+            frm_pesquisa pesquisa = new frm_pesquisa();
+            pesquisa.MdiParent = this;
+            pesquisa.Show();
+
+            /*frm_atualizar atualiza = new frm_atualizar();
             atualiza.MdiParent = this;
-            atualiza.Show();
+            atualiza.Show();*/
 
         }
 
