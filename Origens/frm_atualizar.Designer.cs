@@ -92,7 +92,6 @@
             this.temperamentosTableAdapter = new Origens.DataSetOrigensTableAdapters.temperamentosTableAdapter();
             this.escolaridadesTableAdapter = new Origens.DataSetOrigensTableAdapters.escolaridadesTableAdapter();
             this.doencasTableAdapter = new Origens.DataSetOrigensTableAdapters.doencasTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
@@ -708,23 +707,12 @@
             // 
             this.doencasTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(316, 625);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 216;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frm_atualizar
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 696);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.cboESTADO);
@@ -856,7 +844,6 @@
         private DataSetOrigensTableAdapters.escolaridadesTableAdapter escolaridadesTableAdapter;
         private System.Windows.Forms.BindingSource doencasBindingSource;
         private DataSetOrigensTableAdapters.doencasTableAdapter doencasTableAdapter;
-        private System.Windows.Forms.Button button1;
         
     }
 }

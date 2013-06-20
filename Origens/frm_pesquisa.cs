@@ -19,6 +19,8 @@ namespace Origens
             candidatoSelecionado = new Candidato();
         }
 
+        public frm_atualizar formularioAtualizacao { get; set; }
+
         private void frm_pesquisa_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSetOrigens.candidatos' table. You can move, or remove it, as needed.
@@ -43,9 +45,7 @@ namespace Origens
             this.Close();
             this.Dispose();
 
-            /*frm_atualizar atualiza = new frm_atualizar();
-            atualiza.MdiParent = this.Parent();
-            atualiza.Show();*/
+            formularioAtualizacao.carregarFormulario(Convert.ToInt32(x));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace Origens
         {
             try
             {
-                this.candidatosTableAdapter.FillBy(this.dataSetOrigens.candidatos, Convert.ToInt32(txtPALAVRA_CHAVE.Text));
+                this.candidatoPesquisaTableAdapter.Fill(this.dataSetOrigens.candidatoPesquisa, txtPALAVRA_CHAVE.Text);
             }
             catch (Exception exc)
             {

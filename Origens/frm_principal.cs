@@ -102,13 +102,17 @@ namespace Origens
 
         private void bt_atualizar_Click(object sender, EventArgs e)
         {
+
+            frm_atualizar atualiza = new frm_atualizar();
+            atualiza.MdiParent = this;
+            atualiza.Show();
+
             frm_pesquisa pesquisa = new frm_pesquisa();
             pesquisa.MdiParent = this;
+            pesquisa.formularioAtualizacao = atualiza;
             pesquisa.Show();
 
-            /*frm_atualizar atualiza = new frm_atualizar();
-            atualiza.MdiParent = this;
-            atualiza.Show();*/
+            
 
         }
 

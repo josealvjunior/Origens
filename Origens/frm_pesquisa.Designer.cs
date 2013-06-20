@@ -32,34 +32,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPALAVRA_CHAVE = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.codcandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomcandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfcandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datnascimentocandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telcandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codestadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidadecandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecocandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.complementocandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cepcandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codcorolhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codcorcabeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codcorpeleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codtipocabeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codfaixaalturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codtemperamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codescolaridadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coddoencaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.praticaesporteDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.leDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.candidatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetOrigens = new Origens.DataSetOrigens();
             this.candidatosTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatosTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.candidatoPesquisaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatoPesquisaTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatoPesquisaTableAdapter();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoPesquisaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -86,191 +75,23 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codcandidatoDataGridViewTextBoxColumn,
-            this.nomcandidatoDataGridViewTextBoxColumn,
-            this.cpfcandidatoDataGridViewTextBoxColumn,
-            this.datnascimentocandidatoDataGridViewTextBoxColumn,
-            this.telcandidatoDataGridViewTextBoxColumn,
-            this.codestadoDataGridViewTextBoxColumn,
-            this.cidadecandidatoDataGridViewTextBoxColumn,
-            this.enderecocandidatoDataGridViewTextBoxColumn,
-            this.complementocandidatoDataGridViewTextBoxColumn,
-            this.cepcandidatoDataGridViewTextBoxColumn,
-            this.codcorolhoDataGridViewTextBoxColumn,
-            this.codcorcabeloDataGridViewTextBoxColumn,
-            this.codcorpeleDataGridViewTextBoxColumn,
-            this.codtipocabeloDataGridViewTextBoxColumn,
-            this.codfaixaalturaDataGridViewTextBoxColumn,
-            this.codtemperamentoDataGridViewTextBoxColumn,
-            this.codescolaridadeDataGridViewTextBoxColumn,
-            this.coddoencaDataGridViewTextBoxColumn,
-            this.praticaesporteDataGridViewCheckBoxColumn,
-            this.leDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.candidatosBindingSource;
+            this.Nome,
+            this.CPF,
+            this.Nascimento,
+            this.Estado,
+            this.Cidade});
+            this.dataGridView1.DataSource = this.candidatoPesquisaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 38);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(499, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(585, 315);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
-            // codcandidatoDataGridViewTextBoxColumn
-            // 
-            this.codcandidatoDataGridViewTextBoxColumn.DataPropertyName = "cod_candidato";
-            this.codcandidatoDataGridViewTextBoxColumn.HeaderText = "cod_candidato";
-            this.codcandidatoDataGridViewTextBoxColumn.Name = "codcandidatoDataGridViewTextBoxColumn";
-            this.codcandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomcandidatoDataGridViewTextBoxColumn
-            // 
-            this.nomcandidatoDataGridViewTextBoxColumn.DataPropertyName = "nom_candidato";
-            this.nomcandidatoDataGridViewTextBoxColumn.HeaderText = "nom_candidato";
-            this.nomcandidatoDataGridViewTextBoxColumn.Name = "nomcandidatoDataGridViewTextBoxColumn";
-            this.nomcandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cpfcandidatoDataGridViewTextBoxColumn
-            // 
-            this.cpfcandidatoDataGridViewTextBoxColumn.DataPropertyName = "cpf_candidato";
-            this.cpfcandidatoDataGridViewTextBoxColumn.HeaderText = "cpf_candidato";
-            this.cpfcandidatoDataGridViewTextBoxColumn.Name = "cpfcandidatoDataGridViewTextBoxColumn";
-            this.cpfcandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datnascimentocandidatoDataGridViewTextBoxColumn
-            // 
-            this.datnascimentocandidatoDataGridViewTextBoxColumn.DataPropertyName = "dat_nascimento_candidato";
-            this.datnascimentocandidatoDataGridViewTextBoxColumn.HeaderText = "dat_nascimento_candidato";
-            this.datnascimentocandidatoDataGridViewTextBoxColumn.Name = "datnascimentocandidatoDataGridViewTextBoxColumn";
-            this.datnascimentocandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telcandidatoDataGridViewTextBoxColumn
-            // 
-            this.telcandidatoDataGridViewTextBoxColumn.DataPropertyName = "tel_candidato";
-            this.telcandidatoDataGridViewTextBoxColumn.HeaderText = "tel_candidato";
-            this.telcandidatoDataGridViewTextBoxColumn.Name = "telcandidatoDataGridViewTextBoxColumn";
-            this.telcandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codestadoDataGridViewTextBoxColumn
-            // 
-            this.codestadoDataGridViewTextBoxColumn.DataPropertyName = "cod_estado";
-            this.codestadoDataGridViewTextBoxColumn.HeaderText = "cod_estado";
-            this.codestadoDataGridViewTextBoxColumn.Name = "codestadoDataGridViewTextBoxColumn";
-            this.codestadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cidadecandidatoDataGridViewTextBoxColumn
-            // 
-            this.cidadecandidatoDataGridViewTextBoxColumn.DataPropertyName = "cidade_candidato";
-            this.cidadecandidatoDataGridViewTextBoxColumn.HeaderText = "cidade_candidato";
-            this.cidadecandidatoDataGridViewTextBoxColumn.Name = "cidadecandidatoDataGridViewTextBoxColumn";
-            this.cidadecandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // enderecocandidatoDataGridViewTextBoxColumn
-            // 
-            this.enderecocandidatoDataGridViewTextBoxColumn.DataPropertyName = "endereco_candidato";
-            this.enderecocandidatoDataGridViewTextBoxColumn.HeaderText = "endereco_candidato";
-            this.enderecocandidatoDataGridViewTextBoxColumn.Name = "enderecocandidatoDataGridViewTextBoxColumn";
-            this.enderecocandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // complementocandidatoDataGridViewTextBoxColumn
-            // 
-            this.complementocandidatoDataGridViewTextBoxColumn.DataPropertyName = "complemento_candidato";
-            this.complementocandidatoDataGridViewTextBoxColumn.HeaderText = "complemento_candidato";
-            this.complementocandidatoDataGridViewTextBoxColumn.Name = "complementocandidatoDataGridViewTextBoxColumn";
-            this.complementocandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cepcandidatoDataGridViewTextBoxColumn
-            // 
-            this.cepcandidatoDataGridViewTextBoxColumn.DataPropertyName = "cep_candidato";
-            this.cepcandidatoDataGridViewTextBoxColumn.HeaderText = "cep_candidato";
-            this.cepcandidatoDataGridViewTextBoxColumn.Name = "cepcandidatoDataGridViewTextBoxColumn";
-            this.cepcandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codcorolhoDataGridViewTextBoxColumn
-            // 
-            this.codcorolhoDataGridViewTextBoxColumn.DataPropertyName = "cod_cor_olho";
-            this.codcorolhoDataGridViewTextBoxColumn.HeaderText = "cod_cor_olho";
-            this.codcorolhoDataGridViewTextBoxColumn.Name = "codcorolhoDataGridViewTextBoxColumn";
-            this.codcorolhoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codcorcabeloDataGridViewTextBoxColumn
-            // 
-            this.codcorcabeloDataGridViewTextBoxColumn.DataPropertyName = "cod_cor_cabelo";
-            this.codcorcabeloDataGridViewTextBoxColumn.HeaderText = "cod_cor_cabelo";
-            this.codcorcabeloDataGridViewTextBoxColumn.Name = "codcorcabeloDataGridViewTextBoxColumn";
-            this.codcorcabeloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codcorpeleDataGridViewTextBoxColumn
-            // 
-            this.codcorpeleDataGridViewTextBoxColumn.DataPropertyName = "cod_cor_pele";
-            this.codcorpeleDataGridViewTextBoxColumn.HeaderText = "cod_cor_pele";
-            this.codcorpeleDataGridViewTextBoxColumn.Name = "codcorpeleDataGridViewTextBoxColumn";
-            this.codcorpeleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codtipocabeloDataGridViewTextBoxColumn
-            // 
-            this.codtipocabeloDataGridViewTextBoxColumn.DataPropertyName = "cod_tipo_cabelo";
-            this.codtipocabeloDataGridViewTextBoxColumn.HeaderText = "cod_tipo_cabelo";
-            this.codtipocabeloDataGridViewTextBoxColumn.Name = "codtipocabeloDataGridViewTextBoxColumn";
-            this.codtipocabeloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codfaixaalturaDataGridViewTextBoxColumn
-            // 
-            this.codfaixaalturaDataGridViewTextBoxColumn.DataPropertyName = "cod_faixa_altura";
-            this.codfaixaalturaDataGridViewTextBoxColumn.HeaderText = "cod_faixa_altura";
-            this.codfaixaalturaDataGridViewTextBoxColumn.Name = "codfaixaalturaDataGridViewTextBoxColumn";
-            this.codfaixaalturaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codtemperamentoDataGridViewTextBoxColumn
-            // 
-            this.codtemperamentoDataGridViewTextBoxColumn.DataPropertyName = "cod_temperamento";
-            this.codtemperamentoDataGridViewTextBoxColumn.HeaderText = "cod_temperamento";
-            this.codtemperamentoDataGridViewTextBoxColumn.Name = "codtemperamentoDataGridViewTextBoxColumn";
-            this.codtemperamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codescolaridadeDataGridViewTextBoxColumn
-            // 
-            this.codescolaridadeDataGridViewTextBoxColumn.DataPropertyName = "cod_escolaridade";
-            this.codescolaridadeDataGridViewTextBoxColumn.HeaderText = "cod_escolaridade";
-            this.codescolaridadeDataGridViewTextBoxColumn.Name = "codescolaridadeDataGridViewTextBoxColumn";
-            this.codescolaridadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // coddoencaDataGridViewTextBoxColumn
-            // 
-            this.coddoencaDataGridViewTextBoxColumn.DataPropertyName = "cod_doenca";
-            this.coddoencaDataGridViewTextBoxColumn.HeaderText = "cod_doenca";
-            this.coddoencaDataGridViewTextBoxColumn.Name = "coddoencaDataGridViewTextBoxColumn";
-            this.coddoencaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // praticaesporteDataGridViewCheckBoxColumn
-            // 
-            this.praticaesporteDataGridViewCheckBoxColumn.DataPropertyName = "pratica_esporte";
-            this.praticaesporteDataGridViewCheckBoxColumn.HeaderText = "pratica_esporte";
-            this.praticaesporteDataGridViewCheckBoxColumn.Name = "praticaesporteDataGridViewCheckBoxColumn";
-            this.praticaesporteDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // leDataGridViewCheckBoxColumn
-            // 
-            this.leDataGridViewCheckBoxColumn.DataPropertyName = "le";
-            this.leDataGridViewCheckBoxColumn.HeaderText = "le";
-            this.leDataGridViewCheckBoxColumn.Name = "leDataGridViewCheckBoxColumn";
-            this.leDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // candidatosBindingSource
-            // 
-            this.candidatosBindingSource.DataMember = "candidatos";
-            this.candidatosBindingSource.DataSource = this.dataSetOrigens;
-            // 
-            // dataSetOrigens
-            // 
-            this.dataSetOrigens.DataSetName = "DataSetOrigens";
-            this.dataSetOrigens.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // candidatosTableAdapter
-            // 
-            this.candidatosTableAdapter.ClearBeforeFill = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(322, 291);
+            this.button1.Location = new System.Drawing.Point(408, 368);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 23);
             this.button1.TabIndex = 3;
@@ -288,12 +109,77 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // codcandidatoDataGridViewTextBoxColumn
+            // 
+            this.codcandidatoDataGridViewTextBoxColumn.DataPropertyName = "cod_candidato";
+            this.codcandidatoDataGridViewTextBoxColumn.HeaderText = "cod_candidato";
+            this.codcandidatoDataGridViewTextBoxColumn.Name = "codcandidatoDataGridViewTextBoxColumn";
+            this.codcandidatoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // candidatosBindingSource
+            // 
+            this.candidatosBindingSource.DataMember = "candidatos";
+            this.candidatosBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // dataSetOrigens
+            // 
+            this.dataSetOrigens.DataSetName = "DataSetOrigens";
+            this.dataSetOrigens.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // candidatosTableAdapter
+            // 
+            this.candidatosTableAdapter.ClearBeforeFill = true;
+            // 
+            // candidatoPesquisaBindingSource
+            // 
+            this.candidatoPesquisaBindingSource.DataMember = "candidatoPesquisa";
+            this.candidatoPesquisaBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // candidatoPesquisaTableAdapter
+            // 
+            this.candidatoPesquisaTableAdapter.ClearBeforeFill = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // CPF
+            // 
+            this.CPF.DataPropertyName = "CPF";
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            // 
+            // Nascimento
+            // 
+            this.Nascimento.DataPropertyName = "Nascimento";
+            this.Nascimento.HeaderText = "Nascimento";
+            this.Nascimento.Name = "Nascimento";
+            this.Nascimento.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // Cidade
+            // 
+            this.Cidade.DataPropertyName = "Cidade";
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
+            // 
             // frm_pesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(524, 326);
+            this.ClientSize = new System.Drawing.Size(626, 403);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -307,6 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoPesquisaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,26 +208,14 @@
         private System.Windows.Forms.BindingSource candidatosBindingSource;
         private DataSetOrigensTableAdapters.candidatosTableAdapter candidatosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codcandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomcandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpfcandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datnascimentocandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telcandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codestadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cidadecandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enderecocandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn complementocandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cepcandidatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codcorolhoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codcorcabeloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codcorpeleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codtipocabeloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codfaixaalturaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codtemperamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codescolaridadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coddoencaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn praticaesporteDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn leDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nascimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
+        private System.Windows.Forms.BindingSource candidatoPesquisaBindingSource;
+        private DataSetOrigensTableAdapters.candidatoPesquisaTableAdapter candidatoPesquisaTableAdapter;
     }
 }

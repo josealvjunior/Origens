@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candidato.cs" />
+    <Compile Include="DataSetOrigens.cs">
+      <DependentUpon>DataSetOrigens.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSetOrigens.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
