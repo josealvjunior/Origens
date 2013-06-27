@@ -9,7 +9,10 @@ namespace Origens
     public class Candidato
     {
         public int? codigo { get; set; }
+
         public int? codCorOlho { get; set; }
+
+        public int? codCorCabelo { get; set; }
 
         public int? corCorCabelo { get; set; }
 
@@ -27,9 +30,9 @@ namespace Origens
 
         public int? codDoenca { get; set; }
 
-        public bool praticarEsporte { get; set; }
+        public bool? praticarEsporte { get; set; }
 
-        public bool le { get; set; }
+        public bool? le { get; set; }
 
         public string nome { get; set; }
 
@@ -68,5 +71,6 @@ namespace Origens
         public string endereco { get; set; }
 
         public string complemento { get; set; }
+
     }
 }

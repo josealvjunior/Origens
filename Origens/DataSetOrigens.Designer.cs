@@ -48,6 +48,10 @@ namespace Origens {
         
         private candidatoPesquisaDataTable tablecandidatoPesquisa;
         
+        private candidatoLocalizarDataTable tablecandidatoLocalizar;
+        
+        private opcoesDataTable tableopcoes;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -111,6 +115,12 @@ namespace Origens {
                 }
                 if ((ds.Tables["candidatoPesquisa"] != null)) {
                     base.Tables.Add(new candidatoPesquisaDataTable(ds.Tables["candidatoPesquisa"]));
+                }
+                if ((ds.Tables["candidatoLocalizar"] != null)) {
+                    base.Tables.Add(new candidatoLocalizarDataTable(ds.Tables["candidatoLocalizar"]));
+                }
+                if ((ds.Tables["opcoes"] != null)) {
+                    base.Tables.Add(new opcoesDataTable(ds.Tables["opcoes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -252,6 +262,26 @@ namespace Origens {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public candidatoLocalizarDataTable candidatoLocalizar {
+            get {
+                return this.tablecandidatoLocalizar;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public opcoesDataTable opcoes {
+            get {
+                return this.tableopcoes;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -352,6 +382,12 @@ namespace Origens {
                 }
                 if ((ds.Tables["candidatoPesquisa"] != null)) {
                     base.Tables.Add(new candidatoPesquisaDataTable(ds.Tables["candidatoPesquisa"]));
+                }
+                if ((ds.Tables["candidatoLocalizar"] != null)) {
+                    base.Tables.Add(new candidatoLocalizarDataTable(ds.Tables["candidatoLocalizar"]));
+                }
+                if ((ds.Tables["opcoes"] != null)) {
+                    base.Tables.Add(new opcoesDataTable(ds.Tables["opcoes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -458,6 +494,18 @@ namespace Origens {
                     this.tablecandidatoPesquisa.InitVars();
                 }
             }
+            this.tablecandidatoLocalizar = ((candidatoLocalizarDataTable)(base.Tables["candidatoLocalizar"]));
+            if ((initTable == true)) {
+                if ((this.tablecandidatoLocalizar != null)) {
+                    this.tablecandidatoLocalizar.InitVars();
+                }
+            }
+            this.tableopcoes = ((opcoesDataTable)(base.Tables["opcoes"]));
+            if ((initTable == true)) {
+                if ((this.tableopcoes != null)) {
+                    this.tableopcoes.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -492,6 +540,10 @@ namespace Origens {
             base.Tables.Add(this.tablecandidatos);
             this.tablecandidatoPesquisa = new candidatoPesquisaDataTable();
             base.Tables.Add(this.tablecandidatoPesquisa);
+            this.tablecandidatoLocalizar = new candidatoLocalizarDataTable();
+            base.Tables.Add(this.tablecandidatoLocalizar);
+            this.tableopcoes = new opcoesDataTable();
+            base.Tables.Add(this.tableopcoes);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -563,6 +615,18 @@ namespace Origens {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializecandidatoPesquisa() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializecandidatoLocalizar() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeopcoes() {
             return false;
         }
         
@@ -656,6 +720,12 @@ namespace Origens {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void candidatoPesquisaRowChangeEventHandler(object sender, candidatoPesquisaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void candidatoLocalizarRowChangeEventHandler(object sender, candidatoLocalizarRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void opcoesRowChangeEventHandler(object sender, opcoesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4642,6 +4712,875 @@ namespace Origens {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class candidatoLocalizarDataTable : global::System.Data.TypedTableBase<candidatoLocalizarRow> {
+            
+            private global::System.Data.DataColumn columncod_candidato;
+            
+            private global::System.Data.DataColumn columnNascimento;
+            
+            private global::System.Data.DataColumn columncod_cor_olho;
+            
+            private global::System.Data.DataColumn columnCor_olhos;
+            
+            private global::System.Data.DataColumn columncod_cor_cabelo;
+            
+            private global::System.Data.DataColumn columnCor_cabelo;
+            
+            private global::System.Data.DataColumn columncod_cor_pele;
+            
+            private global::System.Data.DataColumn columnCor_da_pele;
+            
+            private global::System.Data.DataColumn columncod_tipo_cabelo;
+            
+            private global::System.Data.DataColumn columnTipo_de_cabelo;
+            
+            private global::System.Data.DataColumn columncod_faixa_altura;
+            
+            private global::System.Data.DataColumn columnFaixa_de_altura;
+            
+            private global::System.Data.DataColumn columncod_temperamento;
+            
+            private global::System.Data.DataColumn columnTemperamento;
+            
+            private global::System.Data.DataColumn columncod_escolaridade;
+            
+            private global::System.Data.DataColumn columnEscolaridade;
+            
+            private global::System.Data.DataColumn columncod_doenca;
+            
+            private global::System.Data.DataColumn columnDoença;
+            
+            private global::System.Data.DataColumn columnpratica_esporte;
+            
+            private global::System.Data.DataColumn columnPratica_de_esporte;
+            
+            private global::System.Data.DataColumn columnle;
+            
+            private global::System.Data.DataColumn columnPratica_leitura;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatoLocalizarDataTable() {
+                this.TableName = "candidatoLocalizar";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal candidatoLocalizarDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected candidatoLocalizarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_candidatoColumn {
+                get {
+                    return this.columncod_candidato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NascimentoColumn {
+                get {
+                    return this.columnNascimento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_cor_olhoColumn {
+                get {
+                    return this.columncod_cor_olho;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cor_olhosColumn {
+                get {
+                    return this.columnCor_olhos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_cor_cabeloColumn {
+                get {
+                    return this.columncod_cor_cabelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cor_cabeloColumn {
+                get {
+                    return this.columnCor_cabelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_cor_peleColumn {
+                get {
+                    return this.columncod_cor_pele;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Cor_da_peleColumn {
+                get {
+                    return this.columnCor_da_pele;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_tipo_cabeloColumn {
+                get {
+                    return this.columncod_tipo_cabelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Tipo_de_cabeloColumn {
+                get {
+                    return this.columnTipo_de_cabelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_faixa_alturaColumn {
+                get {
+                    return this.columncod_faixa_altura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Faixa_de_alturaColumn {
+                get {
+                    return this.columnFaixa_de_altura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_temperamentoColumn {
+                get {
+                    return this.columncod_temperamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TemperamentoColumn {
+                get {
+                    return this.columnTemperamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_escolaridadeColumn {
+                get {
+                    return this.columncod_escolaridade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EscolaridadeColumn {
+                get {
+                    return this.columnEscolaridade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_doencaColumn {
+                get {
+                    return this.columncod_doenca;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DoençaColumn {
+                get {
+                    return this.columnDoença;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pratica_esporteColumn {
+                get {
+                    return this.columnpratica_esporte;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Pratica_de_esporteColumn {
+                get {
+                    return this.columnPratica_de_esporte;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn leColumn {
+                get {
+                    return this.columnle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Pratica_leituraColumn {
+                get {
+                    return this.columnPratica_leitura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatoLocalizarRow this[int index] {
+                get {
+                    return ((candidatoLocalizarRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatoLocalizarRowChangeEventHandler candidatoLocalizarRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatoLocalizarRowChangeEventHandler candidatoLocalizarRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatoLocalizarRowChangeEventHandler candidatoLocalizarRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event candidatoLocalizarRowChangeEventHandler candidatoLocalizarRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddcandidatoLocalizarRow(candidatoLocalizarRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatoLocalizarRow AddcandidatoLocalizarRow(
+                        string Nascimento, 
+                        int cod_cor_olho, 
+                        string Cor_olhos, 
+                        int cod_cor_cabelo, 
+                        string Cor_cabelo, 
+                        int cod_cor_pele, 
+                        string Cor_da_pele, 
+                        int cod_tipo_cabelo, 
+                        string Tipo_de_cabelo, 
+                        int cod_faixa_altura, 
+                        string Faixa_de_altura, 
+                        int cod_temperamento, 
+                        string Temperamento, 
+                        int cod_escolaridade, 
+                        string Escolaridade, 
+                        int cod_doenca, 
+                        string Doença, 
+                        bool pratica_esporte, 
+                        string Pratica_de_esporte, 
+                        bool le, 
+                        string Pratica_leitura) {
+                candidatoLocalizarRow rowcandidatoLocalizarRow = ((candidatoLocalizarRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Nascimento,
+                        cod_cor_olho,
+                        Cor_olhos,
+                        cod_cor_cabelo,
+                        Cor_cabelo,
+                        cod_cor_pele,
+                        Cor_da_pele,
+                        cod_tipo_cabelo,
+                        Tipo_de_cabelo,
+                        cod_faixa_altura,
+                        Faixa_de_altura,
+                        cod_temperamento,
+                        Temperamento,
+                        cod_escolaridade,
+                        Escolaridade,
+                        cod_doenca,
+                        Doença,
+                        pratica_esporte,
+                        Pratica_de_esporte,
+                        le,
+                        Pratica_leitura};
+                rowcandidatoLocalizarRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowcandidatoLocalizarRow);
+                return rowcandidatoLocalizarRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatoLocalizarRow FindBycod_candidato(int cod_candidato) {
+                return ((candidatoLocalizarRow)(this.Rows.Find(new object[] {
+                            cod_candidato})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                candidatoLocalizarDataTable cln = ((candidatoLocalizarDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new candidatoLocalizarDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columncod_candidato = base.Columns["cod_candidato"];
+                this.columnNascimento = base.Columns["Nascimento"];
+                this.columncod_cor_olho = base.Columns["cod_cor_olho"];
+                this.columnCor_olhos = base.Columns["Cor olhos"];
+                this.columncod_cor_cabelo = base.Columns["cod_cor_cabelo"];
+                this.columnCor_cabelo = base.Columns["Cor cabelo"];
+                this.columncod_cor_pele = base.Columns["cod_cor_pele"];
+                this.columnCor_da_pele = base.Columns["Cor da pele"];
+                this.columncod_tipo_cabelo = base.Columns["cod_tipo_cabelo"];
+                this.columnTipo_de_cabelo = base.Columns["Tipo de cabelo"];
+                this.columncod_faixa_altura = base.Columns["cod_faixa_altura"];
+                this.columnFaixa_de_altura = base.Columns["Faixa de altura"];
+                this.columncod_temperamento = base.Columns["cod_temperamento"];
+                this.columnTemperamento = base.Columns["Temperamento"];
+                this.columncod_escolaridade = base.Columns["cod_escolaridade"];
+                this.columnEscolaridade = base.Columns["Escolaridade"];
+                this.columncod_doenca = base.Columns["cod_doenca"];
+                this.columnDoença = base.Columns["Doença"];
+                this.columnpratica_esporte = base.Columns["pratica_esporte"];
+                this.columnPratica_de_esporte = base.Columns["Pratica de esporte"];
+                this.columnle = base.Columns["le"];
+                this.columnPratica_leitura = base.Columns["Pratica leitura"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columncod_candidato = new global::System.Data.DataColumn("cod_candidato", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_candidato);
+                this.columnNascimento = new global::System.Data.DataColumn("Nascimento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNascimento);
+                this.columncod_cor_olho = new global::System.Data.DataColumn("cod_cor_olho", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_cor_olho);
+                this.columnCor_olhos = new global::System.Data.DataColumn("Cor olhos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCor_olhos);
+                this.columncod_cor_cabelo = new global::System.Data.DataColumn("cod_cor_cabelo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_cor_cabelo);
+                this.columnCor_cabelo = new global::System.Data.DataColumn("Cor cabelo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCor_cabelo);
+                this.columncod_cor_pele = new global::System.Data.DataColumn("cod_cor_pele", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_cor_pele);
+                this.columnCor_da_pele = new global::System.Data.DataColumn("Cor da pele", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCor_da_pele);
+                this.columncod_tipo_cabelo = new global::System.Data.DataColumn("cod_tipo_cabelo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_tipo_cabelo);
+                this.columnTipo_de_cabelo = new global::System.Data.DataColumn("Tipo de cabelo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo_de_cabelo);
+                this.columncod_faixa_altura = new global::System.Data.DataColumn("cod_faixa_altura", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_faixa_altura);
+                this.columnFaixa_de_altura = new global::System.Data.DataColumn("Faixa de altura", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFaixa_de_altura);
+                this.columncod_temperamento = new global::System.Data.DataColumn("cod_temperamento", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_temperamento);
+                this.columnTemperamento = new global::System.Data.DataColumn("Temperamento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTemperamento);
+                this.columncod_escolaridade = new global::System.Data.DataColumn("cod_escolaridade", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_escolaridade);
+                this.columnEscolaridade = new global::System.Data.DataColumn("Escolaridade", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEscolaridade);
+                this.columncod_doenca = new global::System.Data.DataColumn("cod_doenca", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_doenca);
+                this.columnDoença = new global::System.Data.DataColumn("Doença", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDoença);
+                this.columnpratica_esporte = new global::System.Data.DataColumn("pratica_esporte", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpratica_esporte);
+                this.columnPratica_de_esporte = new global::System.Data.DataColumn("Pratica de esporte", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPratica_de_esporte);
+                this.columnle = new global::System.Data.DataColumn("le", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnle);
+                this.columnPratica_leitura = new global::System.Data.DataColumn("Pratica leitura", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPratica_leitura);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncod_candidato}, true));
+                this.columncod_candidato.AutoIncrement = true;
+                this.columncod_candidato.AutoIncrementSeed = -1;
+                this.columncod_candidato.AutoIncrementStep = -1;
+                this.columncod_candidato.AllowDBNull = false;
+                this.columncod_candidato.ReadOnly = true;
+                this.columncod_candidato.Unique = true;
+                this.columnNascimento.ReadOnly = true;
+                this.columnNascimento.MaxLength = 30;
+                this.columnCor_olhos.MaxLength = 255;
+                this.columnCor_cabelo.MaxLength = 255;
+                this.columnCor_da_pele.MaxLength = 255;
+                this.columnTipo_de_cabelo.MaxLength = 255;
+                this.columnFaixa_de_altura.ReadOnly = true;
+                this.columnFaixa_de_altura.MaxLength = 11;
+                this.columnTemperamento.MaxLength = 255;
+                this.columnEscolaridade.MaxLength = 255;
+                this.columnDoença.MaxLength = 255;
+                this.columnPratica_de_esporte.ReadOnly = true;
+                this.columnPratica_de_esporte.MaxLength = 3;
+                this.columnPratica_leitura.ReadOnly = true;
+                this.columnPratica_leitura.MaxLength = 3;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatoLocalizarRow NewcandidatoLocalizarRow() {
+                return ((candidatoLocalizarRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new candidatoLocalizarRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(candidatoLocalizarRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.candidatoLocalizarRowChanged != null)) {
+                    this.candidatoLocalizarRowChanged(this, new candidatoLocalizarRowChangeEvent(((candidatoLocalizarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.candidatoLocalizarRowChanging != null)) {
+                    this.candidatoLocalizarRowChanging(this, new candidatoLocalizarRowChangeEvent(((candidatoLocalizarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.candidatoLocalizarRowDeleted != null)) {
+                    this.candidatoLocalizarRowDeleted(this, new candidatoLocalizarRowChangeEvent(((candidatoLocalizarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.candidatoLocalizarRowDeleting != null)) {
+                    this.candidatoLocalizarRowDeleting(this, new candidatoLocalizarRowChangeEvent(((candidatoLocalizarRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovecandidatoLocalizarRow(candidatoLocalizarRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSetOrigens ds = new DataSetOrigens();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "candidatoLocalizarDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class opcoesDataTable : global::System.Data.TypedTableBase<opcoesRow> {
+            
+            private global::System.Data.DataColumn columncod_opcao;
+            
+            private global::System.Data.DataColumn columnnom_opcao;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public opcoesDataTable() {
+                this.TableName = "opcoes";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal opcoesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected opcoesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cod_opcaoColumn {
+                get {
+                    return this.columncod_opcao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nom_opcaoColumn {
+                get {
+                    return this.columnnom_opcao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public opcoesRow this[int index] {
+                get {
+                    return ((opcoesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event opcoesRowChangeEventHandler opcoesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event opcoesRowChangeEventHandler opcoesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event opcoesRowChangeEventHandler opcoesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event opcoesRowChangeEventHandler opcoesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddopcoesRow(opcoesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public opcoesRow AddopcoesRow(string nom_opcao) {
+                opcoesRow rowopcoesRow = ((opcoesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        nom_opcao};
+                rowopcoesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowopcoesRow);
+                return rowopcoesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public opcoesRow FindBycod_opcao(int cod_opcao) {
+                return ((opcoesRow)(this.Rows.Find(new object[] {
+                            cod_opcao})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                opcoesDataTable cln = ((opcoesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new opcoesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columncod_opcao = base.Columns["cod_opcao"];
+                this.columnnom_opcao = base.Columns["nom_opcao"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columncod_opcao = new global::System.Data.DataColumn("cod_opcao", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncod_opcao);
+                this.columnnom_opcao = new global::System.Data.DataColumn("nom_opcao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnom_opcao);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncod_opcao}, true));
+                this.columncod_opcao.AutoIncrement = true;
+                this.columncod_opcao.AutoIncrementSeed = -1;
+                this.columncod_opcao.AutoIncrementStep = -1;
+                this.columncod_opcao.AllowDBNull = false;
+                this.columncod_opcao.ReadOnly = true;
+                this.columncod_opcao.Unique = true;
+                this.columnnom_opcao.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public opcoesRow NewopcoesRow() {
+                return ((opcoesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new opcoesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(opcoesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.opcoesRowChanged != null)) {
+                    this.opcoesRowChanged(this, new opcoesRowChangeEvent(((opcoesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.opcoesRowChanging != null)) {
+                    this.opcoesRowChanging(this, new opcoesRowChangeEvent(((opcoesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.opcoesRowDeleted != null)) {
+                    this.opcoesRowDeleted(this, new opcoesRowChangeEvent(((opcoesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.opcoesRowDeleting != null)) {
+                    this.opcoesRowDeleting(this, new opcoesRowChangeEvent(((opcoesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveopcoesRow(opcoesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSetOrigens ds = new DataSetOrigens();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "opcoesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class estadosRow : global::System.Data.DataRow {
@@ -6468,6 +7407,675 @@ namespace Origens {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class candidatoLocalizarRow : global::System.Data.DataRow {
+            
+            private candidatoLocalizarDataTable tablecandidatoLocalizar;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal candidatoLocalizarRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablecandidatoLocalizar = ((candidatoLocalizarDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_candidato {
+                get {
+                    return ((int)(this[this.tablecandidatoLocalizar.cod_candidatoColumn]));
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_candidatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nascimento {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.NascimentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nascimento\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.NascimentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_cor_olho {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_cor_olhoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_cor_olho\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_cor_olhoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Cor_olhos {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.Cor_olhosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cor olhos\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.Cor_olhosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_cor_cabelo {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_cor_cabeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_cor_cabelo\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_cor_cabeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Cor_cabelo {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.Cor_cabeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cor cabelo\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.Cor_cabeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_cor_pele {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_cor_peleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_cor_pele\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_cor_peleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Cor_da_pele {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.Cor_da_peleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cor da pele\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.Cor_da_peleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_tipo_cabelo {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_tipo_cabeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_tipo_cabelo\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_tipo_cabeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Tipo_de_cabelo {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.Tipo_de_cabeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tipo de cabelo\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.Tipo_de_cabeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_faixa_altura {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_faixa_alturaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_faixa_altura\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_faixa_alturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Faixa_de_altura {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.Faixa_de_alturaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Faixa de altura\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.Faixa_de_alturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_temperamento {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_temperamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_temperamento\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_temperamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Temperamento {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.TemperamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Temperamento\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.TemperamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_escolaridade {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_escolaridadeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_escolaridade\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_escolaridadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Escolaridade {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.EscolaridadeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Escolaridade\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.EscolaridadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_doenca {
+                get {
+                    try {
+                        return ((int)(this[this.tablecandidatoLocalizar.cod_doencaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cod_doenca\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.cod_doencaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Doença {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.DoençaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Doença\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.DoençaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool pratica_esporte {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecandidatoLocalizar.pratica_esporteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pratica_esporte\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.pratica_esporteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Pratica_de_esporte {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.Pratica_de_esporteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Pratica de esporte\' in table \'candidatoLocalizar\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.Pratica_de_esporteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool le {
+                get {
+                    try {
+                        return ((bool)(this[this.tablecandidatoLocalizar.leColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'le\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.leColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Pratica_leitura {
+                get {
+                    try {
+                        return ((string)(this[this.tablecandidatoLocalizar.Pratica_leituraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Pratica leitura\' in table \'candidatoLocalizar\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecandidatoLocalizar.Pratica_leituraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNascimentoNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.NascimentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNascimentoNull() {
+                this[this.tablecandidatoLocalizar.NascimentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_cor_olhoNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_cor_olhoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_cor_olhoNull() {
+                this[this.tablecandidatoLocalizar.cod_cor_olhoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCor_olhosNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.Cor_olhosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCor_olhosNull() {
+                this[this.tablecandidatoLocalizar.Cor_olhosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_cor_cabeloNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_cor_cabeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_cor_cabeloNull() {
+                this[this.tablecandidatoLocalizar.cod_cor_cabeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCor_cabeloNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.Cor_cabeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCor_cabeloNull() {
+                this[this.tablecandidatoLocalizar.Cor_cabeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_cor_peleNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_cor_peleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_cor_peleNull() {
+                this[this.tablecandidatoLocalizar.cod_cor_peleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCor_da_peleNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.Cor_da_peleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCor_da_peleNull() {
+                this[this.tablecandidatoLocalizar.Cor_da_peleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_tipo_cabeloNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_tipo_cabeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_tipo_cabeloNull() {
+                this[this.tablecandidatoLocalizar.cod_tipo_cabeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTipo_de_cabeloNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.Tipo_de_cabeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTipo_de_cabeloNull() {
+                this[this.tablecandidatoLocalizar.Tipo_de_cabeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_faixa_alturaNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_faixa_alturaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_faixa_alturaNull() {
+                this[this.tablecandidatoLocalizar.cod_faixa_alturaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFaixa_de_alturaNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.Faixa_de_alturaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFaixa_de_alturaNull() {
+                this[this.tablecandidatoLocalizar.Faixa_de_alturaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_temperamentoNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_temperamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_temperamentoNull() {
+                this[this.tablecandidatoLocalizar.cod_temperamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTemperamentoNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.TemperamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTemperamentoNull() {
+                this[this.tablecandidatoLocalizar.TemperamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_escolaridadeNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_escolaridadeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_escolaridadeNull() {
+                this[this.tablecandidatoLocalizar.cod_escolaridadeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEscolaridadeNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.EscolaridadeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEscolaridadeNull() {
+                this[this.tablecandidatoLocalizar.EscolaridadeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscod_doencaNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.cod_doencaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcod_doencaNull() {
+                this[this.tablecandidatoLocalizar.cod_doencaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDoençaNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.DoençaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDoençaNull() {
+                this[this.tablecandidatoLocalizar.DoençaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispratica_esporteNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.pratica_esporteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpratica_esporteNull() {
+                this[this.tablecandidatoLocalizar.pratica_esporteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPratica_de_esporteNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.Pratica_de_esporteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPratica_de_esporteNull() {
+                this[this.tablecandidatoLocalizar.Pratica_de_esporteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsleNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.leColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetleNull() {
+                this[this.tablecandidatoLocalizar.leColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPratica_leituraNull() {
+                return this.IsNull(this.tablecandidatoLocalizar.Pratica_leituraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPratica_leituraNull() {
+                this[this.tablecandidatoLocalizar.Pratica_leituraColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class opcoesRow : global::System.Data.DataRow {
+            
+            private opcoesDataTable tableopcoes;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal opcoesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableopcoes = ((opcoesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int cod_opcao {
+                get {
+                    return ((int)(this[this.tableopcoes.cod_opcaoColumn]));
+                }
+                set {
+                    this[this.tableopcoes.cod_opcaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nom_opcao {
+                get {
+                    try {
+                        return ((string)(this[this.tableopcoes.nom_opcaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nom_opcao\' in table \'opcoes\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableopcoes.nom_opcaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnom_opcaoNull() {
+                return this.IsNull(this.tableopcoes.nom_opcaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnom_opcaoNull() {
+                this[this.tableopcoes.nom_opcaoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -6861,6 +8469,74 @@ namespace Origens {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public candidatoPesquisaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class candidatoLocalizarRowChangeEvent : global::System.EventArgs {
+            
+            private candidatoLocalizarRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatoLocalizarRowChangeEvent(candidatoLocalizarRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public candidatoLocalizarRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class opcoesRowChangeEvent : global::System.EventArgs {
+            
+            private opcoesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public opcoesRowChangeEvent(opcoesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public opcoesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -11487,6 +13163,717 @@ namespace Origens.DataSetOrigensTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class candidatoLocalizarTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public candidatoLocalizarTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "candidatoLocalizar";
+            tableMapping.ColumnMappings.Add("cod_candidato", "cod_candidato");
+            tableMapping.ColumnMappings.Add("Nascimento", "Nascimento");
+            tableMapping.ColumnMappings.Add("cod_cor_olho", "cod_cor_olho");
+            tableMapping.ColumnMappings.Add("Cor olhos", "Cor olhos");
+            tableMapping.ColumnMappings.Add("cod_cor_cabelo", "cod_cor_cabelo");
+            tableMapping.ColumnMappings.Add("Cor cabelo", "Cor cabelo");
+            tableMapping.ColumnMappings.Add("cod_cor_pele", "cod_cor_pele");
+            tableMapping.ColumnMappings.Add("Cor da pele", "Cor da pele");
+            tableMapping.ColumnMappings.Add("cod_tipo_cabelo", "cod_tipo_cabelo");
+            tableMapping.ColumnMappings.Add("Tipo de cabelo", "Tipo de cabelo");
+            tableMapping.ColumnMappings.Add("cod_faixa_altura", "cod_faixa_altura");
+            tableMapping.ColumnMappings.Add("Faixa de altura", "Faixa de altura");
+            tableMapping.ColumnMappings.Add("cod_temperamento", "cod_temperamento");
+            tableMapping.ColumnMappings.Add("Temperamento", "Temperamento");
+            tableMapping.ColumnMappings.Add("cod_escolaridade", "cod_escolaridade");
+            tableMapping.ColumnMappings.Add("Escolaridade", "Escolaridade");
+            tableMapping.ColumnMappings.Add("cod_doenca", "cod_doenca");
+            tableMapping.ColumnMappings.Add("Doença", "Doença");
+            tableMapping.ColumnMappings.Add("pratica_esporte", "pratica_esporte");
+            tableMapping.ColumnMappings.Add("Pratica de esporte", "Pratica de esporte");
+            tableMapping.ColumnMappings.Add("le", "le");
+            tableMapping.ColumnMappings.Add("Pratica leitura", "Pratica leitura");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Origens.Properties.Settings.Default.ORIGENSconStr;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        candidatos.cod_candidato, CONVERT(varchar, candidatos.dat_nasciment" +
+                "o_candidato, 103) AS Nascimento, candidatos.cod_cor_olho, \r\n                    " +
+                "     olhos.nom_cor AS [Cor olhos], candidatos.cod_cor_cabelo, cores_cabelo.nom_c" +
+                "or AS [Cor cabelo], candidatos.cod_cor_pele, \r\n                         cores_pe" +
+                "le.nom_cor AS [Cor da pele], candidatos.cod_tipo_cabelo, tipos_cabelo.nom_tipo A" +
+                "S [Tipo de cabelo], candidatos.cod_faixa_altura, \r\n                         view" +
+                "_faixa_altura.nom_faixa AS [Faixa de altura], candidatos.cod_temperamento, tempe" +
+                "ramentos.nom_temperamento AS Temperamento, \r\n                         candidatos" +
+                ".cod_escolaridade, escolaridades.nom_escolaridade AS Escolaridade, candidatos.co" +
+                "d_doenca, doencas.nom_doenca AS Doença, \r\n                         candidatos.pr" +
+                "atica_esporte, CASE WHEN pratica_esporte = 1 THEN \'Sim\' ELSE \'Não\' END AS [Prati" +
+                "ca de esporte], candidatos.le, \r\n                         CASE WHEN le = 1 THEN " +
+                "\'Sim\' ELSE \'Não\' END AS [Pratica leitura]\r\nFROM            candidatos LEFT OUTER" +
+                " JOIN\r\n                         cores_olho AS olhos ON olhos.cod_cor = candidato" +
+                "s.cod_cor_olho LEFT OUTER JOIN\r\n                         cores_cabelo ON cores_c" +
+                "abelo.cod_cor = candidatos.cod_cor_cabelo LEFT OUTER JOIN\r\n                     " +
+                "    cores_pele ON cores_pele.cod_cor = candidatos.cod_cor_pele LEFT OUTER JOIN\r\n" +
+                "                         tipos_cabelo ON tipos_cabelo.cod_tipo = candidatos.cod_" +
+                "tipo_cabelo LEFT OUTER JOIN\r\n                         view_faixa_altura ON view_" +
+                "faixa_altura.cod_faixa = candidatos.cod_faixa_altura LEFT OUTER JOIN\r\n          " +
+                "               temperamentos ON temperamentos.cod_temperamento = candidatos.cod_" +
+                "temperamento LEFT OUTER JOIN\r\n                         escolaridades ON escolari" +
+                "dades.cod_escolaridade = candidatos.cod_escolaridade LEFT OUTER JOIN\r\n          " +
+                "               doencas ON doencas.cod_doenca = candidatos.cod_doenca\r\nWHERE     " +
+                "   (@cod_cor_olho IS NULL OR\r\n                         @cod_cor_olho = candidato" +
+                "s.cod_cor_olho) AND (@cod_cor_cabelo IS NULL OR\r\n                         @cod_c" +
+                "or_cabelo = candidatos.cod_cor_cabelo) AND (@cod_cor_pele IS NULL OR\r\n          " +
+                "               @cod_cor_pele = candidatos.cod_cor_pele) AND (@cod_tipo_cabelo IS" +
+                " NULL OR\r\n                         @cod_tipo_cabelo = candidatos.cod_tipo_cabelo" +
+                ") AND (@cod_faixa_altura IS NULL OR\r\n                         @cod_faixa_altura " +
+                "= candidatos.cod_faixa_altura) AND (@cod_temperamento IS NULL OR\r\n              " +
+                "           @cod_temperamento = candidatos.cod_temperamento) AND (@cod_escolarida" +
+                "de IS NULL OR\r\n                         @cod_escolaridade = candidatos.cod_escol" +
+                "aridade) AND (@cod_doenca IS NULL OR\r\n                         @cod_doenca = can" +
+                "didatos.cod_doenca) AND (@bit_leitura IS NULL) AND (@bit_pratica_esporte IS NULL" +
+                ") OR\r\n                         (@cod_cor_olho IS NULL OR\r\n                      " +
+                "   @cod_cor_olho = candidatos.cod_cor_olho) AND (@cod_cor_cabelo IS NULL OR\r\n   " +
+                "                      @cod_cor_cabelo = candidatos.cod_cor_cabelo) AND (@cod_cor" +
+                "_pele IS NULL OR\r\n                         @cod_cor_pele = candidatos.cod_cor_pe" +
+                "le) AND (@cod_tipo_cabelo IS NULL OR\r\n                         @cod_tipo_cabelo " +
+                "= candidatos.cod_tipo_cabelo) AND (@cod_faixa_altura IS NULL OR\r\n               " +
+                "          @cod_faixa_altura = candidatos.cod_faixa_altura) AND (@cod_temperament" +
+                "o IS NULL OR\r\n                         @cod_temperamento = candidatos.cod_temper" +
+                "amento) AND (@cod_escolaridade IS NULL OR\r\n                         @cod_escolar" +
+                "idade = candidatos.cod_escolaridade) AND (@cod_doenca IS NULL OR\r\n              " +
+                "           @cod_doenca = candidatos.cod_doenca) AND (@bit_pratica_esporte IS NUL" +
+                "L) AND (candidatos.le = @bit_leitura) OR\r\n                         (@cod_cor_olh" +
+                "o IS NULL OR\r\n                         @cod_cor_olho = candidatos.cod_cor_olho) " +
+                "AND (@cod_cor_cabelo IS NULL OR\r\n                         @cod_cor_cabelo = cand" +
+                "idatos.cod_cor_cabelo) AND (@cod_cor_pele IS NULL OR\r\n                         @" +
+                "cod_cor_pele = candidatos.cod_cor_pele) AND (@cod_tipo_cabelo IS NULL OR\r\n      " +
+                "                   @cod_tipo_cabelo = candidatos.cod_tipo_cabelo) AND (@cod_faix" +
+                "a_altura IS NULL OR\r\n                         @cod_faixa_altura = candidatos.cod" +
+                "_faixa_altura) AND (@cod_temperamento IS NULL OR\r\n                         @cod_" +
+                "temperamento = candidatos.cod_temperamento) AND (@cod_escolaridade IS NULL OR\r\n " +
+                "                        @cod_escolaridade = candidatos.cod_escolaridade) AND (@c" +
+                "od_doenca IS NULL OR\r\n                         @cod_doenca = candidatos.cod_doen" +
+                "ca) AND (@bit_leitura IS NULL) AND (candidatos.pratica_esporte = @bit_pratica_es" +
+                "porte) OR\r\n                         (@cod_cor_olho IS NULL OR\r\n                 " +
+                "        @cod_cor_olho = candidatos.cod_cor_olho) AND (@cod_cor_cabelo IS NULL OR" +
+                "\r\n                         @cod_cor_cabelo = candidatos.cod_cor_cabelo) AND (@co" +
+                "d_cor_pele IS NULL OR\r\n                         @cod_cor_pele = candidatos.cod_c" +
+                "or_pele) AND (@cod_tipo_cabelo IS NULL OR\r\n                         @cod_tipo_ca" +
+                "belo = candidatos.cod_tipo_cabelo) AND (@cod_faixa_altura IS NULL OR\r\n          " +
+                "               @cod_faixa_altura = candidatos.cod_faixa_altura) AND (@cod_temper" +
+                "amento IS NULL OR\r\n                         @cod_temperamento = candidatos.cod_t" +
+                "emperamento) AND (@cod_escolaridade IS NULL OR\r\n                         @cod_es" +
+                "colaridade = candidatos.cod_escolaridade) AND (@cod_doenca IS NULL OR\r\n         " +
+                "                @cod_doenca = candidatos.cod_doenca) AND (candidatos.le = @bit_l" +
+                "eitura) AND (candidatos.pratica_esporte = @bit_pratica_esporte)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_olho", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_cabelo", global::System.Data.SqlDbType.Int, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_cor_pele", global::System.Data.SqlDbType.Int, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_tipo_cabelo", global::System.Data.SqlDbType.Int, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_faixa_altura", global::System.Data.SqlDbType.Int, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_temperamento", global::System.Data.SqlDbType.Int, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_escolaridade", global::System.Data.SqlDbType.Int, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_doenca", global::System.Data.SqlDbType.Int, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bit_leitura", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "le", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bit_pratica_esporte", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "pratica_esporte", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSetOrigens.candidatoLocalizarDataTable dataTable, global::System.Nullable<int> cod_cor_olho, global::System.Nullable<int> cod_cor_cabelo, global::System.Nullable<int> cod_cor_pele, global::System.Nullable<int> cod_tipo_cabelo, global::System.Nullable<int> cod_faixa_altura, global::System.Nullable<int> cod_temperamento, global::System.Nullable<int> cod_escolaridade, global::System.Nullable<int> cod_doenca, global::System.Nullable<bool> bit_leitura, global::System.Nullable<bool> bit_pratica_esporte) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((cod_cor_olho.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(cod_cor_olho.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_cabelo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(cod_cor_cabelo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_pele.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(cod_cor_pele.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((cod_tipo_cabelo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(cod_tipo_cabelo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((cod_faixa_altura.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(cod_faixa_altura.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((cod_temperamento.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(cod_temperamento.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((cod_escolaridade.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(cod_escolaridade.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((cod_doenca.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(cod_doenca.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((bit_leitura.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((bool)(bit_leitura.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((bit_pratica_esporte.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((bool)(bit_pratica_esporte.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSetOrigens.candidatoLocalizarDataTable GetData(global::System.Nullable<int> cod_cor_olho, global::System.Nullable<int> cod_cor_cabelo, global::System.Nullable<int> cod_cor_pele, global::System.Nullable<int> cod_tipo_cabelo, global::System.Nullable<int> cod_faixa_altura, global::System.Nullable<int> cod_temperamento, global::System.Nullable<int> cod_escolaridade, global::System.Nullable<int> cod_doenca, global::System.Nullable<bool> bit_leitura, global::System.Nullable<bool> bit_pratica_esporte) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((cod_cor_olho.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(cod_cor_olho.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_cabelo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(cod_cor_cabelo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((cod_cor_pele.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(cod_cor_pele.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((cod_tipo_cabelo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(cod_tipo_cabelo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((cod_faixa_altura.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(cod_faixa_altura.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((cod_temperamento.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(cod_temperamento.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((cod_escolaridade.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(cod_escolaridade.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((cod_doenca.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(cod_doenca.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((bit_leitura.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((bool)(bit_leitura.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((bit_pratica_esporte.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((bool)(bit_pratica_esporte.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            DataSetOrigens.candidatoLocalizarDataTable dataTable = new DataSetOrigens.candidatoLocalizarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class opcoesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public opcoesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "opcoes";
+            tableMapping.ColumnMappings.Add("cod_opcao", "cod_opcao");
+            tableMapping.ColumnMappings.Add("nom_opcao", "nom_opcao");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "dbo.OPCOES_DELETE";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_opcao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_opcao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nom_opcao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_opcao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_opcao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_opcao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "dbo.OPCOES_INSERT";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_opcao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_opcao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "dbo.OPCOES_UPDATE";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nom_opcao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_opcao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_opcao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_opcao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nom_opcao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_opcao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nom_opcao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nom_opcao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_opcao", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cod_opcao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Origens.Properties.Settings.Default.ORIGENSconStr;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.OPCOES_SELECT";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Variant, 0, global::System.Data.ParameterDirection.ReturnValue, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSetOrigens.opcoesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSetOrigens.opcoesDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetOrigens.opcoesDataTable dataTable = new DataSetOrigens.opcoesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSetOrigens.opcoesDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSetOrigens dataSet) {
+            return this.Adapter.Update(dataSet, "opcoes");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_cod_opcao, string Original_nom_opcao) {
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_cod_opcao));
+            if ((Original_nom_opcao == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_nom_opcao));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string nom_opcao) {
+            if ((nom_opcao == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nom_opcao));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string nom_opcao, int Original_cod_opcao, string Original_nom_opcao, int cod_opcao) {
+            if ((nom_opcao == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nom_opcao));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_cod_opcao));
+            if ((Original_nom_opcao == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_nom_opcao));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(cod_opcao));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string nom_opcao, int Original_cod_opcao, string Original_nom_opcao) {
+            return this.Update(nom_opcao, Original_cod_opcao, Original_nom_opcao, Original_cod_opcao);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -11517,6 +13904,8 @@ namespace Origens.DataSetOrigensTableAdapters {
         private USUARIOSTableAdapter _uSUARIOSTableAdapter;
         
         private candidatosTableAdapter _candidatosTableAdapter;
+        
+        private opcoesTableAdapter _opcoesTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -11675,6 +14064,20 @@ namespace Origens.DataSetOrigensTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public opcoesTableAdapter opcoesTableAdapter {
+            get {
+                return this._opcoesTableAdapter;
+            }
+            set {
+                this._opcoesTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -11732,6 +14135,10 @@ namespace Origens.DataSetOrigensTableAdapters {
                             && (this._candidatosTableAdapter.Connection != null))) {
                     return this._candidatosTableAdapter.Connection;
                 }
+                if (((this._opcoesTableAdapter != null) 
+                            && (this._opcoesTableAdapter.Connection != null))) {
+                    return this._opcoesTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -11773,6 +14180,9 @@ namespace Origens.DataSetOrigensTableAdapters {
                     count = (count + 1);
                 }
                 if ((this._candidatosTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._opcoesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -11876,6 +14286,15 @@ namespace Origens.DataSetOrigensTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._opcoesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.opcoes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._opcoesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -11966,6 +14385,14 @@ namespace Origens.DataSetOrigensTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._opcoesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.opcoes.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._opcoesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -11976,6 +14403,14 @@ namespace Origens.DataSetOrigensTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataSetOrigens dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._opcoesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.opcoes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._opcoesTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._candidatosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.candidatos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12145,6 +14580,11 @@ namespace Origens.DataSetOrigensTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._opcoesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._opcoesTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -12267,6 +14707,15 @@ namespace Origens.DataSetOrigensTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._candidatosTableAdapter.Adapter);
                     }
                 }
+                if ((this._opcoesTableAdapter != null)) {
+                    revertConnections.Add(this._opcoesTableAdapter, this._opcoesTableAdapter.Connection);
+                    this._opcoesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._opcoesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._opcoesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._opcoesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._opcoesTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -12364,6 +14813,10 @@ namespace Origens.DataSetOrigensTableAdapters {
                 if ((this._candidatosTableAdapter != null)) {
                     this._candidatosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._candidatosTableAdapter]));
                     this._candidatosTableAdapter.Transaction = null;
+                }
+                if ((this._opcoesTableAdapter != null)) {
+                    this._opcoesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._opcoesTableAdapter]));
+                    this._opcoesTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -780,6 +780,157 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="candidatoLocalizarTableAdapter" GeneratorDataComponentClassName="candidatoLocalizarTableAdapter" Name="candidatoLocalizar" UserDataComponentName="candidatoLocalizarTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ORIGENSconStr (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        candidatos.cod_candidato, CONVERT(varchar, candidatos.dat_nascimento_candidato, 103) AS Nascimento, candidatos.cod_cor_olho, 
+                         olhos.nom_cor AS [Cor olhos], candidatos.cod_cor_cabelo, cores_cabelo.nom_cor AS [Cor cabelo], candidatos.cod_cor_pele, 
+                         cores_pele.nom_cor AS [Cor da pele], candidatos.cod_tipo_cabelo, tipos_cabelo.nom_tipo AS [Tipo de cabelo], candidatos.cod_faixa_altura, 
+                         view_faixa_altura.nom_faixa AS [Faixa de altura], candidatos.cod_temperamento, temperamentos.nom_temperamento AS Temperamento, 
+                         candidatos.cod_escolaridade, escolaridades.nom_escolaridade AS Escolaridade, candidatos.cod_doenca, doencas.nom_doenca AS Doença, 
+                         candidatos.pratica_esporte, CASE WHEN pratica_esporte = 1 THEN 'Sim' ELSE 'Não' END AS [Pratica de esporte], candidatos.le, 
+                         CASE WHEN le = 1 THEN 'Sim' ELSE 'Não' END AS [Pratica leitura]
+FROM            candidatos LEFT OUTER JOIN
+                         cores_olho AS olhos ON olhos.cod_cor = candidatos.cod_cor_olho LEFT OUTER JOIN
+                         cores_cabelo ON cores_cabelo.cod_cor = candidatos.cod_cor_cabelo LEFT OUTER JOIN
+                         cores_pele ON cores_pele.cod_cor = candidatos.cod_cor_pele LEFT OUTER JOIN
+                         tipos_cabelo ON tipos_cabelo.cod_tipo = candidatos.cod_tipo_cabelo LEFT OUTER JOIN
+                         view_faixa_altura ON view_faixa_altura.cod_faixa = candidatos.cod_faixa_altura LEFT OUTER JOIN
+                         temperamentos ON temperamentos.cod_temperamento = candidatos.cod_temperamento LEFT OUTER JOIN
+                         escolaridades ON escolaridades.cod_escolaridade = candidatos.cod_escolaridade LEFT OUTER JOIN
+                         doencas ON doencas.cod_doenca = candidatos.cod_doenca
+WHERE        (@cod_cor_olho IS NULL OR
+                         @cod_cor_olho = candidatos.cod_cor_olho) AND (@cod_cor_cabelo IS NULL OR
+                         @cod_cor_cabelo = candidatos.cod_cor_cabelo) AND (@cod_cor_pele IS NULL OR
+                         @cod_cor_pele = candidatos.cod_cor_pele) AND (@cod_tipo_cabelo IS NULL OR
+                         @cod_tipo_cabelo = candidatos.cod_tipo_cabelo) AND (@cod_faixa_altura IS NULL OR
+                         @cod_faixa_altura = candidatos.cod_faixa_altura) AND (@cod_temperamento IS NULL OR
+                         @cod_temperamento = candidatos.cod_temperamento) AND (@cod_escolaridade IS NULL OR
+                         @cod_escolaridade = candidatos.cod_escolaridade) AND (@cod_doenca IS NULL OR
+                         @cod_doenca = candidatos.cod_doenca) AND (@bit_leitura IS NULL) AND (@bit_pratica_esporte IS NULL) OR
+                         (@cod_cor_olho IS NULL OR
+                         @cod_cor_olho = candidatos.cod_cor_olho) AND (@cod_cor_cabelo IS NULL OR
+                         @cod_cor_cabelo = candidatos.cod_cor_cabelo) AND (@cod_cor_pele IS NULL OR
+                         @cod_cor_pele = candidatos.cod_cor_pele) AND (@cod_tipo_cabelo IS NULL OR
+                         @cod_tipo_cabelo = candidatos.cod_tipo_cabelo) AND (@cod_faixa_altura IS NULL OR
+                         @cod_faixa_altura = candidatos.cod_faixa_altura) AND (@cod_temperamento IS NULL OR
+                         @cod_temperamento = candidatos.cod_temperamento) AND (@cod_escolaridade IS NULL OR
+                         @cod_escolaridade = candidatos.cod_escolaridade) AND (@cod_doenca IS NULL OR
+                         @cod_doenca = candidatos.cod_doenca) AND (@bit_pratica_esporte IS NULL) AND (candidatos.le = @bit_leitura) OR
+                         (@cod_cor_olho IS NULL OR
+                         @cod_cor_olho = candidatos.cod_cor_olho) AND (@cod_cor_cabelo IS NULL OR
+                         @cod_cor_cabelo = candidatos.cod_cor_cabelo) AND (@cod_cor_pele IS NULL OR
+                         @cod_cor_pele = candidatos.cod_cor_pele) AND (@cod_tipo_cabelo IS NULL OR
+                         @cod_tipo_cabelo = candidatos.cod_tipo_cabelo) AND (@cod_faixa_altura IS NULL OR
+                         @cod_faixa_altura = candidatos.cod_faixa_altura) AND (@cod_temperamento IS NULL OR
+                         @cod_temperamento = candidatos.cod_temperamento) AND (@cod_escolaridade IS NULL OR
+                         @cod_escolaridade = candidatos.cod_escolaridade) AND (@cod_doenca IS NULL OR
+                         @cod_doenca = candidatos.cod_doenca) AND (@bit_leitura IS NULL) AND (candidatos.pratica_esporte = @bit_pratica_esporte) OR
+                         (@cod_cor_olho IS NULL OR
+                         @cod_cor_olho = candidatos.cod_cor_olho) AND (@cod_cor_cabelo IS NULL OR
+                         @cod_cor_cabelo = candidatos.cod_cor_cabelo) AND (@cod_cor_pele IS NULL OR
+                         @cod_cor_pele = candidatos.cod_cor_pele) AND (@cod_tipo_cabelo IS NULL OR
+                         @cod_tipo_cabelo = candidatos.cod_tipo_cabelo) AND (@cod_faixa_altura IS NULL OR
+                         @cod_faixa_altura = candidatos.cod_faixa_altura) AND (@cod_temperamento IS NULL OR
+                         @cod_temperamento = candidatos.cod_temperamento) AND (@cod_escolaridade IS NULL OR
+                         @cod_escolaridade = candidatos.cod_escolaridade) AND (@cod_doenca IS NULL OR
+                         @cod_doenca = candidatos.cod_doenca) AND (candidatos.le = @bit_leitura) AND (candidatos.pratica_esporte = @bit_pratica_esporte)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_cor_olho" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_cor_olho" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_cor_cabelo" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_cor_cabelo" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_cor_pele" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_cor_pele" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_tipo_cabelo" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_tipo_cabelo" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_faixa_altura" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_faixa_altura" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_temperamento" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_temperamento" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_escolaridade" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_escolaridade" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cod_doenca" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@cod_doenca" Precision="0" ProviderType="Int" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="bit_leitura" ColumnName="le" DataSourceName="origens.dbo.candidatos" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@bit_leitura" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="le" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="bit_pratica_esporte" ColumnName="pratica_esporte" DataSourceName="origens.dbo.candidatos" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@bit_pratica_esporte" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="pratica_esporte" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_candidato" DataSetColumn="cod_candidato" />
+              <Mapping SourceColumn="Nascimento" DataSetColumn="Nascimento" />
+              <Mapping SourceColumn="cod_cor_olho" DataSetColumn="cod_cor_olho" />
+              <Mapping SourceColumn="Cor olhos" DataSetColumn="Cor olhos" />
+              <Mapping SourceColumn="cod_cor_cabelo" DataSetColumn="cod_cor_cabelo" />
+              <Mapping SourceColumn="Cor cabelo" DataSetColumn="Cor cabelo" />
+              <Mapping SourceColumn="cod_cor_pele" DataSetColumn="cod_cor_pele" />
+              <Mapping SourceColumn="Cor da pele" DataSetColumn="Cor da pele" />
+              <Mapping SourceColumn="cod_tipo_cabelo" DataSetColumn="cod_tipo_cabelo" />
+              <Mapping SourceColumn="Tipo de cabelo" DataSetColumn="Tipo de cabelo" />
+              <Mapping SourceColumn="cod_faixa_altura" DataSetColumn="cod_faixa_altura" />
+              <Mapping SourceColumn="Faixa de altura" DataSetColumn="Faixa de altura" />
+              <Mapping SourceColumn="cod_temperamento" DataSetColumn="cod_temperamento" />
+              <Mapping SourceColumn="Temperamento" DataSetColumn="Temperamento" />
+              <Mapping SourceColumn="cod_escolaridade" DataSetColumn="cod_escolaridade" />
+              <Mapping SourceColumn="Escolaridade" DataSetColumn="Escolaridade" />
+              <Mapping SourceColumn="cod_doenca" DataSetColumn="cod_doenca" />
+              <Mapping SourceColumn="Doença" DataSetColumn="Doença" />
+              <Mapping SourceColumn="pratica_esporte" DataSetColumn="pratica_esporte" />
+              <Mapping SourceColumn="Pratica de esporte" DataSetColumn="Pratica de esporte" />
+              <Mapping SourceColumn="le" DataSetColumn="le" />
+              <Mapping SourceColumn="Pratica leitura" DataSetColumn="Pratica leitura" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="opcoesTableAdapter" GeneratorDataComponentClassName="opcoesTableAdapter" Name="opcoes" UserDataComponentName="opcoesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ORIGENSconStr (Settings)" DbObjectName="origens.dbo.OPCOES_SELECT" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.OPCOES_DELETE</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Object" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="0" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_cod_opcao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cod_opcao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar(255)" DbType="Int32" Direction="Input" ParameterName="@IsNull_nom_opcao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nom_opcao" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@Original_nom_opcao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nom_opcao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.OPCOES_INSERT</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Object" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="0" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@nom_opcao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nom_opcao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.OPCOES_SELECT</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Object" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="0" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.OPCOES_UPDATE</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Object" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="0" Scale="0" Size="0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@nom_opcao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nom_opcao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_cod_opcao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cod_opcao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar(255)" DbType="Int32" Direction="Input" ParameterName="@IsNull_nom_opcao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="nom_opcao" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@Original_nom_opcao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nom_opcao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="cod_opcao" ColumnName="cod_opcao" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cod_opcao" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="cod_opcao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_opcao" DataSetColumn="cod_opcao" />
+              <Mapping SourceColumn="nom_opcao" DataSetColumn="nom_opcao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -788,7 +939,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
   <xs:element name="DataSetOrigens" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetOrigens" msprop:Generator_UserDSName="DataSetOrigens">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="estados" msprop:Generator_TableClassName="estadosDataTable" msprop:Generator_TableVarName="tableestados" msprop:Generator_RowChangedName="estadosRowChanged" msprop:Generator_TablePropName="estados" msprop:Generator_RowDeletingName="estadosRowDeleting" msprop:Generator_RowChangingName="estadosRowChanging" msprop:Generator_RowEvHandlerName="estadosRowChangeEventHandler" msprop:Generator_RowDeletedName="estadosRowDeleted" msprop:Generator_RowClassName="estadosRow" msprop:Generator_UserTableName="estados" msprop:Generator_RowEvArgName="estadosRowChangeEvent">
+        <xs:element name="estados" msprop:Generator_TableClassName="estadosDataTable" msprop:Generator_TableVarName="tableestados" msprop:Generator_TablePropName="estados" msprop:Generator_RowDeletingName="estadosRowDeleting" msprop:Generator_RowChangingName="estadosRowChanging" msprop:Generator_RowEvHandlerName="estadosRowChangeEventHandler" msprop:Generator_RowDeletedName="estadosRowDeleted" msprop:Generator_UserTableName="estados" msprop:Generator_RowChangedName="estadosRowChanged" msprop:Generator_RowEvArgName="estadosRowChangeEvent" msprop:Generator_RowClassName="estadosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_estado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_estado" msprop:Generator_ColumnPropNameInRow="cod_estado" msprop:Generator_ColumnPropNameInTable="cod_estadoColumn" msprop:Generator_UserColumnName="cod_estado" type="xs:int" />
@@ -809,7 +960,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cores_cabelo" msprop:Generator_TableClassName="cores_cabeloDataTable" msprop:Generator_TableVarName="tablecores_cabelo" msprop:Generator_RowChangedName="cores_cabeloRowChanged" msprop:Generator_TablePropName="cores_cabelo" msprop:Generator_RowDeletingName="cores_cabeloRowDeleting" msprop:Generator_RowChangingName="cores_cabeloRowChanging" msprop:Generator_RowEvHandlerName="cores_cabeloRowChangeEventHandler" msprop:Generator_RowDeletedName="cores_cabeloRowDeleted" msprop:Generator_RowClassName="cores_cabeloRow" msprop:Generator_UserTableName="cores_cabelo" msprop:Generator_RowEvArgName="cores_cabeloRowChangeEvent">
+        <xs:element name="cores_cabelo" msprop:Generator_TableClassName="cores_cabeloDataTable" msprop:Generator_TableVarName="tablecores_cabelo" msprop:Generator_TablePropName="cores_cabelo" msprop:Generator_RowDeletingName="cores_cabeloRowDeleting" msprop:Generator_RowChangingName="cores_cabeloRowChanging" msprop:Generator_RowEvHandlerName="cores_cabeloRowChangeEventHandler" msprop:Generator_RowDeletedName="cores_cabeloRowDeleted" msprop:Generator_UserTableName="cores_cabelo" msprop:Generator_RowChangedName="cores_cabeloRowChanged" msprop:Generator_RowEvArgName="cores_cabeloRowChangeEvent" msprop:Generator_RowClassName="cores_cabeloRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_cor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_cor" msprop:Generator_ColumnPropNameInRow="cod_cor" msprop:Generator_ColumnPropNameInTable="cod_corColumn" msprop:Generator_UserColumnName="cod_cor" type="xs:int" />
@@ -823,7 +974,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cores_olho" msprop:Generator_TableClassName="cores_olhoDataTable" msprop:Generator_TableVarName="tablecores_olho" msprop:Generator_RowChangedName="cores_olhoRowChanged" msprop:Generator_TablePropName="cores_olho" msprop:Generator_RowDeletingName="cores_olhoRowDeleting" msprop:Generator_RowChangingName="cores_olhoRowChanging" msprop:Generator_RowEvHandlerName="cores_olhoRowChangeEventHandler" msprop:Generator_RowDeletedName="cores_olhoRowDeleted" msprop:Generator_RowClassName="cores_olhoRow" msprop:Generator_UserTableName="cores_olho" msprop:Generator_RowEvArgName="cores_olhoRowChangeEvent">
+        <xs:element name="cores_olho" msprop:Generator_TableClassName="cores_olhoDataTable" msprop:Generator_TableVarName="tablecores_olho" msprop:Generator_TablePropName="cores_olho" msprop:Generator_RowDeletingName="cores_olhoRowDeleting" msprop:Generator_RowChangingName="cores_olhoRowChanging" msprop:Generator_RowEvHandlerName="cores_olhoRowChangeEventHandler" msprop:Generator_RowDeletedName="cores_olhoRowDeleted" msprop:Generator_UserTableName="cores_olho" msprop:Generator_RowChangedName="cores_olhoRowChanged" msprop:Generator_RowEvArgName="cores_olhoRowChangeEvent" msprop:Generator_RowClassName="cores_olhoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_cor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_cor" msprop:Generator_ColumnPropNameInRow="cod_cor" msprop:Generator_ColumnPropNameInTable="cod_corColumn" msprop:Generator_UserColumnName="cod_cor" type="xs:int" />
@@ -837,7 +988,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cores_pele" msprop:Generator_TableClassName="cores_peleDataTable" msprop:Generator_TableVarName="tablecores_pele" msprop:Generator_RowChangedName="cores_peleRowChanged" msprop:Generator_TablePropName="cores_pele" msprop:Generator_RowDeletingName="cores_peleRowDeleting" msprop:Generator_RowChangingName="cores_peleRowChanging" msprop:Generator_RowEvHandlerName="cores_peleRowChangeEventHandler" msprop:Generator_RowDeletedName="cores_peleRowDeleted" msprop:Generator_RowClassName="cores_peleRow" msprop:Generator_UserTableName="cores_pele" msprop:Generator_RowEvArgName="cores_peleRowChangeEvent">
+        <xs:element name="cores_pele" msprop:Generator_TableClassName="cores_peleDataTable" msprop:Generator_TableVarName="tablecores_pele" msprop:Generator_TablePropName="cores_pele" msprop:Generator_RowDeletingName="cores_peleRowDeleting" msprop:Generator_RowChangingName="cores_peleRowChanging" msprop:Generator_RowEvHandlerName="cores_peleRowChangeEventHandler" msprop:Generator_RowDeletedName="cores_peleRowDeleted" msprop:Generator_UserTableName="cores_pele" msprop:Generator_RowChangedName="cores_peleRowChanged" msprop:Generator_RowEvArgName="cores_peleRowChangeEvent" msprop:Generator_RowClassName="cores_peleRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_cor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_cor" msprop:Generator_ColumnPropNameInRow="cod_cor" msprop:Generator_ColumnPropNameInTable="cod_corColumn" msprop:Generator_UserColumnName="cod_cor" type="xs:int" />
@@ -858,7 +1009,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="doencas" msprop:Generator_TableClassName="doencasDataTable" msprop:Generator_TableVarName="tabledoencas" msprop:Generator_RowChangedName="doencasRowChanged" msprop:Generator_TablePropName="doencas" msprop:Generator_RowDeletingName="doencasRowDeleting" msprop:Generator_RowChangingName="doencasRowChanging" msprop:Generator_RowEvHandlerName="doencasRowChangeEventHandler" msprop:Generator_RowDeletedName="doencasRowDeleted" msprop:Generator_RowClassName="doencasRow" msprop:Generator_UserTableName="doencas" msprop:Generator_RowEvArgName="doencasRowChangeEvent">
+        <xs:element name="doencas" msprop:Generator_TableClassName="doencasDataTable" msprop:Generator_TableVarName="tabledoencas" msprop:Generator_TablePropName="doencas" msprop:Generator_RowDeletingName="doencasRowDeleting" msprop:Generator_RowChangingName="doencasRowChanging" msprop:Generator_RowEvHandlerName="doencasRowChangeEventHandler" msprop:Generator_RowDeletedName="doencasRowDeleted" msprop:Generator_UserTableName="doencas" msprop:Generator_RowChangedName="doencasRowChanged" msprop:Generator_RowEvArgName="doencasRowChangeEvent" msprop:Generator_RowClassName="doencasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_doenca" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_doenca" msprop:Generator_ColumnPropNameInRow="cod_doenca" msprop:Generator_ColumnPropNameInTable="cod_doencaColumn" msprop:Generator_UserColumnName="cod_doenca" type="xs:int" />
@@ -879,7 +1030,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="escolaridades" msprop:Generator_TableClassName="escolaridadesDataTable" msprop:Generator_TableVarName="tableescolaridades" msprop:Generator_RowChangedName="escolaridadesRowChanged" msprop:Generator_TablePropName="escolaridades" msprop:Generator_RowDeletingName="escolaridadesRowDeleting" msprop:Generator_RowChangingName="escolaridadesRowChanging" msprop:Generator_RowEvHandlerName="escolaridadesRowChangeEventHandler" msprop:Generator_RowDeletedName="escolaridadesRowDeleted" msprop:Generator_RowClassName="escolaridadesRow" msprop:Generator_UserTableName="escolaridades" msprop:Generator_RowEvArgName="escolaridadesRowChangeEvent">
+        <xs:element name="escolaridades" msprop:Generator_TableClassName="escolaridadesDataTable" msprop:Generator_TableVarName="tableescolaridades" msprop:Generator_TablePropName="escolaridades" msprop:Generator_RowDeletingName="escolaridadesRowDeleting" msprop:Generator_RowChangingName="escolaridadesRowChanging" msprop:Generator_RowEvHandlerName="escolaridadesRowChangeEventHandler" msprop:Generator_RowDeletedName="escolaridadesRowDeleted" msprop:Generator_UserTableName="escolaridades" msprop:Generator_RowChangedName="escolaridadesRowChanged" msprop:Generator_RowEvArgName="escolaridadesRowChangeEvent" msprop:Generator_RowClassName="escolaridadesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_escolaridade" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_escolaridade" msprop:Generator_ColumnPropNameInRow="cod_escolaridade" msprop:Generator_ColumnPropNameInTable="cod_escolaridadeColumn" msprop:Generator_UserColumnName="cod_escolaridade" type="xs:int" />
@@ -893,7 +1044,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_faixa_altura" msprop:Generator_TableClassName="view_faixa_alturaDataTable" msprop:Generator_TableVarName="tableview_faixa_altura" msprop:Generator_RowChangedName="view_faixa_alturaRowChanged" msprop:Generator_TablePropName="view_faixa_altura" msprop:Generator_RowDeletingName="view_faixa_alturaRowDeleting" msprop:Generator_RowChangingName="view_faixa_alturaRowChanging" msprop:Generator_RowEvHandlerName="view_faixa_alturaRowChangeEventHandler" msprop:Generator_RowDeletedName="view_faixa_alturaRowDeleted" msprop:Generator_RowClassName="view_faixa_alturaRow" msprop:Generator_UserTableName="view_faixa_altura" msprop:Generator_RowEvArgName="view_faixa_alturaRowChangeEvent">
+        <xs:element name="view_faixa_altura" msprop:Generator_TableClassName="view_faixa_alturaDataTable" msprop:Generator_TableVarName="tableview_faixa_altura" msprop:Generator_TablePropName="view_faixa_altura" msprop:Generator_RowDeletingName="view_faixa_alturaRowDeleting" msprop:Generator_RowChangingName="view_faixa_alturaRowChanging" msprop:Generator_RowEvHandlerName="view_faixa_alturaRowChangeEventHandler" msprop:Generator_RowDeletedName="view_faixa_alturaRowDeleted" msprop:Generator_UserTableName="view_faixa_altura" msprop:Generator_RowChangedName="view_faixa_alturaRowChanged" msprop:Generator_RowEvArgName="view_faixa_alturaRowChangeEvent" msprop:Generator_RowClassName="view_faixa_alturaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_faixa" msprop:Generator_ColumnVarNameInTable="columncod_faixa" msprop:Generator_ColumnPropNameInRow="cod_faixa" msprop:Generator_ColumnPropNameInTable="cod_faixaColumn" msprop:Generator_UserColumnName="cod_faixa" type="xs:int" />
@@ -907,7 +1058,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="temperamentos" msprop:Generator_TableClassName="temperamentosDataTable" msprop:Generator_TableVarName="tabletemperamentos" msprop:Generator_RowChangedName="temperamentosRowChanged" msprop:Generator_TablePropName="temperamentos" msprop:Generator_RowDeletingName="temperamentosRowDeleting" msprop:Generator_RowChangingName="temperamentosRowChanging" msprop:Generator_RowEvHandlerName="temperamentosRowChangeEventHandler" msprop:Generator_RowDeletedName="temperamentosRowDeleted" msprop:Generator_RowClassName="temperamentosRow" msprop:Generator_UserTableName="temperamentos" msprop:Generator_RowEvArgName="temperamentosRowChangeEvent">
+        <xs:element name="temperamentos" msprop:Generator_TableClassName="temperamentosDataTable" msprop:Generator_TableVarName="tabletemperamentos" msprop:Generator_TablePropName="temperamentos" msprop:Generator_RowDeletingName="temperamentosRowDeleting" msprop:Generator_RowChangingName="temperamentosRowChanging" msprop:Generator_RowEvHandlerName="temperamentosRowChangeEventHandler" msprop:Generator_RowDeletedName="temperamentosRowDeleted" msprop:Generator_UserTableName="temperamentos" msprop:Generator_RowChangedName="temperamentosRowChanged" msprop:Generator_RowEvArgName="temperamentosRowChangeEvent" msprop:Generator_RowClassName="temperamentosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_temperamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_temperamento" msprop:Generator_ColumnPropNameInRow="cod_temperamento" msprop:Generator_ColumnPropNameInTable="cod_temperamentoColumn" msprop:Generator_UserColumnName="cod_temperamento" type="xs:int" />
@@ -921,7 +1072,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tipos_cabelo" msprop:Generator_TableClassName="tipos_cabeloDataTable" msprop:Generator_TableVarName="tabletipos_cabelo" msprop:Generator_RowChangedName="tipos_cabeloRowChanged" msprop:Generator_TablePropName="tipos_cabelo" msprop:Generator_RowDeletingName="tipos_cabeloRowDeleting" msprop:Generator_RowChangingName="tipos_cabeloRowChanging" msprop:Generator_RowEvHandlerName="tipos_cabeloRowChangeEventHandler" msprop:Generator_RowDeletedName="tipos_cabeloRowDeleted" msprop:Generator_RowClassName="tipos_cabeloRow" msprop:Generator_UserTableName="tipos_cabelo" msprop:Generator_RowEvArgName="tipos_cabeloRowChangeEvent">
+        <xs:element name="tipos_cabelo" msprop:Generator_TableClassName="tipos_cabeloDataTable" msprop:Generator_TableVarName="tabletipos_cabelo" msprop:Generator_TablePropName="tipos_cabelo" msprop:Generator_RowDeletingName="tipos_cabeloRowDeleting" msprop:Generator_RowChangingName="tipos_cabeloRowChanging" msprop:Generator_RowEvHandlerName="tipos_cabeloRowChangeEventHandler" msprop:Generator_RowDeletedName="tipos_cabeloRowDeleted" msprop:Generator_UserTableName="tipos_cabelo" msprop:Generator_RowChangedName="tipos_cabeloRowChanged" msprop:Generator_RowEvArgName="tipos_cabeloRowChangeEvent" msprop:Generator_RowClassName="tipos_cabeloRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_tipo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_tipo" msprop:Generator_ColumnPropNameInRow="cod_tipo" msprop:Generator_ColumnPropNameInTable="cod_tipoColumn" msprop:Generator_UserColumnName="cod_tipo" type="xs:int" />
@@ -935,7 +1086,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="USUARIOS" msprop:Generator_TableClassName="USUARIOSDataTable" msprop:Generator_TableVarName="tableUSUARIOS" msprop:Generator_TablePropName="USUARIOS" msprop:Generator_RowDeletingName="USUARIOSRowDeleting" msprop:Generator_RowChangingName="USUARIOSRowChanging" msprop:Generator_RowEvHandlerName="USUARIOSRowChangeEventHandler" msprop:Generator_RowDeletedName="USUARIOSRowDeleted" msprop:Generator_UserTableName="USUARIOS" msprop:Generator_RowChangedName="USUARIOSRowChanged" msprop:Generator_RowEvArgName="USUARIOSRowChangeEvent" msprop:Generator_RowClassName="USUARIOSRow">
+        <xs:element name="USUARIOS" msprop:Generator_TableClassName="USUARIOSDataTable" msprop:Generator_TableVarName="tableUSUARIOS" msprop:Generator_RowChangedName="USUARIOSRowChanged" msprop:Generator_TablePropName="USUARIOS" msprop:Generator_RowDeletingName="USUARIOSRowDeleting" msprop:Generator_RowChangingName="USUARIOSRowChanging" msprop:Generator_RowEvHandlerName="USUARIOSRowChangeEventHandler" msprop:Generator_RowDeletedName="USUARIOSRowDeleted" msprop:Generator_RowClassName="USUARIOSRow" msprop:Generator_UserTableName="USUARIOS" msprop:Generator_RowEvArgName="USUARIOSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_usuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_usuario" msprop:Generator_ColumnPropNameInRow="cod_usuario" msprop:Generator_ColumnPropNameInTable="cod_usuarioColumn" msprop:Generator_UserColumnName="cod_usuario" type="xs:int" />
@@ -963,7 +1114,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="candidatos" msprop:Generator_TableClassName="candidatosDataTable" msprop:Generator_TableVarName="tablecandidatos" msprop:Generator_RowChangedName="candidatosRowChanged" msprop:Generator_TablePropName="candidatos" msprop:Generator_RowDeletingName="candidatosRowDeleting" msprop:Generator_RowChangingName="candidatosRowChanging" msprop:Generator_RowEvHandlerName="candidatosRowChangeEventHandler" msprop:Generator_RowDeletedName="candidatosRowDeleted" msprop:Generator_RowClassName="candidatosRow" msprop:Generator_UserTableName="candidatos" msprop:Generator_RowEvArgName="candidatosRowChangeEvent">
+        <xs:element name="candidatos" msprop:Generator_TableClassName="candidatosDataTable" msprop:Generator_TableVarName="tablecandidatos" msprop:Generator_TablePropName="candidatos" msprop:Generator_RowDeletingName="candidatosRowDeleting" msprop:Generator_RowChangingName="candidatosRowChanging" msprop:Generator_RowEvHandlerName="candidatosRowChangeEventHandler" msprop:Generator_RowDeletedName="candidatosRowDeleted" msprop:Generator_UserTableName="candidatos" msprop:Generator_RowChangedName="candidatosRowChanged" msprop:Generator_RowEvArgName="candidatosRowChangeEvent" msprop:Generator_RowClassName="candidatosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_candidato" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_candidato" msprop:Generator_ColumnPropNameInRow="cod_candidato" msprop:Generator_ColumnPropNameInTable="cod_candidatoColumn" msprop:Generator_UserColumnName="cod_candidato" type="xs:int" />
@@ -1031,7 +1182,7 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="candidatoPesquisa" msprop:Generator_TableClassName="candidatoPesquisaDataTable" msprop:Generator_TableVarName="tablecandidatoPesquisa" msprop:Generator_TablePropName="candidatoPesquisa" msprop:Generator_RowDeletingName="candidatoPesquisaRowDeleting" msprop:Generator_RowChangingName="candidatoPesquisaRowChanging" msprop:Generator_RowEvHandlerName="candidatoPesquisaRowChangeEventHandler" msprop:Generator_RowDeletedName="candidatoPesquisaRowDeleted" msprop:Generator_UserTableName="candidatoPesquisa" msprop:Generator_RowChangedName="candidatoPesquisaRowChanged" msprop:Generator_RowEvArgName="candidatoPesquisaRowChangeEvent" msprop:Generator_RowClassName="candidatoPesquisaRow">
+        <xs:element name="candidatoPesquisa" msprop:Generator_TableClassName="candidatoPesquisaDataTable" msprop:Generator_TableVarName="tablecandidatoPesquisa" msprop:Generator_RowChangedName="candidatoPesquisaRowChanged" msprop:Generator_TablePropName="candidatoPesquisa" msprop:Generator_RowDeletingName="candidatoPesquisaRowDeleting" msprop:Generator_RowChangingName="candidatoPesquisaRowChanging" msprop:Generator_RowEvHandlerName="candidatoPesquisaRowChangeEventHandler" msprop:Generator_RowDeletedName="candidatoPesquisaRowDeleted" msprop:Generator_RowClassName="candidatoPesquisaRow" msprop:Generator_UserTableName="candidatoPesquisa" msprop:Generator_RowEvArgName="candidatoPesquisaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="cod_candidato" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_candidato" msprop:Generator_ColumnPropNameInRow="cod_candidato" msprop:Generator_ColumnPropNameInTable="cod_candidatoColumn" msprop:Generator_UserColumnName="cod_candidato" type="xs:int" />
@@ -1178,6 +1329,114 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="candidatoLocalizar" msprop:Generator_TableClassName="candidatoLocalizarDataTable" msprop:Generator_TableVarName="tablecandidatoLocalizar" msprop:Generator_TablePropName="candidatoLocalizar" msprop:Generator_RowDeletingName="candidatoLocalizarRowDeleting" msprop:Generator_RowChangingName="candidatoLocalizarRowChanging" msprop:Generator_RowEvHandlerName="candidatoLocalizarRowChangeEventHandler" msprop:Generator_RowDeletedName="candidatoLocalizarRowDeleted" msprop:Generator_UserTableName="candidatoLocalizar" msprop:Generator_RowChangedName="candidatoLocalizarRowChanged" msprop:Generator_RowEvArgName="candidatoLocalizarRowChangeEvent" msprop:Generator_RowClassName="candidatoLocalizarRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_candidato" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_candidato" msprop:Generator_ColumnPropNameInRow="cod_candidato" msprop:Generator_ColumnPropNameInTable="cod_candidatoColumn" msprop:Generator_UserColumnName="cod_candidato" type="xs:int" />
+              <xs:element name="Nascimento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNascimento" msprop:Generator_ColumnPropNameInRow="Nascimento" msprop:Generator_ColumnPropNameInTable="NascimentoColumn" msprop:Generator_UserColumnName="Nascimento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_cor_olho" msprop:Generator_ColumnVarNameInTable="columncod_cor_olho" msprop:Generator_ColumnPropNameInRow="cod_cor_olho" msprop:Generator_ColumnPropNameInTable="cod_cor_olhoColumn" msprop:Generator_UserColumnName="cod_cor_olho" type="xs:int" minOccurs="0" />
+              <xs:element name="Cor_x0020_olhos" msprop:Generator_ColumnVarNameInTable="columnCor_olhos" msprop:Generator_ColumnPropNameInRow="Cor_olhos" msprop:Generator_ColumnPropNameInTable="Cor_olhosColumn" msprop:Generator_UserColumnName="Cor olhos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_cor_cabelo" msprop:Generator_ColumnVarNameInTable="columncod_cor_cabelo" msprop:Generator_ColumnPropNameInRow="cod_cor_cabelo" msprop:Generator_ColumnPropNameInTable="cod_cor_cabeloColumn" msprop:Generator_UserColumnName="cod_cor_cabelo" type="xs:int" minOccurs="0" />
+              <xs:element name="Cor_x0020_cabelo" msprop:Generator_ColumnVarNameInTable="columnCor_cabelo" msprop:Generator_ColumnPropNameInRow="Cor_cabelo" msprop:Generator_ColumnPropNameInTable="Cor_cabeloColumn" msprop:Generator_UserColumnName="Cor cabelo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_cor_pele" msprop:Generator_ColumnVarNameInTable="columncod_cor_pele" msprop:Generator_ColumnPropNameInRow="cod_cor_pele" msprop:Generator_ColumnPropNameInTable="cod_cor_peleColumn" msprop:Generator_UserColumnName="cod_cor_pele" type="xs:int" minOccurs="0" />
+              <xs:element name="Cor_x0020_da_x0020_pele" msprop:Generator_ColumnVarNameInTable="columnCor_da_pele" msprop:Generator_ColumnPropNameInRow="Cor_da_pele" msprop:Generator_ColumnPropNameInTable="Cor_da_peleColumn" msprop:Generator_UserColumnName="Cor da pele" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_tipo_cabelo" msprop:Generator_ColumnVarNameInTable="columncod_tipo_cabelo" msprop:Generator_ColumnPropNameInRow="cod_tipo_cabelo" msprop:Generator_ColumnPropNameInTable="cod_tipo_cabeloColumn" msprop:Generator_UserColumnName="cod_tipo_cabelo" type="xs:int" minOccurs="0" />
+              <xs:element name="Tipo_x0020_de_x0020_cabelo" msprop:Generator_ColumnVarNameInTable="columnTipo_de_cabelo" msprop:Generator_ColumnPropNameInRow="Tipo_de_cabelo" msprop:Generator_ColumnPropNameInTable="Tipo_de_cabeloColumn" msprop:Generator_UserColumnName="Tipo de cabelo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_faixa_altura" msprop:Generator_ColumnVarNameInTable="columncod_faixa_altura" msprop:Generator_ColumnPropNameInRow="cod_faixa_altura" msprop:Generator_ColumnPropNameInTable="cod_faixa_alturaColumn" msprop:Generator_UserColumnName="cod_faixa_altura" type="xs:int" minOccurs="0" />
+              <xs:element name="Faixa_x0020_de_x0020_altura" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFaixa_de_altura" msprop:Generator_ColumnPropNameInRow="Faixa_de_altura" msprop:Generator_ColumnPropNameInTable="Faixa_de_alturaColumn" msprop:Generator_UserColumnName="Faixa de altura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_temperamento" msprop:Generator_ColumnVarNameInTable="columncod_temperamento" msprop:Generator_ColumnPropNameInRow="cod_temperamento" msprop:Generator_ColumnPropNameInTable="cod_temperamentoColumn" msprop:Generator_UserColumnName="cod_temperamento" type="xs:int" minOccurs="0" />
+              <xs:element name="Temperamento" msprop:Generator_ColumnVarNameInTable="columnTemperamento" msprop:Generator_ColumnPropNameInRow="Temperamento" msprop:Generator_ColumnPropNameInTable="TemperamentoColumn" msprop:Generator_UserColumnName="Temperamento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_escolaridade" msprop:Generator_ColumnVarNameInTable="columncod_escolaridade" msprop:Generator_ColumnPropNameInRow="cod_escolaridade" msprop:Generator_ColumnPropNameInTable="cod_escolaridadeColumn" msprop:Generator_UserColumnName="cod_escolaridade" type="xs:int" minOccurs="0" />
+              <xs:element name="Escolaridade" msprop:Generator_ColumnVarNameInTable="columnEscolaridade" msprop:Generator_ColumnPropNameInRow="Escolaridade" msprop:Generator_ColumnPropNameInTable="EscolaridadeColumn" msprop:Generator_UserColumnName="Escolaridade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_doenca" msprop:Generator_ColumnVarNameInTable="columncod_doenca" msprop:Generator_ColumnPropNameInRow="cod_doenca" msprop:Generator_ColumnPropNameInTable="cod_doencaColumn" msprop:Generator_UserColumnName="cod_doenca" type="xs:int" minOccurs="0" />
+              <xs:element name="Doença" msprop:Generator_ColumnVarNameInTable="columnDoença" msprop:Generator_ColumnPropNameInRow="Doença" msprop:Generator_ColumnPropNameInTable="DoençaColumn" msprop:Generator_UserColumnName="Doença" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pratica_esporte" msprop:Generator_ColumnVarNameInTable="columnpratica_esporte" msprop:Generator_ColumnPropNameInRow="pratica_esporte" msprop:Generator_ColumnPropNameInTable="pratica_esporteColumn" msprop:Generator_UserColumnName="pratica_esporte" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Pratica_x0020_de_x0020_esporte" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPratica_de_esporte" msprop:Generator_ColumnPropNameInRow="Pratica_de_esporte" msprop:Generator_ColumnPropNameInTable="Pratica_de_esporteColumn" msprop:Generator_UserColumnName="Pratica de esporte" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="le" msprop:Generator_ColumnVarNameInTable="columnle" msprop:Generator_ColumnPropNameInRow="le" msprop:Generator_ColumnPropNameInTable="leColumn" msprop:Generator_UserColumnName="le" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Pratica_x0020_leitura" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPratica_leitura" msprop:Generator_ColumnPropNameInRow="Pratica_leitura" msprop:Generator_ColumnPropNameInTable="Pratica_leituraColumn" msprop:Generator_UserColumnName="Pratica leitura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="opcoes" msprop:Generator_TableClassName="opcoesDataTable" msprop:Generator_TableVarName="tableopcoes" msprop:Generator_TablePropName="opcoes" msprop:Generator_RowDeletingName="opcoesRowDeleting" msprop:Generator_RowChangingName="opcoesRowChanging" msprop:Generator_RowEvHandlerName="opcoesRowChangeEventHandler" msprop:Generator_RowDeletedName="opcoesRowDeleted" msprop:Generator_UserTableName="opcoes" msprop:Generator_RowChangedName="opcoesRowChanged" msprop:Generator_RowEvArgName="opcoesRowChangeEvent" msprop:Generator_RowClassName="opcoesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_opcao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_opcao" msprop:Generator_ColumnPropNameInRow="cod_opcao" msprop:Generator_ColumnPropNameInTable="cod_opcaoColumn" msprop:Generator_UserColumnName="cod_opcao" type="xs:int" />
+              <xs:element name="nom_opcao" msprop:Generator_ColumnVarNameInTable="columnnom_opcao" msprop:Generator_ColumnPropNameInRow="nom_opcao" msprop:Generator_ColumnPropNameInTable="nom_opcaoColumn" msprop:Generator_UserColumnName="nom_opcao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1227,6 +1486,14 @@ WHERE        (CAN.nom_candidato LIKE '%' + @palavra_chave + '%') OR
     <xs:unique name="candidatoPesquisa_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:candidatoPesquisa" />
       <xs:field xpath="mstns:cod_candidato" />
+    </xs:unique>
+    <xs:unique name="candidatoLocalizar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:candidatoLocalizar" />
+      <xs:field xpath="mstns:cod_candidato" />
+    </xs:unique>
+    <xs:unique name="opcoes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:opcoes" />
+      <xs:field xpath="mstns:cod_opcao" />
     </xs:unique>
   </xs:element>
 </xs:schema>

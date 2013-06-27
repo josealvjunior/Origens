@@ -30,61 +30,75 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.cboCOR_OLHOS = new System.Windows.Forms.ComboBox();
+            this.coresolhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetOrigens = new Origens.DataSetOrigens();
             this.cboDOENCA = new System.Windows.Forms.ComboBox();
+            this.doencasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label20 = new System.Windows.Forms.Label();
             this.cboLE = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cboPRATICA_ESPORTE = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cboESCOLARIDADE = new System.Windows.Forms.ComboBox();
+            this.escolaridadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label17 = new System.Windows.Forms.Label();
             this.cboFAIXA_ALTURA = new System.Windows.Forms.ComboBox();
+            this.viewfaixaalturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label16 = new System.Windows.Forms.Label();
             this.cboTEMPERAMENTO = new System.Windows.Forms.ComboBox();
+            this.temperamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label15 = new System.Windows.Forms.Label();
             this.cboTIPO_CABELO = new System.Windows.Forms.ComboBox();
+            this.tiposcabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.cboCOR_PELE = new System.Windows.Forms.ComboBox();
+            this.corespeleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.cboCOR_CABELO = new System.Windows.Forms.ComboBox();
+            this.corescabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataSetOrigens = new Origens.DataSetOrigens();
-            this.coresolhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cores_olhoTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_olhoTableAdapter();
-            this.corescabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cores_cabeloTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_cabeloTableAdapter();
-            this.corespeleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cores_peleTableAdapter = new Origens.DataSetOrigensTableAdapters.cores_peleTableAdapter();
             this.corespeleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tiposcabeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipos_cabeloTableAdapter = new Origens.DataSetOrigensTableAdapters.tipos_cabeloTableAdapter();
-            this.viewfaixaalturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.view_faixa_alturaTableAdapter = new Origens.DataSetOrigensTableAdapters.view_faixa_alturaTableAdapter();
-            this.temperamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.temperamentosTableAdapter = new Origens.DataSetOrigensTableAdapters.temperamentosTableAdapter();
-            this.escolaridadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.escolaridadesTableAdapter = new Origens.DataSetOrigensTableAdapters.escolaridadesTableAdapter();
             this.dataSetOrigensBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.doencasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doencasTableAdapter = new Origens.DataSetOrigensTableAdapters.doencasTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corOlhosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corCabeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corDaPeleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDeCabeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.faixaDeAlturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temperamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.escolaridadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doençaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.praticaDeEsporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.praticaLeituraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.candidatoLocalizarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatoLocalizarTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatoLocalizarTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigensBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoLocalizarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -97,40 +111,20 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(186, 432);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(98, 20);
-            this.textBox7.TabIndex = 156;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(60, 433);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(124, 17);
-            this.label21.TabIndex = 155;
-            this.label21.Text = "Código do Doador:";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(164)))), ((int)(((byte)(70)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.SeaShell;
-            this.button4.Location = new System.Drawing.Point(427, 416);
+            this.button4.Location = new System.Drawing.Point(287, 309);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(114, 49);
             this.button4.TabIndex = 154;
             this.button4.Text = "Localizar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // cboCOR_OLHOS
             // 
@@ -139,11 +133,21 @@
             this.cboCOR_OLHOS.DataSource = this.coresolhoBindingSource;
             this.cboCOR_OLHOS.DisplayMember = "nom_cor";
             this.cboCOR_OLHOS.FormattingEnabled = true;
-            this.cboCOR_OLHOS.Location = new System.Drawing.Point(163, 215);
+            this.cboCOR_OLHOS.Location = new System.Drawing.Point(210, 151);
             this.cboCOR_OLHOS.Name = "cboCOR_OLHOS";
             this.cboCOR_OLHOS.Size = new System.Drawing.Size(122, 21);
             this.cboCOR_OLHOS.TabIndex = 215;
             this.cboCOR_OLHOS.ValueMember = "cod_olho";
+            // 
+            // coresolhoBindingSource
+            // 
+            this.coresolhoBindingSource.DataMember = "cores_olho";
+            this.coresolhoBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // dataSetOrigens
+            // 
+            this.dataSetOrigens.DataSetName = "DataSetOrigens";
+            this.dataSetOrigens.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cboDOENCA
             // 
@@ -152,18 +156,23 @@
             this.cboDOENCA.DataSource = this.doencasBindingSource;
             this.cboDOENCA.DisplayMember = "nom_doenca";
             this.cboDOENCA.FormattingEnabled = true;
-            this.cboDOENCA.Location = new System.Drawing.Point(417, 335);
+            this.cboDOENCA.Location = new System.Drawing.Point(464, 271);
             this.cboDOENCA.Name = "cboDOENCA";
             this.cboDOENCA.Size = new System.Drawing.Size(125, 21);
             this.cboDOENCA.TabIndex = 224;
             this.cboDOENCA.ValueMember = "cod_doenca";
+            // 
+            // doencasBindingSource
+            // 
+            this.doencasBindingSource.DataMember = "doencas";
+            this.doencasBindingSource.DataSource = this.dataSetOrigens;
             // 
             // label20
             // 
             this.label20.BackColor = System.Drawing.Color.White;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(324, 331);
+            this.label20.Location = new System.Drawing.Point(371, 267);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(93, 29);
             this.label20.TabIndex = 234;
@@ -179,7 +188,7 @@
             this.cboLE.Items.AddRange(new object[] {
             "Não",
             "Sim"});
-            this.cboLE.Location = new System.Drawing.Point(163, 337);
+            this.cboLE.Location = new System.Drawing.Point(210, 273);
             this.cboLE.Name = "cboLE";
             this.cboLE.Size = new System.Drawing.Size(122, 21);
             this.cboLE.TabIndex = 223;
@@ -190,7 +199,7 @@
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(60, 339);
+            this.label19.Location = new System.Drawing.Point(107, 275);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(105, 13);
             this.label19.TabIndex = 233;
@@ -205,7 +214,7 @@
             this.cboPRATICA_ESPORTE.Items.AddRange(new object[] {
             "Não",
             "Sim"});
-            this.cboPRATICA_ESPORTE.Location = new System.Drawing.Point(417, 305);
+            this.cboPRATICA_ESPORTE.Location = new System.Drawing.Point(464, 241);
             this.cboPRATICA_ESPORTE.Name = "cboPRATICA_ESPORTE";
             this.cboPRATICA_ESPORTE.Size = new System.Drawing.Size(126, 21);
             this.cboPRATICA_ESPORTE.TabIndex = 222;
@@ -216,7 +225,7 @@
             this.label18.BackColor = System.Drawing.Color.White;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(324, 307);
+            this.label18.Location = new System.Drawing.Point(371, 243);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(93, 13);
             this.label18.TabIndex = 232;
@@ -230,11 +239,16 @@
             this.cboESCOLARIDADE.DataSource = this.escolaridadesBindingSource;
             this.cboESCOLARIDADE.DisplayMember = "nom_escolaridade";
             this.cboESCOLARIDADE.FormattingEnabled = true;
-            this.cboESCOLARIDADE.Location = new System.Drawing.Point(163, 307);
+            this.cboESCOLARIDADE.Location = new System.Drawing.Point(210, 243);
             this.cboESCOLARIDADE.Name = "cboESCOLARIDADE";
             this.cboESCOLARIDADE.Size = new System.Drawing.Size(122, 21);
             this.cboESCOLARIDADE.TabIndex = 221;
             this.cboESCOLARIDADE.ValueMember = "cod_escolaridade";
+            // 
+            // escolaridadesBindingSource
+            // 
+            this.escolaridadesBindingSource.DataMember = "escolaridades";
+            this.escolaridadesBindingSource.DataSource = this.dataSetOrigens;
             // 
             // label17
             // 
@@ -242,7 +256,7 @@
             this.label17.BackColor = System.Drawing.Color.White;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(60, 309);
+            this.label17.Location = new System.Drawing.Point(107, 245);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 13);
             this.label17.TabIndex = 231;
@@ -256,11 +270,16 @@
             this.cboFAIXA_ALTURA.DataSource = this.viewfaixaalturaBindingSource;
             this.cboFAIXA_ALTURA.DisplayMember = "nom_faixa";
             this.cboFAIXA_ALTURA.FormattingEnabled = true;
-            this.cboFAIXA_ALTURA.Location = new System.Drawing.Point(163, 277);
+            this.cboFAIXA_ALTURA.Location = new System.Drawing.Point(210, 213);
             this.cboFAIXA_ALTURA.Name = "cboFAIXA_ALTURA";
             this.cboFAIXA_ALTURA.Size = new System.Drawing.Size(122, 21);
             this.cboFAIXA_ALTURA.TabIndex = 219;
             this.cboFAIXA_ALTURA.ValueMember = "cod_faixa";
+            // 
+            // viewfaixaalturaBindingSource
+            // 
+            this.viewfaixaalturaBindingSource.DataMember = "view_faixa_altura";
+            this.viewfaixaalturaBindingSource.DataSource = this.dataSetOrigens;
             // 
             // label16
             // 
@@ -268,7 +287,7 @@
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label16.Location = new System.Drawing.Point(60, 279);
+            this.label16.Location = new System.Drawing.Point(107, 215);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 230;
@@ -282,11 +301,16 @@
             this.cboTEMPERAMENTO.DataSource = this.temperamentosBindingSource;
             this.cboTEMPERAMENTO.DisplayMember = "nom_temperamento";
             this.cboTEMPERAMENTO.FormattingEnabled = true;
-            this.cboTEMPERAMENTO.Location = new System.Drawing.Point(417, 275);
+            this.cboTEMPERAMENTO.Location = new System.Drawing.Point(464, 211);
             this.cboTEMPERAMENTO.Name = "cboTEMPERAMENTO";
             this.cboTEMPERAMENTO.Size = new System.Drawing.Size(126, 21);
             this.cboTEMPERAMENTO.TabIndex = 220;
             this.cboTEMPERAMENTO.ValueMember = "cod_temperamento";
+            // 
+            // temperamentosBindingSource
+            // 
+            this.temperamentosBindingSource.DataMember = "temperamentos";
+            this.temperamentosBindingSource.DataSource = this.dataSetOrigens;
             // 
             // label15
             // 
@@ -294,7 +318,7 @@
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(324, 277);
+            this.label15.Location = new System.Drawing.Point(371, 213);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(86, 13);
             this.label15.TabIndex = 229;
@@ -308,11 +332,16 @@
             this.cboTIPO_CABELO.DataSource = this.tiposcabeloBindingSource;
             this.cboTIPO_CABELO.DisplayMember = "nom_tipo";
             this.cboTIPO_CABELO.FormattingEnabled = true;
-            this.cboTIPO_CABELO.Location = new System.Drawing.Point(417, 246);
+            this.cboTIPO_CABELO.Location = new System.Drawing.Point(464, 182);
             this.cboTIPO_CABELO.Name = "cboTIPO_CABELO";
             this.cboTIPO_CABELO.Size = new System.Drawing.Size(126, 21);
             this.cboTIPO_CABELO.TabIndex = 218;
             this.cboTIPO_CABELO.ValueMember = "cod_tipo";
+            // 
+            // tiposcabeloBindingSource
+            // 
+            this.tiposcabeloBindingSource.DataMember = "tipos_cabelo";
+            this.tiposcabeloBindingSource.DataSource = this.dataSetOrigens;
             // 
             // label14
             // 
@@ -320,7 +349,7 @@
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(324, 248);
+            this.label14.Location = new System.Drawing.Point(371, 184);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 13);
             this.label14.TabIndex = 228;
@@ -334,12 +363,17 @@
             this.cboCOR_PELE.DataSource = this.corespeleBindingSource;
             this.cboCOR_PELE.DisplayMember = "nom_cor";
             this.cboCOR_PELE.FormattingEnabled = true;
-            this.cboCOR_PELE.Location = new System.Drawing.Point(163, 246);
+            this.cboCOR_PELE.Location = new System.Drawing.Point(210, 182);
             this.cboCOR_PELE.Name = "cboCOR_PELE";
             this.cboCOR_PELE.Size = new System.Drawing.Size(122, 21);
             this.cboCOR_PELE.TabIndex = 217;
             this.cboCOR_PELE.ValueMember = "cod_cor";
             this.cboCOR_PELE.SelectedIndexChanged += new System.EventHandler(this.cboCOR_PELE_SelectedIndexChanged);
+            // 
+            // corespeleBindingSource
+            // 
+            this.corespeleBindingSource.DataMember = "cores_pele";
+            this.corespeleBindingSource.DataSource = this.dataSetOrigens;
             // 
             // label13
             // 
@@ -347,7 +381,7 @@
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(60, 248);
+            this.label13.Location = new System.Drawing.Point(107, 184);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 13);
             this.label13.TabIndex = 227;
@@ -361,11 +395,16 @@
             this.cboCOR_CABELO.DataSource = this.corescabeloBindingSource;
             this.cboCOR_CABELO.DisplayMember = "nom_cor";
             this.cboCOR_CABELO.FormattingEnabled = true;
-            this.cboCOR_CABELO.Location = new System.Drawing.Point(417, 216);
+            this.cboCOR_CABELO.Location = new System.Drawing.Point(464, 152);
             this.cboCOR_CABELO.Name = "cboCOR_CABELO";
             this.cboCOR_CABELO.Size = new System.Drawing.Size(126, 21);
             this.cboCOR_CABELO.TabIndex = 216;
             this.cboCOR_CABELO.ValueMember = "cod_cor";
+            // 
+            // corescabeloBindingSource
+            // 
+            this.corescabeloBindingSource.DataMember = "cores_cabelo";
+            this.corescabeloBindingSource.DataSource = this.dataSetOrigens;
             // 
             // label12
             // 
@@ -373,7 +412,7 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label12.Location = new System.Drawing.Point(324, 218);
+            this.label12.Location = new System.Drawing.Point(371, 154);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 13);
             this.label12.TabIndex = 226;
@@ -386,7 +425,7 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(60, 216);
+            this.label11.Location = new System.Drawing.Point(107, 152);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 13);
             this.label11.TabIndex = 225;
@@ -399,39 +438,19 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(59, 179);
+            this.label10.Location = new System.Drawing.Point(106, 115);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(128, 21);
             this.label10.TabIndex = 214;
             this.label10.Text = "Características: ";
             // 
-            // dataSetOrigens
-            // 
-            this.dataSetOrigens.DataSetName = "DataSetOrigens";
-            this.dataSetOrigens.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coresolhoBindingSource
-            // 
-            this.coresolhoBindingSource.DataMember = "cores_olho";
-            this.coresolhoBindingSource.DataSource = this.dataSetOrigens;
-            // 
             // cores_olhoTableAdapter
             // 
             this.cores_olhoTableAdapter.ClearBeforeFill = true;
             // 
-            // corescabeloBindingSource
-            // 
-            this.corescabeloBindingSource.DataMember = "cores_cabelo";
-            this.corescabeloBindingSource.DataSource = this.dataSetOrigens;
-            // 
             // cores_cabeloTableAdapter
             // 
             this.cores_cabeloTableAdapter.ClearBeforeFill = true;
-            // 
-            // corespeleBindingSource
-            // 
-            this.corespeleBindingSource.DataMember = "cores_pele";
-            this.corespeleBindingSource.DataSource = this.dataSetOrigens;
             // 
             // cores_peleTableAdapter
             // 
@@ -442,37 +461,17 @@
             this.corespeleBindingSource1.DataMember = "cores_pele";
             this.corespeleBindingSource1.DataSource = this.dataSetOrigens;
             // 
-            // tiposcabeloBindingSource
-            // 
-            this.tiposcabeloBindingSource.DataMember = "tipos_cabelo";
-            this.tiposcabeloBindingSource.DataSource = this.dataSetOrigens;
-            // 
             // tipos_cabeloTableAdapter
             // 
             this.tipos_cabeloTableAdapter.ClearBeforeFill = true;
-            // 
-            // viewfaixaalturaBindingSource
-            // 
-            this.viewfaixaalturaBindingSource.DataMember = "view_faixa_altura";
-            this.viewfaixaalturaBindingSource.DataSource = this.dataSetOrigens;
             // 
             // view_faixa_alturaTableAdapter
             // 
             this.view_faixa_alturaTableAdapter.ClearBeforeFill = true;
             // 
-            // temperamentosBindingSource
-            // 
-            this.temperamentosBindingSource.DataMember = "temperamentos";
-            this.temperamentosBindingSource.DataSource = this.dataSetOrigens;
-            // 
             // temperamentosTableAdapter
             // 
             this.temperamentosTableAdapter.ClearBeforeFill = true;
-            // 
-            // escolaridadesBindingSource
-            // 
-            this.escolaridadesBindingSource.DataMember = "escolaridades";
-            this.escolaridadesBindingSource.DataSource = this.dataSetOrigens;
             // 
             // escolaridadesTableAdapter
             // 
@@ -483,14 +482,110 @@
             this.dataSetOrigensBindingSource.DataSource = this.dataSetOrigens;
             this.dataSetOrigensBindingSource.Position = 0;
             // 
-            // doencasBindingSource
-            // 
-            this.doencasBindingSource.DataMember = "doencas";
-            this.doencasBindingSource.DataSource = this.dataSetOrigens;
-            // 
             // doencasTableAdapter
             // 
             this.doencasTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nascimentoDataGridViewTextBoxColumn,
+            this.corOlhosDataGridViewTextBoxColumn,
+            this.corCabeloDataGridViewTextBoxColumn,
+            this.corDaPeleDataGridViewTextBoxColumn,
+            this.tipoDeCabeloDataGridViewTextBoxColumn,
+            this.faixaDeAlturaDataGridViewTextBoxColumn,
+            this.temperamentoDataGridViewTextBoxColumn,
+            this.escolaridadeDataGridViewTextBoxColumn,
+            this.doençaDataGridViewTextBoxColumn,
+            this.praticaDeEsporteDataGridViewTextBoxColumn,
+            this.praticaLeituraDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.candidatoLocalizarBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 361);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(630, 214);
+            this.dataGridView1.TabIndex = 235;
+            // 
+            // nascimentoDataGridViewTextBoxColumn
+            // 
+            this.nascimentoDataGridViewTextBoxColumn.DataPropertyName = "Nascimento";
+            this.nascimentoDataGridViewTextBoxColumn.HeaderText = "Nascimento";
+            this.nascimentoDataGridViewTextBoxColumn.Name = "nascimentoDataGridViewTextBoxColumn";
+            this.nascimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // corOlhosDataGridViewTextBoxColumn
+            // 
+            this.corOlhosDataGridViewTextBoxColumn.DataPropertyName = "Cor olhos";
+            this.corOlhosDataGridViewTextBoxColumn.HeaderText = "Cor olhos";
+            this.corOlhosDataGridViewTextBoxColumn.Name = "corOlhosDataGridViewTextBoxColumn";
+            // 
+            // corCabeloDataGridViewTextBoxColumn
+            // 
+            this.corCabeloDataGridViewTextBoxColumn.DataPropertyName = "Cor cabelo";
+            this.corCabeloDataGridViewTextBoxColumn.HeaderText = "Cor cabelo";
+            this.corCabeloDataGridViewTextBoxColumn.Name = "corCabeloDataGridViewTextBoxColumn";
+            // 
+            // corDaPeleDataGridViewTextBoxColumn
+            // 
+            this.corDaPeleDataGridViewTextBoxColumn.DataPropertyName = "Cor da pele";
+            this.corDaPeleDataGridViewTextBoxColumn.HeaderText = "Cor da pele";
+            this.corDaPeleDataGridViewTextBoxColumn.Name = "corDaPeleDataGridViewTextBoxColumn";
+            // 
+            // tipoDeCabeloDataGridViewTextBoxColumn
+            // 
+            this.tipoDeCabeloDataGridViewTextBoxColumn.DataPropertyName = "Tipo de cabelo";
+            this.tipoDeCabeloDataGridViewTextBoxColumn.HeaderText = "Tipo de cabelo";
+            this.tipoDeCabeloDataGridViewTextBoxColumn.Name = "tipoDeCabeloDataGridViewTextBoxColumn";
+            // 
+            // faixaDeAlturaDataGridViewTextBoxColumn
+            // 
+            this.faixaDeAlturaDataGridViewTextBoxColumn.DataPropertyName = "Faixa de altura";
+            this.faixaDeAlturaDataGridViewTextBoxColumn.HeaderText = "Faixa de altura";
+            this.faixaDeAlturaDataGridViewTextBoxColumn.Name = "faixaDeAlturaDataGridViewTextBoxColumn";
+            this.faixaDeAlturaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // temperamentoDataGridViewTextBoxColumn
+            // 
+            this.temperamentoDataGridViewTextBoxColumn.DataPropertyName = "Temperamento";
+            this.temperamentoDataGridViewTextBoxColumn.HeaderText = "Temperamento";
+            this.temperamentoDataGridViewTextBoxColumn.Name = "temperamentoDataGridViewTextBoxColumn";
+            // 
+            // escolaridadeDataGridViewTextBoxColumn
+            // 
+            this.escolaridadeDataGridViewTextBoxColumn.DataPropertyName = "Escolaridade";
+            this.escolaridadeDataGridViewTextBoxColumn.HeaderText = "Escolaridade";
+            this.escolaridadeDataGridViewTextBoxColumn.Name = "escolaridadeDataGridViewTextBoxColumn";
+            // 
+            // doençaDataGridViewTextBoxColumn
+            // 
+            this.doençaDataGridViewTextBoxColumn.DataPropertyName = "Doença";
+            this.doençaDataGridViewTextBoxColumn.HeaderText = "Doença";
+            this.doençaDataGridViewTextBoxColumn.Name = "doençaDataGridViewTextBoxColumn";
+            // 
+            // praticaDeEsporteDataGridViewTextBoxColumn
+            // 
+            this.praticaDeEsporteDataGridViewTextBoxColumn.DataPropertyName = "Pratica de esporte";
+            this.praticaDeEsporteDataGridViewTextBoxColumn.HeaderText = "Pratica de esporte";
+            this.praticaDeEsporteDataGridViewTextBoxColumn.Name = "praticaDeEsporteDataGridViewTextBoxColumn";
+            this.praticaDeEsporteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // praticaLeituraDataGridViewTextBoxColumn
+            // 
+            this.praticaLeituraDataGridViewTextBoxColumn.DataPropertyName = "Pratica leitura";
+            this.praticaLeituraDataGridViewTextBoxColumn.HeaderText = "Pratica leitura";
+            this.praticaLeituraDataGridViewTextBoxColumn.Name = "praticaLeituraDataGridViewTextBoxColumn";
+            this.praticaLeituraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // candidatoLocalizarBindingSource
+            // 
+            this.candidatoLocalizarBindingSource.DataMember = "candidatoLocalizar";
+            this.candidatoLocalizarBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // candidatoLocalizarTableAdapter
+            // 
+            this.candidatoLocalizarTableAdapter.ClearBeforeFill = true;
             // 
             // frm_localizar
             // 
@@ -499,6 +594,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 696);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cboCOR_OLHOS);
             this.Controls.Add(this.cboDOENCA);
             this.Controls.Add(this.label20);
@@ -520,8 +616,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -530,17 +624,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_localizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewfaixaalturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.temperamentosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.escolaridadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tiposcabeloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corescabeloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corespeleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigensBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doencasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatoLocalizarBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,8 +645,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox cboCOR_OLHOS;
         private System.Windows.Forms.ComboBox cboDOENCA;
@@ -592,5 +686,19 @@
         private System.Windows.Forms.BindingSource dataSetOrigensBindingSource;
         private System.Windows.Forms.BindingSource doencasBindingSource;
         private DataSetOrigensTableAdapters.doencasTableAdapter doencasTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn corOlhosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn corCabeloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn corDaPeleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDeCabeloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn faixaDeAlturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn temperamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn escolaridadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doençaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn praticaDeEsporteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn praticaLeituraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource candidatoLocalizarBindingSource;
+        private DataSetOrigensTableAdapters.candidatoLocalizarTableAdapter candidatoLocalizarTableAdapter;
     }
 }

@@ -32,29 +32,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPALAVRA_CHAVE = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.codcandidatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.candidatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetOrigens = new Origens.DataSetOrigens();
-            this.candidatosTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatosTableAdapter();
-            this.candidatoPesquisaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.candidatoPesquisaTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatoPesquisaTableAdapter();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.candidatoPesquisaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetOrigens = new Origens.DataSetOrigens();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.candidatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatosTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatosTableAdapter();
+            this.candidatoPesquisaTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatoPesquisaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.candidatosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoPesquisaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 0;
@@ -62,9 +62,9 @@
             // 
             // txtPALAVRA_CHAVE
             // 
-            this.txtPALAVRA_CHAVE.Location = new System.Drawing.Point(74, 6);
+            this.txtPALAVRA_CHAVE.Location = new System.Drawing.Point(74, 12);
             this.txtPALAVRA_CHAVE.Name = "txtPALAVRA_CHAVE";
-            this.txtPALAVRA_CHAVE.Size = new System.Drawing.Size(328, 20);
+            this.txtPALAVRA_CHAVE.Size = new System.Drawing.Size(413, 20);
             this.txtPALAVRA_CHAVE.TabIndex = 1;
             // 
             // dataGridView1
@@ -81,33 +81,13 @@
             this.Estado,
             this.Cidade});
             this.dataGridView1.DataSource = this.candidatoPesquisaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(585, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(585, 270);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(408, 368);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Editar o candidato selecionado";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(408, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 20);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Pesquisar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // codcandidatoDataGridViewTextBoxColumn
             // 
@@ -115,29 +95,6 @@
             this.codcandidatoDataGridViewTextBoxColumn.HeaderText = "cod_candidato";
             this.codcandidatoDataGridViewTextBoxColumn.Name = "codcandidatoDataGridViewTextBoxColumn";
             this.codcandidatoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // candidatosBindingSource
-            // 
-            this.candidatosBindingSource.DataMember = "candidatos";
-            this.candidatosBindingSource.DataSource = this.dataSetOrigens;
-            // 
-            // dataSetOrigens
-            // 
-            this.dataSetOrigens.DataSetName = "DataSetOrigens";
-            this.dataSetOrigens.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // candidatosTableAdapter
-            // 
-            this.candidatosTableAdapter.ClearBeforeFill = true;
-            // 
-            // candidatoPesquisaBindingSource
-            // 
-            this.candidatoPesquisaBindingSource.DataMember = "candidatoPesquisa";
-            this.candidatoPesquisaBindingSource.DataSource = this.dataSetOrigens;
-            // 
-            // candidatoPesquisaTableAdapter
-            // 
-            this.candidatoPesquisaTableAdapter.ClearBeforeFill = true;
             // 
             // Nome
             // 
@@ -174,12 +131,59 @@
             this.Cidade.Name = "Cidade";
             this.Cidade.ReadOnly = true;
             // 
+            // candidatoPesquisaBindingSource
+            // 
+            this.candidatoPesquisaBindingSource.DataMember = "candidatoPesquisa";
+            this.candidatoPesquisaBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // dataSetOrigens
+            // 
+            this.dataSetOrigens.DataSetName = "DataSetOrigens";
+            this.dataSetOrigens.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(408, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Editar o candidato selecionado";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(493, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 43);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Pesquisar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // candidatosBindingSource
+            // 
+            this.candidatosBindingSource.DataMember = "candidatos";
+            this.candidatosBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // candidatosTableAdapter
+            // 
+            this.candidatosTableAdapter.ClearBeforeFill = true;
+            // 
+            // candidatoPesquisaTableAdapter
+            // 
+            this.candidatoPesquisaTableAdapter.ClearBeforeFill = true;
+            // 
             // frm_pesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(626, 403);
+            this.ClientSize = new System.Drawing.Size(615, 384);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -191,9 +195,9 @@
             this.Text = "frm_pesquisa";
             this.Load += new System.EventHandler(this.frm_pesquisa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.candidatosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoPesquisaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.candidatosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

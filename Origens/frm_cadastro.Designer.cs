@@ -93,6 +93,9 @@
             this.doencasTableAdapter = new Origens.DataSetOrigensTableAdapters.doencasTableAdapter();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.opcoesTableAdapter1 = new Origens.DataSetOrigensTableAdapters.opcoesTableAdapter();
+            this.opcoesTableAdapter2 = new Origens.DataSetOrigensTableAdapters.opcoesTableAdapter();
+            this.opcoesTableAdapter3 = new Origens.DataSetOrigensTableAdapters.opcoesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigensBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
@@ -231,8 +234,8 @@
             this.cboPRATICA_ESPORTE.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboPRATICA_ESPORTE.FormattingEnabled = true;
             this.cboPRATICA_ESPORTE.Items.AddRange(new object[] {
-            "Não",
-            "Sim"});
+            "Sim",
+            "Não"});
             this.cboPRATICA_ESPORTE.Location = new System.Drawing.Point(464, 547);
             this.cboPRATICA_ESPORTE.Name = "cboPRATICA_ESPORTE";
             this.cboPRATICA_ESPORTE.Size = new System.Drawing.Size(126, 21);
@@ -712,6 +715,18 @@
             this.txtCEP.Size = new System.Drawing.Size(160, 20);
             this.txtCEP.TabIndex = 9;
             // 
+            // opcoesTableAdapter1
+            // 
+            this.opcoesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // opcoesTableAdapter2
+            // 
+            this.opcoesTableAdapter2.ClearBeforeFill = true;
+            // 
+            // opcoesTableAdapter3
+            // 
+            this.opcoesTableAdapter3.ClearBeforeFill = true;
+            // 
             // frm_cadastro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -850,5 +865,8 @@
         private DataSetOrigensTableAdapters.doencasTableAdapter doencasTableAdapter;
         private System.Windows.Forms.MaskedTextBox txtCPF;
         private System.Windows.Forms.MaskedTextBox txtCEP;
+        private DataSetOrigensTableAdapters.opcoesTableAdapter opcoesTableAdapter1;
+        private DataSetOrigensTableAdapters.opcoesTableAdapter opcoesTableAdapter2;
+        private DataSetOrigensTableAdapters.opcoesTableAdapter opcoesTableAdapter3;
     }
 }

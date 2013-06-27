@@ -98,6 +98,7 @@
     <Compile Include="frm_splash.Designer.cs">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios.cs" />
     <EmbeddedResource Include="frm_atualizar.resx">
       <DependentUpon>frm_atualizar.cs</DependentUpon>
     </EmbeddedResource>

@@ -12,6 +12,7 @@ namespace Origens
 {
     public partial class frm_localizar : Form
     {
+        private Utilitarios util = new Utilitarios();
         public frm_localizar()
         {
             InitializeComponent();
@@ -41,6 +42,41 @@ namespace Origens
         private void cboCOR_PELE_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Candidato candidato = new Candidato();
+                candidato.codCorOlho = util.obterValorCombo(cboCOR_OLHOS);
+                candidato.codCorCabelo = util.obterValorCombo(cboCOR_CABELO);
+                candidato.codCorPele = util.obterValorCombo(cboCOR_PELE);
+                candidato.codTipoCabelo = util.obterValorCombo(cboTIPO_CABELO);
+                candidato.codFaixaAltura = util.obterValorCombo(cboFAIXA_ALTURA);
+                candidato.codTemperamento = util.obterValorCombo(cboTEMPERAMENTO);
+                candidato.codEscolaridade = util.obterValorCombo(cboESCOLARIDADE);
+                candidato.codDoenca = util.obterValorCombo(cboDOENCA);
+                candidato.le = util.obterValorBool(cboLE);
+                candidato.praticarEsporte = util.obterValorBool(cboPRATICA_ESPORTE);
+
+                this.candidatoLocalizarTableAdapter.Fill(
+                    this.dataSetOrigens.candidatoLocalizar,
+                    util.obterValorCombo(cboCOR_OLHOS),
+                    util.obterValorCombo(cboCOR_CABELO),
+                    util.obterValorCombo(cboCOR_PELE),
+                    util.obterValorCombo(cboTIPO_CABELO),
+                    util.obterValorCombo(cboFAIXA_ALTURA),
+                    util.obterValorCombo(cboTEMPERAMENTO),
+                    util.obterValorCombo(cboESCOLARIDADE),
+                    util.obterValorCombo(cboDOENCA),
+                    util.obterValorBool(cboDOENCA),
+                    util.obterValorBool(cboLE));
+            }
+            catch (Exception exc)
+            {
+
+            }
         }
     }
 }
