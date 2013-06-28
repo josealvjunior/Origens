@@ -107,10 +107,10 @@ namespace Origens
             atualiza.MdiParent = this;
             atualiza.Show();
 
-            frm_pesquisa pesquisa = new frm_pesquisa();
+            /*frm_pesquisa pesquisa = new frm_pesquisa();
             pesquisa.MdiParent = this;
             pesquisa.formularioAtualizacao = atualiza;
-            pesquisa.Show();
+            pesquisa.Show();*/
 
             
 

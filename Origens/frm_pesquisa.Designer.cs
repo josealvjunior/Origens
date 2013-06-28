@@ -45,6 +45,7 @@
             this.candidatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.candidatosTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatosTableAdapter();
             this.candidatoPesquisaTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatoPesquisaTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.candidatoPesquisaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
@@ -178,12 +179,25 @@
             // 
             this.candidatoPesquisaTableAdapter.ClearBeforeFill = true;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(12, 337);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(190, 35);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Cancelar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frm_pesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(615, 384);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -221,5 +235,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
         private System.Windows.Forms.BindingSource candidatoPesquisaBindingSource;
         private DataSetOrigensTableAdapters.candidatoPesquisaTableAdapter candidatoPesquisaTableAdapter;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -23,7 +23,7 @@ namespace Origens
             this.Dispose();
         }
 
-        private void frm_atualizar_Load(object sender, EventArgs e)
+        private void frm_atualizar_Load(object sender, EventArgs e) 
         {
             // TODO: This line of code loads data into the 'dataSetOrigens.doencas' table. You can move, or remove it, as needed.
             this.doencasTableAdapter.Fill(this.dataSetOrigens.doencas);
@@ -43,8 +43,9 @@ namespace Origens
             this.cores_olhoTableAdapter.Fill(this.dataSetOrigens.cores_olho);
             // TODO: This line of code loads data into the 'dataSetOrigens.estados' table. You can move, or remove it, as needed.
             this.estadosTableAdapter.Fill(this.dataSetOrigens.estados);
-
         }
+
+      
 
         private System.Nullable<int> obterValorCombo(ComboBox c)
         {
@@ -176,6 +177,13 @@ namespace Origens
             catch (Exception exc)
             {
             }
+        }
+
+        private void frm_atualizar_Shown(object sender, EventArgs e)
+        {
+            frm_pesquisa pesquisa = new frm_pesquisa();
+            pesquisa.formularioAtualizacao = this;
+            pesquisa.ShowDialog();
         }
     }
 }

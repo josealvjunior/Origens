@@ -72,19 +72,19 @@
             this.dataSetOrigensBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doencasTableAdapter = new Origens.DataSetOrigensTableAdapters.doencasTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.candidatoLocalizarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.candidatoLocalizarTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatoLocalizarTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.corOlhosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.corCabeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.corDaPeleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDeCabeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.faixaDeAlturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temperamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.escolaridadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doençaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.praticaDeEsporteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.praticaLeituraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.candidatoLocalizarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.candidatoLocalizarTableAdapter = new Origens.DataSetOrigensTableAdapters.candidatoLocalizarTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coresolhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetOrigens)).BeginInit();
@@ -488,14 +488,16 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.nascimentoDataGridViewTextBoxColumn,
             this.corOlhosDataGridViewTextBoxColumn,
             this.corCabeloDataGridViewTextBoxColumn,
             this.corDaPeleDataGridViewTextBoxColumn,
-            this.tipoDeCabeloDataGridViewTextBoxColumn,
             this.faixaDeAlturaDataGridViewTextBoxColumn,
             this.temperamentoDataGridViewTextBoxColumn,
             this.escolaridadeDataGridViewTextBoxColumn,
@@ -505,8 +507,25 @@
             this.dataGridView1.DataSource = this.candidatoLocalizarBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(24, 361);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(630, 214);
             this.dataGridView1.TabIndex = 235;
+            // 
+            // candidatoLocalizarBindingSource
+            // 
+            this.candidatoLocalizarBindingSource.DataMember = "candidatoLocalizar";
+            this.candidatoLocalizarBindingSource.DataSource = this.dataSetOrigens;
+            // 
+            // candidatoLocalizarTableAdapter
+            // 
+            this.candidatoLocalizarTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "cod_candidato";
+            this.Column1.HeaderText = "Código Semen";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // nascimentoDataGridViewTextBoxColumn
             // 
@@ -520,24 +539,21 @@
             this.corOlhosDataGridViewTextBoxColumn.DataPropertyName = "Cor olhos";
             this.corOlhosDataGridViewTextBoxColumn.HeaderText = "Cor olhos";
             this.corOlhosDataGridViewTextBoxColumn.Name = "corOlhosDataGridViewTextBoxColumn";
+            this.corOlhosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // corCabeloDataGridViewTextBoxColumn
             // 
             this.corCabeloDataGridViewTextBoxColumn.DataPropertyName = "Cor cabelo";
             this.corCabeloDataGridViewTextBoxColumn.HeaderText = "Cor cabelo";
             this.corCabeloDataGridViewTextBoxColumn.Name = "corCabeloDataGridViewTextBoxColumn";
+            this.corCabeloDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // corDaPeleDataGridViewTextBoxColumn
             // 
             this.corDaPeleDataGridViewTextBoxColumn.DataPropertyName = "Cor da pele";
             this.corDaPeleDataGridViewTextBoxColumn.HeaderText = "Cor da pele";
             this.corDaPeleDataGridViewTextBoxColumn.Name = "corDaPeleDataGridViewTextBoxColumn";
-            // 
-            // tipoDeCabeloDataGridViewTextBoxColumn
-            // 
-            this.tipoDeCabeloDataGridViewTextBoxColumn.DataPropertyName = "Tipo de cabelo";
-            this.tipoDeCabeloDataGridViewTextBoxColumn.HeaderText = "Tipo de cabelo";
-            this.tipoDeCabeloDataGridViewTextBoxColumn.Name = "tipoDeCabeloDataGridViewTextBoxColumn";
+            this.corDaPeleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // faixaDeAlturaDataGridViewTextBoxColumn
             // 
@@ -551,18 +567,21 @@
             this.temperamentoDataGridViewTextBoxColumn.DataPropertyName = "Temperamento";
             this.temperamentoDataGridViewTextBoxColumn.HeaderText = "Temperamento";
             this.temperamentoDataGridViewTextBoxColumn.Name = "temperamentoDataGridViewTextBoxColumn";
+            this.temperamentoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // escolaridadeDataGridViewTextBoxColumn
             // 
             this.escolaridadeDataGridViewTextBoxColumn.DataPropertyName = "Escolaridade";
             this.escolaridadeDataGridViewTextBoxColumn.HeaderText = "Escolaridade";
             this.escolaridadeDataGridViewTextBoxColumn.Name = "escolaridadeDataGridViewTextBoxColumn";
+            this.escolaridadeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // doençaDataGridViewTextBoxColumn
             // 
             this.doençaDataGridViewTextBoxColumn.DataPropertyName = "Doença";
             this.doençaDataGridViewTextBoxColumn.HeaderText = "Doença";
             this.doençaDataGridViewTextBoxColumn.Name = "doençaDataGridViewTextBoxColumn";
+            this.doençaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // praticaDeEsporteDataGridViewTextBoxColumn
             // 
@@ -577,15 +596,6 @@
             this.praticaLeituraDataGridViewTextBoxColumn.HeaderText = "Pratica leitura";
             this.praticaLeituraDataGridViewTextBoxColumn.Name = "praticaLeituraDataGridViewTextBoxColumn";
             this.praticaLeituraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // candidatoLocalizarBindingSource
-            // 
-            this.candidatoLocalizarBindingSource.DataMember = "candidatoLocalizar";
-            this.candidatoLocalizarBindingSource.DataSource = this.dataSetOrigens;
-            // 
-            // candidatoLocalizarTableAdapter
-            // 
-            this.candidatoLocalizarTableAdapter.ClearBeforeFill = true;
             // 
             // frm_localizar
             // 
@@ -687,18 +697,18 @@
         private System.Windows.Forms.BindingSource doencasBindingSource;
         private DataSetOrigensTableAdapters.doencasTableAdapter doencasTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource candidatoLocalizarBindingSource;
+        private DataSetOrigensTableAdapters.candidatoLocalizarTableAdapter candidatoLocalizarTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nascimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn corOlhosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn corCabeloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn corDaPeleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDeCabeloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn faixaDeAlturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn temperamentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn escolaridadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doençaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn praticaDeEsporteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn praticaLeituraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource candidatoLocalizarBindingSource;
-        private DataSetOrigensTableAdapters.candidatoLocalizarTableAdapter candidatoLocalizarTableAdapter;
     }
 }

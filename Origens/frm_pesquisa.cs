@@ -19,7 +19,7 @@ namespace Origens
             candidatoSelecionado = new Candidato();
         }
 
-        public frm_atualizar formularioAtualizacao { get; set; }
+        public frm_atualizar formularioAtualizacao; //{ get; set; }
 
         private void frm_pesquisa_Load(object sender, EventArgs e)
         {
@@ -63,6 +63,11 @@ namespace Origens
             {
 
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
