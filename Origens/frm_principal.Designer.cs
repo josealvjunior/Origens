@@ -134,6 +134,7 @@
             this.bt_ajuda.Name = "bt_ajuda";
             this.bt_ajuda.Size = new System.Drawing.Size(210, 107);
             this.bt_ajuda.Text = "toolStripButton4";
+            this.bt_ajuda.Click += new System.EventHandler(this.bt_ajuda_Click);
             // 
             // frm_principal
             // 

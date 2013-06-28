@@ -12,7 +12,7 @@ namespace Origens
 {
     public partial class frm_pesquisa : Form
     {
-        public static Candidato candidatoSelecionado;
+        public static Candidato candidatoSelecionado = new Candidato();
         public frm_pesquisa()
         {
             InitializeComponent();
@@ -38,18 +38,18 @@ namespace Origens
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dgvr = this.dataGridView1.CurrentRow;
-            //if datagridview have a predefined columns then using those objects as:
-            String x = dgvr.Cells[0].Value.ToString();
-
             this.Close();
             this.Dispose();
 
-            formularioAtualizacao.carregarFormulario(Convert.ToInt32(x));
+            formularioAtualizacao.carregarFormulario(Convert.ToInt32(candidatoSelecionado.codigo));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose();
+
+            formularioAtualizacao.carregarFormulario(Convert.ToInt32(candidatoSelecionado.codigo));
 
         }
 

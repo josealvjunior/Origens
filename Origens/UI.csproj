@@ -54,6 +54,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetOrigens.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frm_ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ajuda.Designer.cs">
+      <DependentUpon>frm_ajuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_atualizar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
       <DependentUpon>frm_splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilitarios.cs" />
+    <EmbeddedResource Include="frm_ajuda.resx">
+      <DependentUpon>frm_ajuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_atualizar.resx">
       <DependentUpon>frm_atualizar.cs</DependentUpon>
     </EmbeddedResource>

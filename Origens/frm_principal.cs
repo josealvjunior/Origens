@@ -140,5 +140,12 @@ namespace Origens
         {
             
         }
+
+        private void bt_ajuda_Click(object sender, EventArgs e)
+        {
+            frm_ajuda ajuda = new frm_ajuda();
+            ajuda.MdiParent = this;
+            ajuda.Show();
+        }
     }
 }
